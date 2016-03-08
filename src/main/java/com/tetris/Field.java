@@ -26,7 +26,7 @@ public class Field {
     }
 
     void prepareBorderStrategy() {
-        borderStrategy = new ArrayList<BorderStrategy>(8);
+        borderStrategy = new ArrayList<BorderStrategy>();
         borderStrategy.add(new LTCornerStrategy());
         borderStrategy.add(new RTCornerStrategy());
         borderStrategy.add(new LBCornerStrategy());
@@ -35,16 +35,14 @@ public class Field {
         borderStrategy.add(new RightBorderStrategy());
         borderStrategy.add(new TopBorderStrategy());
         borderStrategy.add(new BottomBorderStrategy());
+        borderStrategy.add(new NonBorderStrategy());
     }
 
     void checkBorder() {
-        for (int i=0; i<8; i++) {
-            if (borderStrategy.get(i).getBorder(width, height, position) != null) {
-                border = borderStrategy.get(i).getBorder(width, height, position);
+        for (BorderStrategy strategy : borderStrategy) {
+            if (strategy.validate(width, height, position, border)) {
+                border = strategy.getBorder();
             }
-        }
-        if (border == null) {
-            border = Border.NONBORDER;
         }
     }
 
