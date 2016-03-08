@@ -1,13 +1,15 @@
 package com.tetris;
 
+import com.tetris.Board;
+import com.tetris.Field;
+import com.tetris.Move;
+
 import java.util.List;
 
 /**
  * Created by User on 06.03.2016.
  */
 abstract class Tile {
-    final int height = 16;
-    final int width = 10;
     List<Field> fields;
     int[] fieldsID;
     Board board;
