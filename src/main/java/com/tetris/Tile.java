@@ -1,9 +1,5 @@
 package com.tetris;
 
-import com.tetris.Board;
-import com.tetris.Field;
-import com.tetris.Move;
-
 import java.util.List;
 
 /**

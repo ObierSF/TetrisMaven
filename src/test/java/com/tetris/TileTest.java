@@ -1,19 +1,23 @@
 package com.tetris;
 
-import junit.framework.TestCase;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
- * Created by User on 07.03.2016.
+ * Created by User on 09.03.2016.
  */
-public class TileTest extends TestCase {
+public class TileTest {
     Board b;
     Tile t;
 
+    @Before
     public void setUp() throws Exception {
-        super.setUp();
         b = new Board(160);
     }
 
+    @Test
     public void testSetFieldsOnBoard() throws Exception {
         t = new JShapeTile(b);
         t.setFields();
@@ -23,6 +27,7 @@ public class TileTest extends TestCase {
         assertTrue(t.fields.get(3).isPartOfTile);
     }
 
+    @Test
     public void testEmptyOldFields() throws Exception {
         t = new IShapeTile(b);
         t.setFields();
@@ -31,12 +36,14 @@ public class TileTest extends TestCase {
         assertFalse(t.fields.get(0).isPartOfTile);
     }
 
+    @Test
     public void testIsVertical() throws Exception {
         t = new IShapeTile(b);
         t.setFields();
         assertTrue(t.isVertical());
     }
 
+    @Test
     public void testFallBelowBottom() throws Exception {
         t = new IShapeTile(b);
         t.setFields();
@@ -53,6 +60,7 @@ public class TileTest extends TestCase {
         assertEquals(154, t.getFieldPosition(3));
     }
 
+    @Test
     public void testMoveRightToBorder() throws Exception {
         t = new OShapeTile(b);
         t.setFields();
@@ -69,6 +77,7 @@ public class TileTest extends TestCase {
         assertEquals(19, t.getFieldPosition(3));
     }
 
+    @Test
     public void testMoveLeftToBorder() throws Exception {
         t = new OShapeTile(b);
         t.setFields();

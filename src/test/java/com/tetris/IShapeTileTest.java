@@ -1,20 +1,24 @@
 package com.tetris;
 
-import junit.framework.TestCase;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
- * Created by User on 07.03.2016.
+ * Created by User on 09.03.2016.
  */
-public class IShapeTileTest extends TestCase {
+public class IShapeTileTest {
     Board b;
     Tile t;
 
+    @Before
     public void setUp() throws Exception {
-        super.setUp();
         b = new Board(160);
         t = new IShapeTile(b);
     }
 
+    @Test
     public void testRotateLeft() throws Exception {
         t.setFields();
         t.rotateLeft();
@@ -45,6 +49,7 @@ public class IShapeTileTest extends TestCase {
         assertEquals(44, t.getFieldPosition(3));
     }
 
+    @Test
     public void testRotateRight() throws Exception {
         t.setFields();
         t.rotateRight();
@@ -75,6 +80,7 @@ public class IShapeTileTest extends TestCase {
         assertEquals(44, t.getFieldPosition(3));
     }
 
+    @Test
     public void testRotateOverBorder() throws Exception {
         t.setFields();
         for (int i=0; i<4; i++)
