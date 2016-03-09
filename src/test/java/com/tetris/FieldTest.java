@@ -19,6 +19,7 @@ public class FieldTest extends TestCase {
         f.locate();
         assertFalse(f.isPartOfTile);
         assertTrue(f.isLocated);
+        assertFalse(f.isEmpty());
     }
 
     public void testMakePartOfTile() throws Exception {
@@ -26,12 +27,14 @@ public class FieldTest extends TestCase {
         assertTrue(f.isPartOfTile);
         assertFalse(f.isLocated);
         assertEquals(f.color, "RED");
+        assertFalse(f.isEmpty());
     }
 
     public void testEmpty() throws Exception {
         f.empty();
         assertFalse(f.isPartOfTile);
         assertFalse(f.isLocated);
+        assertTrue(f.isEmpty());
     }
 
     public void testLeftBorderField() throws Exception {
