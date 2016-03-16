@@ -9,90 +9,135 @@ import static org.junit.Assert.*;
  * Created by User on 09.03.2016.
  */
 public class FieldTest {
-    Field f;
-    Board b;
+    final int width = 10;
+    final int height = 16;
+    Field field;
+    Board board;
 
     @Before
     public void setUp() throws Exception {
-        b = new Board(160);
-        f = b.board.get(4);
+        board = new Board(160);
+        //given random field from board
+        field = board.board.get(4);
     }
 
     @Test
-    public void testLocate() throws Exception {
-        f.locate();
-        assertFalse(f.isPartOfTile);
-        assertTrue(f.isLocated);
-        assertFalse(f.isEmpty());
+    public void shouldReturnTrueAfterFieldIsPlaced() throws Exception {
+        //when
+        field.placeField();
+        //then
+        assertTrue(field.placedField);
+        assertFalse(field.partOfTile);
+        assertFalse(field.isEmpty());
     }
 
     @Test
-    public void testMakePartOfTile() throws Exception {
-        f.makePartOfTile("RED");
-        assertTrue(f.isPartOfTile);
-        assertFalse(f.isLocated);
-        assertEquals(f.color, "RED");
-        assertFalse(f.isEmpty());
+    public void shouldReturnTrueAfterFieldIsMadePartOfTile() throws Exception {
+        //when
+        field.makePartOfTile("RED");
+        //then
+        assertTrue(field.partOfTile);
+        assertEquals(field.color, "RED");
+        assertFalse(field.placedField);
+        assertFalse(field.isEmpty());
     }
 
     @Test
-    public void testEmpty() throws Exception {
-        f.empty();
-        assertFalse(f.isPartOfTile);
-        assertFalse(f.isLocated);
-        assertTrue(f.isEmpty());
+    public void shouldReturnTrueAfterFieldIsEmptied() throws Exception {
+        //when
+        field.empty();
+        //then
+        assertTrue(field.isEmpty());
+        assertFalse(field.partOfTile);
+        assertFalse(field.placedField);
     }
 
     @Test
-    public void testLeftBorderField() throws Exception {
-        f = b.board.get(20);
-        assertEquals(Border.LEFT, f.border);
+    public void shouldReturnLeftBorder() throws Exception {
+        //given random left border position
+        int position = width*7;
+        //when
+        field = board.board.get(position);
+        //then
+        assertEquals(Border.LEFT, field.border);
     }
 
     @Test
-    public void testRightBorderField() throws Exception {
-        f = b.board.get(59);
-        assertEquals(Border.RIGHT, f.border);
+    public void shouldReturnRightBorder() throws Exception {
+        //given random right border position
+        int position = width*12-1;
+        //when
+        field = board.board.get(position);
+        //then
+        assertEquals(Border.RIGHT, field.border);
     }
     @Test
-    public void testTopBorderField() throws Exception {
-        f = b.board.get(4);
-        assertEquals(Border.TOP, f.border);
-    }
-
-    @Test
-    public void testBottomBorderField() throws Exception {
-        f = b.board.get(158);
-        assertEquals(Border.BOTTOM, f.border);
-    }
-
-    @Test
-    public void testLTCornerBorderField() throws Exception {
-        f = b.board.get(0);
-        assertEquals(Border.LTCORNER, f.border);
+    public void shouldReturnTopBorder() throws Exception {
+        //given random top border position
+        int position = 1;
+        //when
+        field = board.board.get(position);
+        //then
+        assertEquals(Border.TOP, field.border);
     }
 
     @Test
-    public void testRTCornerBorderField() throws Exception {
-        f = b.board.get(9);
-        assertEquals(Border.RTCORNER, f.border);
+    public void shouldReturnBottomBorder() throws Exception {
+        //given random bottom border position
+        int position = height*width-2;
+        //when
+        field = board.board.get(position);
+        //then
+        assertEquals(Border.BOTTOM, field.border);
     }
 
     @Test
-    public void testLBCornerBorderField() throws Exception {
-        f = b.board.get(150);
-        assertEquals(Border.LBCORNER, f.border);
+    public void shouldReturnLeftTopCorner() throws Exception {
+        //given left top position
+        int position = 0;
+        //when
+        field = board.board.get(position);
+        //then
+        assertEquals(Border.LEFTTOPCORNER, field.border);
     }
 
     @Test
-    public void testRBCornerBorderField() throws Exception {
-        f = b.board.get(159);
-        assertEquals(Border.RBCORNER, f.border);
+    public void shouldReturnRightTopCorner() throws Exception {
+        //given right top position
+        int position = width - 1;
+        //when
+        field = board.board.get(position);
+        //then
+        assertEquals(Border.RIGHTTOPCORNER, field.border);
     }
 
     @Test
-    public void testNonBorderField() throws Exception {
-        f = b.board.get(44);
-        assertEquals(Border.NONBORDER, f.border);
+    public void shouldReturnLeftBottomCorner() throws Exception {
+        //given left bottom position
+        int position = height*width-width;
+        //when
+        field = board.board.get(position);
+        //then
+        assertEquals(Border.LEFTBOTTOMCORNER, field.border);
+    }
+
+    @Test
+    public void shouldReturnRightBottomCorner() throws Exception {
+        //given right bottom position
+        int position = height*width-1;
+        //when
+        field = board.board.get(position);
+        //then
+        assertEquals(Border.RIGHTBOTTOMCORNER, field.border);
+    }
+
+    @Test
+    public void shouldReturnNonBorder() throws Exception {
+        //given random non border position
+        int position = width*14+8;
+        //when
+        field = board.board.get(position);
+        //then
+        assertEquals(Border.NONBORDER, field.border);
     }
 }
