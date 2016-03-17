@@ -10,8 +10,7 @@ class JShapeTile extends Tile {
     JShapeTile(Board board) {
         super(board);
         color = "GREEN";
-        fields = new ArrayList<Field>(4);
-        fieldsID = new int[4];
+        fields = new ArrayList<Field>();
     }
 
     @Override
@@ -20,7 +19,7 @@ class JShapeTile extends Tile {
         fields.add(board.getField(15));
         fields.add(board.getField(24));
         fields.add(board.getField(25));
-        setFieldsOnBoard();
+        makeFieldsPartOfTile();
     }
 
     @Override

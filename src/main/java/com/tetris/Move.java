@@ -8,57 +8,60 @@ import java.util.List;
 public enum Move {
     FALL {
         @Override
-        boolean isPossible(int[] fieldsID) {
-            for (int i=0; i<fieldsID.length; i++) {
-                if (fieldsID[i] + width >= 160)
+        boolean isPossible(List<Field> fields) {
+            for (Field field : fields) {
+                if (field.getSurroundingFields().lower == null || field.getSurroundingFields().lower.isPlacedField() == true) {
                     return false;
+                }
             }
             return true;
         }
 
         @Override
-        void move(int[] fieldsID) {
-            for (int i=0; i<fieldsID.length; i++) {
-                fieldsID[i] = fieldsID[i] + width;
+        void move(List<Field> fields) {
+            for (Field field : fields) {
+//                field = field.getSurroundingFields().lower;
             }
         }
     },
     LEFT {
         @Override
-        boolean isPossible(int[] fieldsID) {
-            for (int i=0; i<fieldsID.length; i++) {
-                if (fieldsID[i]-1 < 0 || fieldsID[i] % width < (fieldsID[i]-1) % width)
+        boolean isPossible(List<Field> fields) {
+            for (Field field : fields) {
+                if (field.getSurroundingFields().left == null || field.getSurroundingFields().left.isPlacedField() == true) {
                     return false;
+                }
             }
             return true;
         }
 
         @Override
-        void move(int[] fieldsID) {
-            for (int i=0; i<fieldsID.length; i++) {
-                fieldsID[i]--;
+        void move(List<Field> fields) {
+            for (Field field : fields) {
+//                field = field.getSurroundingFields().left;
             }
         }
     },
     RIGHT {
         @Override
-        boolean isPossible(int[] fieldsID) {
-            for (int i=0; i<fieldsID.length; i++) {
-                if (fieldsID[i]+1 > 159 || fieldsID[i] % width > (fieldsID[i]+1) % width)
+        boolean isPossible(List<Field> fields) {
+            for (Field field : fields) {
+                if (field.getSurroundingFields().right == null || field.getSurroundingFields().right.isPlacedField() == true) {
                     return false;
+                }
             }
             return true;
         }
 
         @Override
-        void move(int[] fieldsID) {
-            for (int i=0; i<fieldsID.length; i++) {
-                fieldsID[i]++;
+        void move(List<Field> fields) {
+            for (Field field : fields) {
+//                field = field.getSurroundingFields().right;
             }
         }
     };
 
     final int width = 10;
-    abstract boolean isPossible(int[] fieldsID);
-    abstract void move(int[] fieldsID);
+    abstract boolean isPossible(List<Field> fields);
+    abstract void move(List<Field> fields);
 }

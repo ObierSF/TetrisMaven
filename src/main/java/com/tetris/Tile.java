@@ -6,10 +6,9 @@ import java.util.List;
  * Created by User on 06.03.2016.
  */
 abstract class Tile {
-    List<Field> fields;
-    int[] fieldsID;
-    Board board;
-    String color;
+    protected List<Field> fields;
+    protected Board board;
+    protected String color;
 
     Tile(Board board) {
         this.board = board;
@@ -19,22 +18,21 @@ abstract class Tile {
     abstract void rotateLeft();
     abstract void rotateRight();
 
-    void setFieldsOnBoard() {
+    void makeFieldsPartOfTile() {
         for (int i=0; i<fields.size(); i++) {
             fields.get(i).makePartOfTile(color);
-            fieldsID[i] = getFieldPosition(i);
         }
     }
 
     void move(Move move) {
-        if (move.isPossible(fieldsID)) {
-            move.move(fieldsID);
-            emptyOldFields();
-            if (isNewPositionEmpty()) {
-                moveTile();
-            }
-            setFieldsOnBoard();
-        }
+//        if (move.isPossible(fieldsID)) {
+//            move.move(fieldsID);
+//            emptyOldFields();
+//            if (isNewPositionEmpty()) {
+//                moveTile();
+//            }
+//            makeFieldsPartOfTile();
+//        }
     }
 
     void emptyOldFields() {
@@ -44,24 +42,24 @@ abstract class Tile {
     }
 
     boolean isNewPositionEmpty() {
-        for (int i=0; i<fieldsID.length; i++) {
-            if (!board.getField(fieldsID[i]).isEmpty())
-                return false;
-        }
+//        for (int i=0; i<fieldsID.length; i++) {
+//            if (!board.getField(fieldsID[i]).isEmpty())
+//                return false;
+//        }
         return true;
     }
 
     void moveTile() {
-        for (int i=0; i<fieldsID.length; i++) {
-            fields.set(i, board.getField(fieldsID[i]));
-        }
+//        for (int i=0; i<fieldsID.length; i++) {
+//            fields.set(i, board.getField(fieldsID[i]));
+//        }
     }
 
     boolean isRotationPossible() {
-        for (int i=0; i<fields.size(); i++) {
-            if (fieldsID[i] < 0 || fieldsID[i] > 159 || fieldsID[i]%10 - fieldsID[1]%10 > 2)
-                return false;
-        }
+//        for (int i=0; i<fields.size(); i++) {
+//            if (fieldsID[i] < 0 || fieldsID[i] > 159 || fieldsID[i]%10 - fieldsID[1]%10 > 2)
+//                return false;
+//        }
         return true;
     }
 
@@ -70,6 +68,6 @@ abstract class Tile {
     }
 
     boolean isVertical() {
-        return Math.abs(fields.get(0).position - fields.get(1).position) == 10;
+        return Math.abs(fields.get(0).getPosition() - fields.get(1).getPosition()) == 10;
     }
 }

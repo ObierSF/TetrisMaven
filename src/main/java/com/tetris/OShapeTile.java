@@ -9,8 +9,7 @@ public class OShapeTile extends Tile {
     OShapeTile(Board board) {
         super(board);
         color = "BLUE";
-        fields = new ArrayList<Field>(4);
-        fieldsID = new int[4];
+        fields = new ArrayList<Field>();
     }
 
     @Override
@@ -19,7 +18,7 @@ public class OShapeTile extends Tile {
         fields.add(board.getField(5));
         fields.add(board.getField(14));
         fields.add(board.getField(15));
-        setFieldsOnBoard();
+        makeFieldsPartOfTile();
     }
 
     @Override

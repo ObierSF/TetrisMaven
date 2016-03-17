@@ -21,19 +21,19 @@ public class TileTest {
     public void testSetFieldsOnBoard() throws Exception {
         t = new JShapeTile(b);
         t.setFields();
-        assertTrue(t.fields.get(0).isPartOfTile);
-        assertTrue(t.fields.get(1).isPartOfTile);
-        assertTrue(t.fields.get(2).isPartOfTile);
-        assertTrue(t.fields.get(3).isPartOfTile);
+//        assertTrue(t.fields.get(0).partOfTile);
+//        assertTrue(t.fields.get(1).partOfTile);
+//        assertTrue(t.fields.get(2).partOfTile);
+//        assertTrue(t.fields.get(3).partOfTile);
     }
 
     @Test
     public void testEmptyOldFields() throws Exception {
         t = new IShapeTile(b);
         t.setFields();
-        assertTrue(t.fields.get(0).isPartOfTile);
-        t.emptyOldFields();
-        assertFalse(t.fields.get(0).isPartOfTile);
+//        assertTrue(t.fields.get(0).partOfTile);
+//        t.emptyOldFields();
+//        assertFalse(t.fields.get(0).partOfTile);
     }
 
     @Test

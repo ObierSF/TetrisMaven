@@ -9,8 +9,7 @@ public class ZShapeTile extends Tile {
     ZShapeTile(Board board) {
         super(board);
         color = "ORANGE";
-        fields = new ArrayList<Field>(4);
-        fieldsID = new int[4];
+        fields = new ArrayList<Field>();
     }
 
     @Override
@@ -19,7 +18,7 @@ public class ZShapeTile extends Tile {
         fields.add(board.getField(14));
         fields.add(board.getField(15));
         fields.add(board.getField(24));
-        setFieldsOnBoard();
+        makeFieldsPartOfTile();
     }
 
     @Override

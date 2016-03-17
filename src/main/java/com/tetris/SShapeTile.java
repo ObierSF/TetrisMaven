@@ -9,8 +9,7 @@ public class SShapeTile extends Tile {
     SShapeTile(Board board) {
         super(board);
         color = "GRAY";
-        fields = new ArrayList<Field>(4);
-        fieldsID = new int[4];
+        fields = new ArrayList<Field>();
     }
 
     @Override
@@ -19,7 +18,7 @@ public class SShapeTile extends Tile {
         fields.add(board.getField(14));
         fields.add(board.getField(15));
         fields.add(board.getField(25));
-        setFieldsOnBoard();
+        makeFieldsPartOfTile();
     }
 
     @Override

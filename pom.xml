@@ -27,5 +27,12 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>lombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.16.8</version>
+      <systemPath>C:/java_libs/Lombok/lombok.jar</systemPath>
+      <scope>system</scope>
+    </dependency>
   </dependencies>
 </project>

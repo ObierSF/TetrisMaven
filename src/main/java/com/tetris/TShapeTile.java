@@ -9,8 +9,7 @@ public class TShapeTile extends Tile {
     TShapeTile(Board board) {
         super(board);
         color = "YELLOW";
-        fields = new ArrayList<Field>(4);
-        fieldsID = new int[4];
+        fields = new ArrayList<Field>();
     }
 
     @Override
@@ -19,7 +18,7 @@ public class TShapeTile extends Tile {
         fields.add(board.getField(5));
         fields.add(board.getField(6));
         fields.add(board.getField(15));
-        setFieldsOnBoard();
+        makeFieldsPartOfTile();
     }
 
     @Override
@@ -29,7 +28,7 @@ public class TShapeTile extends Tile {
 //        if (isAbleToRotate(temp)) {
 //            emptyOldFields();
 //            movePointers(temp);
-//            setFieldsOnBoard();
+//            makeFieldsPartOfTile();
 //        }
     }
 
@@ -55,7 +54,7 @@ public class TShapeTile extends Tile {
 //        if (isAbleToRotate(temp)) {
 //            emptyOldFields();
 //            movePointers(temp);
-//            setFieldsOnBoard();
+//            makeFieldsPartOfTile();
 //        }
 //        rotationRightPointers(temp);
     }

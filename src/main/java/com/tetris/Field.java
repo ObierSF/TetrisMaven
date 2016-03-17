@@ -1,5 +1,7 @@
 package com.tetris;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,28 +11,33 @@ import java.util.List;
 public class Field {
     final int height = 16;
     final int width = 10;
-    boolean isPartOfTile;
-    boolean isLocated;
-    int position;
-    String color;
-    Border border;
-    List<BorderStrategy> borderStrategy;
+    @Getter private boolean partOfTile;
+    @Getter private boolean placedField;
+    @Getter private int position;
+    @Getter private String color;
+    @Getter private Border border;
+    private List<BorderStrategy> borderStrategy;
+    @Getter private SurroundingFields surroundingFields;
 
 
     Field(int position) {
         this.position = position;
-        isPartOfTile = false;
-        isLocated = false;
+        partOfTile = false;
+        placedField = false;
         prepareBorderStrategy();
         checkBorder();
     }
 
+    void setSurroundingFields(Board board) {
+        surroundingFields = border.getSurroundingFields(board, position);
+    }
+
     void prepareBorderStrategy() {
         borderStrategy = new ArrayList<BorderStrategy>();
-        borderStrategy.add(new LTCornerStrategy());
-        borderStrategy.add(new RTCornerStrategy());
-        borderStrategy.add(new LBCornerStrategy());
-        borderStrategy.add(new RBCornerStrategy());
+        borderStrategy.add(new LeftTopCornerStrategy());
+        borderStrategy.add(new RightTopCornerStrategy());
+        borderStrategy.add(new LeftBottomCornerStrategy());
+        borderStrategy.add(new RightBottomCornerStrategy());
         borderStrategy.add(new LeftBorderStrategy());
         borderStrategy.add(new RightBorderStrategy());
         borderStrategy.add(new TopBorderStrategy());
@@ -46,28 +53,24 @@ public class Field {
         }
     }
 
-    void locate() {
-        isPartOfTile = false;
-        isLocated = true;
+    void placeField() {
+        partOfTile = false;
+        placedField = true;
     }
 
     void makePartOfTile(String color) {
         this.color = color;
-        isPartOfTile = true;
-        isLocated = false;
+        partOfTile = true;
+        placedField = false;
     }
 
     void empty() {
         color = "";
-        isPartOfTile = false;
-        isLocated = false;
+        partOfTile = false;
+        placedField = false;
     }
 
     boolean isEmpty() {
-        return !isLocated && !isPartOfTile;
-    }
-
-    int getPosition() {
-        return position;
+        return !placedField && !partOfTile;
     }
 }

@@ -9,8 +9,7 @@ public class IShapeTile extends Tile {
     IShapeTile(Board board) {
         super(board);
         color = "RED";
-        fields = new ArrayList<Field>(4);
-        fieldsID = new int[4];
+        fields = new ArrayList<Field>();
     }
 
     @Override
@@ -19,7 +18,7 @@ public class IShapeTile extends Tile {
         fields.add(board.getField(14));
         fields.add(board.getField(24));
         fields.add(board.getField(34));
-        setFieldsOnBoard();
+        makeFieldsPartOfTile();
     }
 
     @Override
@@ -31,17 +30,17 @@ public class IShapeTile extends Tile {
                 moveTile();
             }
         }
-        setFieldsOnBoard();
+        makeFieldsPartOfTile();
 
     }
 
     void rotationLeft() {
-        if (isVertical())
-            for (int i=0; i< fields.size(); i++)
-                fieldsID[i] = getFieldPosition(1) + ((getFieldPosition(i) - getFieldPosition(1)) / 10);
-        else
-            for (int i=0; i< fields.size(); i++)
-                fieldsID[i] = getFieldPosition(1) - ((getFieldPosition(i) - getFieldPosition(1)) * 10);
+//        if (isVertical())
+//            for (int i=0; i< fields.size(); i++)
+//                fieldsID[i] = getFieldPosition(1) + ((getFieldPosition(i) - getFieldPosition(1)) / 10);
+//        else
+//            for (int i=0; i< fields.size(); i++)
+//                fieldsID[i] = getFieldPosition(1) - ((getFieldPosition(i) - getFieldPosition(1)) * 10);
     }
 
     @Override
@@ -53,15 +52,15 @@ public class IShapeTile extends Tile {
                 moveTile();
             }
         }
-        setFieldsOnBoard();
+        makeFieldsPartOfTile();
     }
 
     void rotationRight() {
-        if (isVertical())
-            for (int i=0; i< fields.size(); i++)
-                fieldsID[i] = getFieldPosition(1) - ((getFieldPosition(i) - getFieldPosition(1)) / 10);
-        else
-            for (int i=0; i< fields.size(); i++)
-                fieldsID[i] = getFieldPosition(1) + ((getFieldPosition(i) - getFieldPosition(1)) * 10);
+//        if (isVertical())
+//            for (int i=0; i< fields.size(); i++)
+//                fieldsID[i] = getFieldPosition(1) - ((getFieldPosition(i) - getFieldPosition(1)) / 10);
+//        else
+//            for (int i=0; i< fields.size(); i++)
+//                fieldsID[i] = getFieldPosition(1) + ((getFieldPosition(i) - getFieldPosition(1)) * 10);
     }
 }

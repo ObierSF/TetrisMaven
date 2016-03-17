@@ -9,8 +9,7 @@ public class LShapeTile extends Tile {
     LShapeTile(Board board) {
         super(board);
         color = "PINK";
-        fields = new ArrayList<Field>(4);
-        fieldsID = new int[4];
+        fields = new ArrayList<Field>();
     }
 
     @Override
@@ -19,7 +18,7 @@ public class LShapeTile extends Tile {
         fields.add(board.getField(14));
         fields.add(board.getField(24));
         fields.add(board.getField(25));
-        setFieldsOnBoard();
+        makeFieldsPartOfTile();
     }
 
     @Override

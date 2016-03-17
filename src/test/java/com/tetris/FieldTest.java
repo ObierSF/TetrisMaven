@@ -16,9 +16,10 @@ public class FieldTest {
 
     @Before
     public void setUp() throws Exception {
-        board = new Board(160);
-        //given random field from board
-        field = board.board.get(4);
+        board = new Board(width * height);
+        //given
+        int pseudoRandomNumber = 4;
+        field = board.getField(pseudoRandomNumber);
     }
 
     @Test
@@ -26,19 +27,21 @@ public class FieldTest {
         //when
         field.placeField();
         //then
-        assertTrue(field.placedField);
-        assertFalse(field.partOfTile);
+        assertTrue(field.isPlacedField());
+        assertFalse(field.isPartOfTile());
         assertFalse(field.isEmpty());
     }
 
     @Test
     public void shouldReturnTrueAfterFieldIsMadePartOfTile() throws Exception {
+        //given
+        String pseudoRandomColor = "RED";
         //when
-        field.makePartOfTile("RED");
+        field.makePartOfTile(pseudoRandomColor);
         //then
-        assertTrue(field.partOfTile);
-        assertEquals(field.color, "RED");
-        assertFalse(field.placedField);
+        assertTrue(field.isPartOfTile());
+        assertEquals(field.getColor(), pseudoRandomColor);
+        assertFalse(field.isPlacedField());
         assertFalse(field.isEmpty());
     }
 
@@ -48,96 +51,243 @@ public class FieldTest {
         field.empty();
         //then
         assertTrue(field.isEmpty());
-        assertFalse(field.partOfTile);
-        assertFalse(field.placedField);
+        assertFalse(field.isPartOfTile());
+        assertFalse(field.isPlacedField());
     }
 
     @Test
     public void shouldReturnLeftBorder() throws Exception {
-        //given random left border position
-        int position = width*7;
+        //given
+        int pseudoRandomNumber = 7;
+        int randomLeftBorderPosition = width * pseudoRandomNumber;
         //when
-        field = board.board.get(position);
+        field = board.getField(randomLeftBorderPosition);
         //then
-        assertEquals(Border.LEFT, field.border);
+        assertEquals(Border.LEFT, field.getBorder());
     }
 
     @Test
     public void shouldReturnRightBorder() throws Exception {
-        //given random right border position
-        int position = width*12-1;
+        //given
+        int pseudoRandomNumber = 12;
+        int randomRightBorderPosition = width * pseudoRandomNumber - 1;
         //when
-        field = board.board.get(position);
+        field = board.getField(randomRightBorderPosition);
         //then
-        assertEquals(Border.RIGHT, field.border);
+        assertEquals(Border.RIGHT, field.getBorder());
     }
     @Test
     public void shouldReturnTopBorder() throws Exception {
-        //given random top border position
-        int position = 1;
+        //given
+        int pseudoRandomNumber = 6;
+        int randomTopBorderPosition = pseudoRandomNumber;
         //when
-        field = board.board.get(position);
+        field = board.getField(randomTopBorderPosition);
         //then
-        assertEquals(Border.TOP, field.border);
+        assertEquals(Border.TOP, field.getBorder());
     }
 
     @Test
     public void shouldReturnBottomBorder() throws Exception {
-        //given random bottom border position
-        int position = height*width-2;
+        //given
+        int pseudoRandomNumber = 2;
+        int randomBottomBorderPosition = height * width - pseudoRandomNumber;
         //when
-        field = board.board.get(position);
+        field = board.getField(randomBottomBorderPosition);
         //then
-        assertEquals(Border.BOTTOM, field.border);
+        assertEquals(Border.BOTTOM, field.getBorder());
     }
 
     @Test
     public void shouldReturnLeftTopCorner() throws Exception {
-        //given left top position
-        int position = 0;
+        //given
+        int leftTopPosition = 0;
         //when
-        field = board.board.get(position);
+        field = board.getField(leftTopPosition);
         //then
-        assertEquals(Border.LEFTTOPCORNER, field.border);
+        assertEquals(Border.LEFTTOPCORNER, field.getBorder());
     }
 
     @Test
     public void shouldReturnRightTopCorner() throws Exception {
-        //given right top position
-        int position = width - 1;
+        //given
+        int rightTopPosition = width - 1;
         //when
-        field = board.board.get(position);
+        field = board.getField(rightTopPosition);
         //then
-        assertEquals(Border.RIGHTTOPCORNER, field.border);
+        assertEquals(Border.RIGHTTOPCORNER, field.getBorder());
     }
 
     @Test
     public void shouldReturnLeftBottomCorner() throws Exception {
-        //given left bottom position
-        int position = height*width-width;
+        //given
+        int leftBottomPosition = height*width-width;
         //when
-        field = board.board.get(position);
+        field = board.getField(leftBottomPosition);
         //then
-        assertEquals(Border.LEFTBOTTOMCORNER, field.border);
+        assertEquals(Border.LEFTBOTTOMCORNER, field.getBorder());
     }
 
     @Test
     public void shouldReturnRightBottomCorner() throws Exception {
-        //given right bottom position
-        int position = height*width-1;
+        //given
+        int rightBottomPosition = height*width-1;
         //when
-        field = board.board.get(position);
+        field = board.getField(rightBottomPosition);
         //then
-        assertEquals(Border.RIGHTBOTTOMCORNER, field.border);
+        assertEquals(Border.RIGHTBOTTOMCORNER, field.getBorder());
     }
 
     @Test
     public void shouldReturnNonBorder() throws Exception {
-        //given random non border position
-        int position = width*14+8;
+        //given
+        int pseudoRandomNumber = 14;
+        int secondPseudoRandomNumber = 8;
+        int randomNonBorderPosition = width * pseudoRandomNumber + secondPseudoRandomNumber;
         //when
-        field = board.board.get(position);
+        field = board.getField(randomNonBorderPosition);
         //then
-        assertEquals(Border.NONBORDER, field.border);
+        assertEquals(Border.NONBORDER, field.getBorder());
+    }
+
+    @Test
+    public void shouldReturnProperSurroundingFieldsForLeftBorder() throws Exception {
+        //given
+        int pseudoRandomNumber = 7;
+        int randomLeftBorderPosition = width * pseudoRandomNumber;
+        SurroundingFields surroundingFields;
+        //when
+        field = board.getField(randomLeftBorderPosition);
+        surroundingFields = field.getSurroundingFields();
+        //then
+        assertNull(surroundingFields.left);
+        assertEquals(board.getField(randomLeftBorderPosition - width), surroundingFields.upper);
+        assertEquals(board.getField(randomLeftBorderPosition + 1), surroundingFields.right);
+        assertEquals(board.getField(randomLeftBorderPosition + width), surroundingFields.lower);
+    }
+
+    @Test
+    public void shouldReturnProperSurroundingFieldsForRightBorder() throws Exception {
+        //given
+        int pseudoRandomNumber = 12;
+        int randomRightBorderPosition = width * pseudoRandomNumber - 1;
+        SurroundingFields surroundingFields;
+        //when
+        field = board.getField(randomRightBorderPosition);
+        surroundingFields = field.getSurroundingFields();
+        //then
+        assertEquals(board.getField(randomRightBorderPosition - width), surroundingFields.upper);
+        assertNull(surroundingFields.right);
+        assertEquals(board.getField(randomRightBorderPosition + width), surroundingFields.lower);
+        assertEquals(board.getField(randomRightBorderPosition - 1), surroundingFields.left);
+    }
+
+    @Test
+    public void shouldReturnProperSurroundingFieldsForTopBorder() throws Exception {
+        //given
+        int pseudoRandomNumber = 6;
+        int randomTopBorderPosition = pseudoRandomNumber;
+        SurroundingFields surroundingFields;
+        //when
+        field = board.getField(randomTopBorderPosition);
+        surroundingFields = field.getSurroundingFields();
+        //then
+        assertNull(surroundingFields.upper);
+        assertEquals(board.getField(randomTopBorderPosition + 1), surroundingFields.right);
+        assertEquals(board.getField(randomTopBorderPosition + width), surroundingFields.lower);
+        assertEquals(board.getField(randomTopBorderPosition - 1), surroundingFields.left);
+    }
+
+    @Test
+    public void shouldReturnProperSurroundingFieldsForBottomBorder() throws Exception {
+        //given
+        int pseudoRandomNumber = 2;
+        int randomBottomBorderPosition = height * width - pseudoRandomNumber;
+        SurroundingFields surroundingFields;
+        //when
+        field = board.getField(randomBottomBorderPosition);
+        surroundingFields = field.getSurroundingFields();
+        //then
+        assertEquals(board.getField(randomBottomBorderPosition - width), surroundingFields.upper);
+        assertEquals(board.getField(randomBottomBorderPosition + 1), surroundingFields.right);
+        assertNull(surroundingFields.lower);
+        assertEquals(board.getField(randomBottomBorderPosition - 1), surroundingFields.left);
+    }
+
+    @Test
+    public void shouldReturnProperSurroundingFieldsForLeftTopCorner() throws Exception {
+        //given
+        int leftTopPosition = 0;
+        SurroundingFields surroundingFields;
+        //when
+        field = board.getField(leftTopPosition);
+        surroundingFields = field.getSurroundingFields();
+        //then
+        assertNull(surroundingFields.upper);
+        assertEquals(board.getField(leftTopPosition + 1), surroundingFields.right);
+        assertEquals(board.getField(leftTopPosition + width), surroundingFields.lower);
+        assertNull(surroundingFields.left);
+    }
+
+    @Test
+    public void shouldReturnProperSurroundingFieldsForRightTopCorner() throws Exception {
+        //given
+        int rightTopPosition = width - 1;
+        SurroundingFields surroundingFields;
+        //when
+        field = board.getField(rightTopPosition);
+        surroundingFields = field.getSurroundingFields();
+        //then
+        assertNull(surroundingFields.upper);
+        assertNull(surroundingFields.right);
+        assertEquals(board.getField(rightTopPosition + width), surroundingFields.lower);
+        assertEquals(board.getField(rightTopPosition - 1), surroundingFields.left);
+    }
+
+    @Test
+    public void shouldReturnProperSurroundingFieldsForLeftBottomCorner() throws Exception {
+        //given
+        int leftBottomPosition = height*width-width;
+        SurroundingFields surroundingFields;
+        //when
+        field = board.getField(leftBottomPosition);
+        surroundingFields = field.getSurroundingFields();
+        //then
+        assertEquals(board.getField(leftBottomPosition - width), surroundingFields.upper);
+        assertEquals(board.getField(leftBottomPosition + 1), surroundingFields.right);
+        assertNull(surroundingFields.lower);
+        assertNull(surroundingFields.left);
+    }
+
+    @Test
+    public void shouldReturnProperSurroundingFieldsForRightBottomCorner() throws Exception {
+        //given
+        int rightBottomPosition = height*width-1;
+        SurroundingFields surroundingFields;
+        //when
+        field = board.getField(rightBottomPosition);
+        surroundingFields = field.getSurroundingFields();
+        //then
+        assertEquals(board.getField(rightBottomPosition - width), surroundingFields.upper);
+        assertNull(surroundingFields.right);
+        assertNull(surroundingFields.lower);
+        assertEquals(board.getField(rightBottomPosition - 1), surroundingFields.left);
+    }
+
+    @Test
+    public void shouldReturnProperSurroundingFieldsForNonBorder() throws Exception {
+        //given
+        int pseudoRandomNumber = 14;
+        int secondPseudoRandomNumber = 8;
+        int randomNonBorderPosition = width * pseudoRandomNumber + secondPseudoRandomNumber;
+        SurroundingFields surroundingFields;
+        //when
+        field = board.getField(randomNonBorderPosition);
+        surroundingFields = field.getSurroundingFields();
+        //then
+        assertEquals(board.getField(randomNonBorderPosition - width), surroundingFields.upper);
+        assertEquals(board.getField(randomNonBorderPosition + 1), surroundingFields.right);
+        assertEquals(board.getField(randomNonBorderPosition + width), surroundingFields.lower);
+        assertEquals(board.getField(randomNonBorderPosition - 1), surroundingFields.left);
     }
 }
