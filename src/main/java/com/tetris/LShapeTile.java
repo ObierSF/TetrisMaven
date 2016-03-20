@@ -9,16 +9,8 @@ public class LShapeTile extends Tile {
     LShapeTile(Board board) {
         super(board);
         color = "PINK";
-        fields = new ArrayList<Field>();
-    }
-
-    @Override
-    void setFields() {
-        fields.add(board.getField(4));
-        fields.add(board.getField(14));
-        fields.add(board.getField(24));
-        fields.add(board.getField(25));
-        makeFieldsPartOfTile();
+        int[] iShapePosition = {4, 14, 24, 25};
+        setUpFields(iShapePosition);
     }
 
     @Override

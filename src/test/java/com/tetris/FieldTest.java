@@ -158,6 +158,7 @@ public class FieldTest {
         SurroundingFields surroundingFields;
         //when
         field = board.getField(randomLeftBorderPosition);
+        field.setSurroundingFields(field.getBorder().determineTheSurroundingFields(board, randomLeftBorderPosition));
         surroundingFields = field.getSurroundingFields();
         //then
         assertNull(surroundingFields.left);
@@ -174,6 +175,7 @@ public class FieldTest {
         SurroundingFields surroundingFields;
         //when
         field = board.getField(randomRightBorderPosition);
+        field.setSurroundingFields(field.getBorder().determineTheSurroundingFields(board, randomRightBorderPosition));
         surroundingFields = field.getSurroundingFields();
         //then
         assertEquals(board.getField(randomRightBorderPosition - width), surroundingFields.upper);
@@ -190,6 +192,7 @@ public class FieldTest {
         SurroundingFields surroundingFields;
         //when
         field = board.getField(randomTopBorderPosition);
+        field.setSurroundingFields(field.getBorder().determineTheSurroundingFields(board, randomTopBorderPosition));
         surroundingFields = field.getSurroundingFields();
         //then
         assertNull(surroundingFields.upper);
@@ -206,6 +209,7 @@ public class FieldTest {
         SurroundingFields surroundingFields;
         //when
         field = board.getField(randomBottomBorderPosition);
+        field.setSurroundingFields(field.getBorder().determineTheSurroundingFields(board, randomBottomBorderPosition));
         surroundingFields = field.getSurroundingFields();
         //then
         assertEquals(board.getField(randomBottomBorderPosition - width), surroundingFields.upper);
@@ -221,6 +225,7 @@ public class FieldTest {
         SurroundingFields surroundingFields;
         //when
         field = board.getField(leftTopPosition);
+        field.setSurroundingFields(field.getBorder().determineTheSurroundingFields(board, leftTopPosition));
         surroundingFields = field.getSurroundingFields();
         //then
         assertNull(surroundingFields.upper);
@@ -236,6 +241,7 @@ public class FieldTest {
         SurroundingFields surroundingFields;
         //when
         field = board.getField(rightTopPosition);
+        field.setSurroundingFields(field.getBorder().determineTheSurroundingFields(board, rightTopPosition));
         surroundingFields = field.getSurroundingFields();
         //then
         assertNull(surroundingFields.upper);
@@ -251,6 +257,7 @@ public class FieldTest {
         SurroundingFields surroundingFields;
         //when
         field = board.getField(leftBottomPosition);
+        field.setSurroundingFields(field.getBorder().determineTheSurroundingFields(board, leftBottomPosition));
         surroundingFields = field.getSurroundingFields();
         //then
         assertEquals(board.getField(leftBottomPosition - width), surroundingFields.upper);
@@ -266,6 +273,7 @@ public class FieldTest {
         SurroundingFields surroundingFields;
         //when
         field = board.getField(rightBottomPosition);
+        field.setSurroundingFields(field.getBorder().determineTheSurroundingFields(board, rightBottomPosition));
         surroundingFields = field.getSurroundingFields();
         //then
         assertEquals(board.getField(rightBottomPosition - width), surroundingFields.upper);
@@ -283,6 +291,7 @@ public class FieldTest {
         SurroundingFields surroundingFields;
         //when
         field = board.getField(randomNonBorderPosition);
+        field.setSurroundingFields(field.getBorder().determineTheSurroundingFields(board, randomNonBorderPosition));
         surroundingFields = field.getSurroundingFields();
         //then
         assertEquals(board.getField(randomNonBorderPosition - width), surroundingFields.upper);

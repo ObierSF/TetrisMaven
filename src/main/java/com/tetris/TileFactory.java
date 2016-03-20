@@ -1,7 +1,5 @@
 package com.tetris;
 
-import com.tetris.Tile.*;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -27,11 +25,10 @@ public class TileFactory {
         shapes.add(new zShapeStrategy());
     }
 
-    Tile getRandomTile() {
+    Tile returnRandomTile() {
         int n = rand.nextInt(7);
         ShapeStrategy shape = shapes.get(n);
         Tile tile = shape.getTileShape(board);
-        tile.setFields();
         return tile;
     }
 }

@@ -10,15 +10,8 @@ public class OShapeTile extends Tile {
         super(board);
         color = "BLUE";
         fields = new ArrayList<Field>();
-    }
-
-    @Override
-    void setFields() {
-        fields.add(board.getField(4));
-        fields.add(board.getField(5));
-        fields.add(board.getField(14));
-        fields.add(board.getField(15));
-        makeFieldsPartOfTile();
+        int[] iShapePosition = {4, 5, 14, 15};
+        setUpFields(iShapePosition);
     }
 
     @Override

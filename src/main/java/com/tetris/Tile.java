@@ -1,5 +1,6 @@
 package com.tetris;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,53 +15,35 @@ abstract class Tile {
         this.board = board;
     }
 
-    abstract void setFields();
     abstract void rotateLeft();
     abstract void rotateRight();
 
-    void makeFieldsPartOfTile() {
-        for (int i=0; i<fields.size(); i++) {
-            fields.get(i).makePartOfTile(color);
+    void setUpFields(int[] shapePosition) {
+        fields = new ArrayList<Field>();
+        for (int i : shapePosition) {
+            fields.add(board.getField(i));
         }
+        makeFieldsPartOfTile();
+    }
+
+    void makeFieldsPartOfTile() {
+        for (Field field : fields) {
+            field.makePartOfTile(color);
+        }
+    }
+
+    boolean isMovePossible(Move move) {
+        return move.isPossible(fields);
     }
 
     void move(Move move) {
-//        if (move.isPossible(fieldsID)) {
-//            move.move(fieldsID);
-//            emptyOldFields();
-//            if (isNewPositionEmpty()) {
-//                moveTile();
-//            }
-//            makeFieldsPartOfTile();
-//        }
+        move.move(fields, color);
     }
 
-    void emptyOldFields() {
-        for (int i=0; i<fields.size(); i++) {
-            fields.get(i).empty();
+    void placeTile() {
+        for (Field field : fields) {
+            field.placeField();
         }
-    }
-
-    boolean isNewPositionEmpty() {
-//        for (int i=0; i<fieldsID.length; i++) {
-//            if (!board.getField(fieldsID[i]).isEmpty())
-//                return false;
-//        }
-        return true;
-    }
-
-    void moveTile() {
-//        for (int i=0; i<fieldsID.length; i++) {
-//            fields.set(i, board.getField(fieldsID[i]));
-//        }
-    }
-
-    boolean isRotationPossible() {
-//        for (int i=0; i<fields.size(); i++) {
-//            if (fieldsID[i] < 0 || fieldsID[i] > 159 || fieldsID[i]%10 - fieldsID[1]%10 > 2)
-//                return false;
-//        }
-        return true;
     }
 
     int getFieldPosition(int n) {
@@ -68,6 +51,10 @@ abstract class Tile {
     }
 
     boolean isVertical() {
-        return Math.abs(fields.get(0).getPosition() - fields.get(1).getPosition()) == 10;
+        return Math.abs(getFieldPosition(0) - getFieldPosition(1)) == 10;
+    }
+
+    boolean isUpSideDown() {
+        return getFieldPosition(0) > getFieldPosition(1);
     }
 }

@@ -1,6 +1,7 @@
 package com.tetris;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,7 @@ public class Field {
     @Getter private String color;
     @Getter private Border border;
     private List<BorderStrategy> borderStrategy;
-    @Getter private SurroundingFields surroundingFields;
+    @Getter @Setter private SurroundingFields surroundingFields;
 
 
     Field(int position) {
@@ -26,10 +27,6 @@ public class Field {
         placedField = false;
         prepareBorderStrategy();
         checkBorder();
-    }
-
-    void setSurroundingFields(Board board) {
-        surroundingFields = border.getSurroundingFields(board, position);
     }
 
     void prepareBorderStrategy() {

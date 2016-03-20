@@ -8,20 +8,17 @@ import java.util.List;
  */
 public class Board {
     private List<Field> board;
-    private int length;
+    private int fieldsNumber;
 
-    Board(int length) {
-        this.length = length;
-        board = new ArrayList<Field>(length);
-        for(int i=0; i<length; i++) {
+    Board(int fieldsNumber) {
+        this.fieldsNumber = fieldsNumber;
+        board = new ArrayList<Field>(fieldsNumber);
+        for (int i=0; i<fieldsNumber; i++) {
             board.add(new Field(i));
-        }
-        for (Field field : board) {
-            field.setSurroundingFields(this);
         }
     }
 
-    Field getField(int fieldNumber) {
-        return board.get(fieldNumber);
+    Field getField(int fieldPosition) {
+        return board.get(fieldPosition);
     }
 }

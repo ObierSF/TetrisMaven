@@ -9,7 +9,7 @@ import java.util.List;
 public enum Border {
     LEFTTOPCORNER {
         @Override
-        SurroundingFields getSurroundingFields(Board board, int position) {
+        SurroundingFields determineTheSurroundingFields(Board board, int position) {
             SurroundingFields surroundingFields = new SurroundingFields();
             surroundingFields.upper = null;
             surroundingFields.right = board.getField(position + 1);
@@ -20,7 +20,7 @@ public enum Border {
     },
     RIGHTTOPCORNER {
         @Override
-        SurroundingFields getSurroundingFields(Board board, int position) {
+        SurroundingFields determineTheSurroundingFields(Board board, int position) {
             SurroundingFields surroundingFields = new SurroundingFields();
             surroundingFields.upper = null;
             surroundingFields.right = null;
@@ -31,7 +31,7 @@ public enum Border {
     },
     LEFTBOTTOMCORNER {
         @Override
-        SurroundingFields getSurroundingFields(Board board, int position) {
+        SurroundingFields determineTheSurroundingFields(Board board, int position) {
             SurroundingFields surroundingFields = new SurroundingFields();
             surroundingFields.upper = board.getField(position - width);
             surroundingFields.right = board.getField(position + 1);
@@ -42,7 +42,7 @@ public enum Border {
     },
     RIGHTBOTTOMCORNER {
         @Override
-        SurroundingFields getSurroundingFields(Board board, int position) {
+        SurroundingFields determineTheSurroundingFields(Board board, int position) {
             SurroundingFields surroundingFields = new SurroundingFields();
             surroundingFields.upper = board.getField(position - width);
             surroundingFields.right = null;
@@ -53,7 +53,7 @@ public enum Border {
     },
     LEFT {
         @Override
-        SurroundingFields getSurroundingFields(Board board, int position) {
+        SurroundingFields determineTheSurroundingFields(Board board, int position) {
             SurroundingFields surroundingFields = new SurroundingFields();
             surroundingFields.upper = board.getField(position - width);
             surroundingFields.right = board.getField(position + 1);
@@ -64,7 +64,7 @@ public enum Border {
     },
     RIGHT {
         @Override
-        SurroundingFields getSurroundingFields(Board board, int position) {
+        SurroundingFields determineTheSurroundingFields(Board board, int position) {
             SurroundingFields surroundingFields = new SurroundingFields();
             surroundingFields.upper = board.getField(position - width);
             surroundingFields.right = null;
@@ -75,7 +75,7 @@ public enum Border {
     },
     TOP {
         @Override
-        SurroundingFields getSurroundingFields(Board board, int position) {
+        SurroundingFields determineTheSurroundingFields(Board board, int position) {
             SurroundingFields surroundingFields = new SurroundingFields();
             surroundingFields.upper = null;
             surroundingFields.right = board.getField(position + 1);
@@ -86,7 +86,7 @@ public enum Border {
     },
     BOTTOM {
         @Override
-        SurroundingFields getSurroundingFields(Board board, int position) {
+        SurroundingFields determineTheSurroundingFields(Board board, int position) {
             SurroundingFields surroundingFields = new SurroundingFields();
             surroundingFields.upper = board.getField(position - width);
             surroundingFields.right = board.getField(position + 1);
@@ -97,7 +97,7 @@ public enum Border {
     },
     NONBORDER {
         @Override
-        SurroundingFields getSurroundingFields(Board board, int position) {
+        SurroundingFields determineTheSurroundingFields(Board board, int position) {
             SurroundingFields surroundingFields = new SurroundingFields();
             surroundingFields.upper = board.getField(position - width);
             surroundingFields.right = board.getField(position + 1);
@@ -109,5 +109,5 @@ public enum Border {
 
     final int width = 10;
     final int height = 16;
-    abstract SurroundingFields getSurroundingFields(Board board, int position);
+    abstract SurroundingFields determineTheSurroundingFields(Board board, int position);
 }

@@ -1,7 +1,5 @@
 package com.tetris;
 
-import java.util.ArrayList;
-
 /**
  * Created by User on 06.03.2016.
  */
@@ -9,16 +7,8 @@ public class ZShapeTile extends Tile {
     ZShapeTile(Board board) {
         super(board);
         color = "ORANGE";
-        fields = new ArrayList<Field>();
-    }
-
-    @Override
-    void setFields() {
-        fields.add(board.getField(5));
-        fields.add(board.getField(14));
-        fields.add(board.getField(15));
-        fields.add(board.getField(24));
-        makeFieldsPartOfTile();
+        int[] iShapePosition = {5, 14, 15, 24};
+        setUpFields(iShapePosition);
     }
 
     @Override

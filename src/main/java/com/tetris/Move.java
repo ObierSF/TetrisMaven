@@ -8,60 +8,82 @@ import java.util.List;
 public enum Move {
     FALL {
         @Override
-        boolean isPossible(List<Field> fields) {
-            for (Field field : fields) {
-                if (field.getSurroundingFields().lower == null || field.getSurroundingFields().lower.isPlacedField() == true) {
-                    return false;
-                }
-            }
-            return true;
+        boolean isFieldOnSideNotAvailable(Field field) {
+            return field.getSurroundingFields().lower == null || field.getSurroundingFields().lower.isPlacedField();
         }
 
         @Override
-        void move(List<Field> fields) {
-            for (Field field : fields) {
-//                field = field.getSurroundingFields().lower;
+        void emptyOldFields(List<Field> fields) {
+            for (int i=0; i<fields.size(); i++) {
+                fields.get(i).empty();
+            }
+        }
+
+        @Override
+        void setUpNewFields(List<Field> fields, String color) {
+            for (int i=0; i<fields.size(); i++) {
+                fields.set(i, fields.get(i).getSurroundingFields().lower);
+                fields.get(i).makePartOfTile(color);
             }
         }
     },
     LEFT {
         @Override
-        boolean isPossible(List<Field> fields) {
-            for (Field field : fields) {
-                if (field.getSurroundingFields().left == null || field.getSurroundingFields().left.isPlacedField() == true) {
-                    return false;
-                }
-            }
-            return true;
+        boolean isFieldOnSideNotAvailable(Field field) {
+            return field.getSurroundingFields().left == null || field.getSurroundingFields().left.isPlacedField();
         }
 
         @Override
-        void move(List<Field> fields) {
-            for (Field field : fields) {
-//                field = field.getSurroundingFields().left;
+        void emptyOldFields(List<Field> fields) {
+            for (int i=0; i<fields.size(); i++) {
+                fields.get(i).empty();
+            }
+        }
+
+        @Override
+        void setUpNewFields(List<Field> fields, String color) {
+            for (int i=0; i<fields.size(); i++) {
+                fields.set(i, fields.get(i).getSurroundingFields().left);
+                fields.get(i).makePartOfTile(color);
             }
         }
     },
     RIGHT {
         @Override
-        boolean isPossible(List<Field> fields) {
-            for (Field field : fields) {
-                if (field.getSurroundingFields().right == null || field.getSurroundingFields().right.isPlacedField() == true) {
-                    return false;
-                }
-            }
-            return true;
+        boolean isFieldOnSideNotAvailable(Field field) {
+            return field.getSurroundingFields().right == null || field.getSurroundingFields().right.isPlacedField();
         }
 
         @Override
-        void move(List<Field> fields) {
-            for (Field field : fields) {
-//                field = field.getSurroundingFields().right;
+        void emptyOldFields(List<Field> fields) {
+            for (int i=0; i<fields.size(); i++) {
+                fields.get(i).empty();
+            }
+        }
+
+        @Override
+        void setUpNewFields(List<Field> fields, String color) {
+            for (int i=0; i<fields.size(); i++) {
+                fields.set(i, fields.get(i).getSurroundingFields().right);
+                fields.get(i).makePartOfTile(color);
             }
         }
     };
 
     final int width = 10;
-    abstract boolean isPossible(List<Field> fields);
-    abstract void move(List<Field> fields);
+    abstract boolean isFieldOnSideNotAvailable(Field field);
+    abstract void emptyOldFields(List<Field> fields);
+    abstract void setUpNewFields(List<Field> fields, String color);
+    boolean isPossible(List<Field> fields) {
+        for (Field field : fields) {
+            if (isFieldOnSideNotAvailable(field)) {
+                return false;
+            }
+        }
+        return true;
+    }
+    void move(List<Field> fields, String color) {
+        emptyOldFields(fields);
+        setUpNewFields(fields, color);
+    }
 }
