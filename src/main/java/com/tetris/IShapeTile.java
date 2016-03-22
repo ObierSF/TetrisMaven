@@ -1,11 +1,13 @@
 package com.tetris;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by User on 06.03.2016.
  */
 public class IShapeTile extends Tile {
+
     IShapeTile(Board board) {
         super(board);
         color = "RED";
@@ -14,10 +16,19 @@ public class IShapeTile extends Tile {
     }
 
     @Override
-    void rotateLeft() {
+    void rotate(String side) {
+        IShapeRotation iShapeRotation = getRotation(side);
+        if (iShapeRotation != null && iShapeRotation.isPossible(fields)) {
+            iShapeRotation.rotate(fields);
+        }
     }
 
-    @Override
-    void rotateRight() {
+    private IShapeRotation getRotation(String side) {
+        for (RotationVariantStrategy strategy : rotationVariantStrategies) {
+            if (strategy.validate(fields, side)) {
+                return strategy.getIShapeRotation();
+            }
+        }
+        return null;
     }
 }

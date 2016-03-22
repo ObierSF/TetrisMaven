@@ -12,55 +12,19 @@ public class TShapeTile extends Tile {
     }
 
     @Override
-    void rotateLeft() {
-//        int[] temp = new int[4];
-//        rotationLeftPointers(temp);
-//        if (isAbleToRotate(temp)) {
-//            emptyOldFields();
-//            movePointers(temp);
-//            makeFieldsPartOfTile();
-//        }
+    void rotate(String side) {
+        TShapeRotation tShapeRotation = getRotation(side);
+        if (tShapeRotation != null && tShapeRotation.isPossible(fields)) {
+            tShapeRotation.rotate(fields);
+        }
     }
 
-//    void rotationLeftPointers(int[] temp) {
-//        if (isVertical()) {
-//            temp[0] = fields[3];
-//            temp[1] = fields[1];
-//            temp[3] = fields[2];
-//            temp[2] = fields[1] + ((fields[2] - fields[1]) / 10);
-//        }
-//        else {
-//            temp[0] = fields[3];
-//            temp[1] = fields[1];
-//            temp[3] = fields[2];
-//            temp[2] = fields[1] + ((fields[2] - fields[1]) * -10);
-//        }
-//    }
-
-    @Override
-    void rotateRight() {
-//        int[] temp = new int[4];
-//        rotationRightPointers(temp);
-//        if (isAbleToRotate(temp)) {
-//            emptyOldFields();
-//            movePointers(temp);
-//            makeFieldsPartOfTile();
-//        }
-//        rotationRightPointers(temp);
+    private TShapeRotation getRotation(String side) {
+        for (RotationVariantStrategy strategy : rotationVariantStrategies) {
+            if (strategy.validate(fields, side)) {
+                return strategy.getTShapeRotation();
+            }
+        }
+        return null;
     }
-
-//    void rotationRightPointers(int[] temp) {
-//        if (isVertical()) {
-//            temp[1] = fields[1];
-//            temp[2] = fields[3];
-//            temp[3] = fields[0];
-//            temp[0] = fields[1] + ((fields[0] - fields[1]) / -10);
-//        }
-//        else {
-//            temp[1] = fields[1];
-//            temp[2] = fields[3];
-//            temp[3] = fields[0];
-//            temp[0] = fields[1] + ((fields[0] - fields[1]) * 10);
-//        }
-//    }
 }

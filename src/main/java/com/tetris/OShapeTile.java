@@ -15,12 +15,7 @@ public class OShapeTile extends Tile {
     }
 
     @Override
-    void rotateLeft() {
-        //rotation doesn't change a thing
-    }
+    void rotate(String side) {
 
-    @Override
-    void rotateRight() {
-        //rotation doesn't change a thing
     }
 }

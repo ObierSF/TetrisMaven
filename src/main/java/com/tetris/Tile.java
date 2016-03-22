@@ -1,5 +1,7 @@
 package com.tetris;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,16 +9,17 @@ import java.util.List;
  * Created by User on 06.03.2016.
  */
 abstract class Tile {
-    protected List<Field> fields;
+    protected List<RotationVariantStrategy> rotationVariantStrategies;
+    @Getter protected List<Field> fields;
     protected Board board;
     protected String color;
 
     Tile(Board board) {
         this.board = board;
+        prepareRotationStrategy();
     }
 
-    abstract void rotateLeft();
-    abstract void rotateRight();
+    abstract void rotate(String side);
 
     void setUpFields(int[] shapePosition) {
         fields = new ArrayList<Field>();
@@ -24,6 +27,14 @@ abstract class Tile {
             fields.add(board.getField(i));
         }
         makeFieldsPartOfTile();
+    }
+
+    void prepareRotationStrategy() {
+        rotationVariantStrategies = new ArrayList<RotationVariantStrategy>(4);
+        rotationVariantStrategies.add(new VerticalUpRotationStrategy());
+        rotationVariantStrategies.add(new HorizontalDownRotationStrategy());
+        rotationVariantStrategies.add(new VerticalDownRotationStrategy());
+        rotationVariantStrategies.add(new HorizontalUpRotationStrategy());
     }
 
     void makeFieldsPartOfTile() {

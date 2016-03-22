@@ -16,13 +16,13 @@ public class TileFactory {
         this.board = board;
         rand = new Random();
         shapes = new ArrayList<ShapeStrategy>(7);
-        shapes.add(new iShapeStrategy());
-        shapes.add(new oShapeStrategy());
-        shapes.add(new tShapeStrategy());
-        shapes.add(new lShapeStrategy());
-        shapes.add(new jShapeStrategy());
-        shapes.add(new sShapeStrategy());
-        shapes.add(new zShapeStrategy());
+        shapes.add(new IShapeStrategy());
+        shapes.add(new OShapeStrategy());
+        shapes.add(new TShapeStrategy());
+        shapes.add(new LShapeStrategy());
+        shapes.add(new JShapeStrategy());
+        shapes.add(new SShapeStrategy());
+        shapes.add(new ZShapeStrategy());
     }
 
     Tile returnRandomTile() {

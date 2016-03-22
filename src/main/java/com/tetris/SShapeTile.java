@@ -12,12 +12,19 @@ public class SShapeTile extends Tile {
     }
 
     @Override
-    void rotateLeft() {
-
+    void rotate(String side) {
+        SShapeRotation sShapeRotation = getRotation(side);
+        if (sShapeRotation != null && sShapeRotation.isPossible(fields)) {
+            sShapeRotation.rotate(fields);
+        }
     }
 
-    @Override
-    void rotateRight() {
-
+    private SShapeRotation getRotation(String side) {
+        for (RotationVariantStrategy strategy : rotationVariantStrategies) {
+            if (strategy.validate(fields, side)) {
+                return strategy.getSShapeRotation();
+            }
+        }
+        return null;
     }
 }

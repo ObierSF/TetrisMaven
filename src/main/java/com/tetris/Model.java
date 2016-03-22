@@ -8,15 +8,15 @@ public class Model {
     private TileFactory tileFactory;
     Tile tile;
 
-    Model(int fieldsNumber) {
-        board = new Board(fieldsNumber);
-        for (int i=0; i<fieldsNumber; i++) {
+    Model(int width, int height) {
+        board = new Board(width, height);
+        for (int i=0; i<width * height; i++) {
             board.getField(i).setSurroundingFields(board.getField(i).getBorder().determineTheSurroundingFields(board, i));
         }
         tileFactory = new TileFactory(board);
     }
 
-    void determineRandomTile() {
+    void setRandomTile() {
         tile = tileFactory.returnRandomTile();
     }
 
@@ -32,13 +32,27 @@ public class Model {
         }
     }
 
+    void rotateTileLeft() {
+        tile.rotate("left");
+    }
+
+    void rotateTileRight() {
+        tile.rotate("right");
+    }
+
+    boolean canTileFall() {
+        return tile.isMovePossible(Move.FALL);
+    }
+
     void tileFall() {
-        if (tile.isMovePossible(Move.FALL)) {
-            tile.move(Move.FALL);
-        }
-        else {
-            tile.placeTile();
-            determineRandomTile();
-        }
+        tile.move(Move.FALL);
+    }
+
+    void placeTile() {
+        tile.placeTile();
+    }
+
+    void clearFullRows() {
+
     }
 }

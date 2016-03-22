@@ -12,12 +12,19 @@ public class ZShapeTile extends Tile {
     }
 
     @Override
-    void rotateLeft() {
-
+    void rotate(String side) {
+        ZShapeRotation zShapeRotation = getRotation(side);
+        if (zShapeRotation != null && zShapeRotation.isPossible(fields)) {
+            zShapeRotation.rotate(fields);
+        }
     }
 
-    @Override
-    void rotateRight() {
-
+    private ZShapeRotation getRotation(String side) {
+        for (RotationVariantStrategy strategy : rotationVariantStrategies) {
+            if (strategy.validate(fields, side)) {
+                return strategy.getZShapeRotation();
+            }
+        }
+        return null;
     }
 }

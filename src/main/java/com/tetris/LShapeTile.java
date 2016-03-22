@@ -14,17 +14,19 @@ public class LShapeTile extends Tile {
     }
 
     @Override
-    void rotateLeft() {
-        if(isVertical()) {
-
-        }
-        else {
-
+    void rotate(String side) {
+        LShapeRotation lShapeRotation = getRotation(side);
+        if (lShapeRotation != null && lShapeRotation.isPossible(fields)) {
+            lShapeRotation.rotate(fields);
         }
     }
 
-    @Override
-    void rotateRight() {
-
+    private LShapeRotation getRotation(String side) {
+        for (RotationVariantStrategy strategy : rotationVariantStrategies) {
+            if (strategy.validate(fields, side)) {
+                return strategy.getLShapeRotation();
+            }
+        }
+        return null;
     }
 }

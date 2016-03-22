@@ -15,12 +15,19 @@ class JShapeTile extends Tile {
     }
 
     @Override
-    void rotateLeft() {
-
+    void rotate(String side) {
+        JShapeRotation jShapeRotation = getRotation(side);
+        if (jShapeRotation != null && jShapeRotation.isPossible(fields)) {
+            jShapeRotation.rotate(fields);
+        }
     }
 
-    @Override
-    void rotateRight() {
-
+    private JShapeRotation getRotation(String side) {
+        for (RotationVariantStrategy strategy : rotationVariantStrategies) {
+            if (strategy.validate(fields, side)) {
+                return strategy.getJShapeRotation();
+            }
+        }
+        return null;
     }
 }

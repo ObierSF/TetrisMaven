@@ -8,10 +8,14 @@ import java.util.List;
  */
 public class Board {
     private List<Field> board;
-    private int fieldsNumber;
+    private int width;
+    private int height;
 
-    Board(int fieldsNumber) {
-        this.fieldsNumber = fieldsNumber;
+    Board(int width, int height) {
+        this.width = width;
+        this.height = height;
+        int fieldsNumber = width * height;
+
         board = new ArrayList<Field>(fieldsNumber);
         for (int i=0; i<fieldsNumber; i++) {
             board.add(new Field(i));
