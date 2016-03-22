@@ -7,7 +7,7 @@ public class TShapeTile extends Tile {
     TShapeTile(Board board) {
         super(board);
         color = "YELLOW";
-        int[] iShapePosition = {4, 5, 6, 15};
+        int[] iShapePosition = {4, 14, 24, 13};
         setUpFields(iShapePosition);
     }
 
