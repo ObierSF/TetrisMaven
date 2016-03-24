@@ -1,5 +1,6 @@
 package com.tetris;
 
+import com.tetris.BorderStrategy.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -50,56 +51,56 @@ public class Field {
         }
     }
 
-    void placeField() {
+    public void placeField() {
         partOfTile = false;
         placedField = true;
     }
 
-    void makePartOfTile(String color) {
+    public void makePartOfTile(String color) {
         this.color = color;
         partOfTile = true;
         placedField = false;
     }
 
-    void empty() {
+    public void empty() {
         color = "";
         partOfTile = false;
         placedField = false;
     }
 
-    boolean isEmpty() {
+    public boolean isEmpty() {
         return !placedField && !partOfTile;
     }
 
-    Field getRightNeighbour() {
+    public Field getRightNeighbour() {
         return surroundingFields.right;
     }
 
-    Field getLeftNeighbour() {
+    public Field getLeftNeighbour() {
         return surroundingFields.left;
     }
 
-    Field getUpperNeighbour() {
+    public Field getUpperNeighbour() {
         return surroundingFields.upper;
     }
 
-    Field getLowerNeighbour() {
+    public Field getLowerNeighbour() {
         return surroundingFields.lower;
     }
 
-    boolean isLeftNeighbourPlacedField() {
+    public boolean isLeftNeighbourPlacedField() {
         return surroundingFields.left.isPlacedField();
     }
 
-    boolean isRightNeighbourPlacedField() {
+    public boolean isRightNeighbourPlacedField() {
         return surroundingFields.right.isPlacedField();
     }
 
-    boolean isUpperNeighbourPlacedField() {
+    public boolean isUpperNeighbourPlacedField() {
         return surroundingFields.upper.isPlacedField();
     }
 
-    boolean isLowerNeighbourPlacedField() {
+    public boolean isLowerNeighbourPlacedField() {
         return surroundingFields.lower.isPlacedField();
     }
 }

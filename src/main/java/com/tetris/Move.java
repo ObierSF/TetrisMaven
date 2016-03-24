@@ -74,7 +74,7 @@ public enum Move {
     abstract boolean isFieldOnSideNotAvailable(Field field);
     abstract void emptyOldFields(List<Field> fields);
     abstract void setUpNewFields(List<Field> fields, String color);
-    boolean isPossible(List<Field> fields) {
+    public boolean isPossible(List<Field> fields) {
         for (Field field : fields) {
             if (isFieldOnSideNotAvailable(field)) {
                 return false;
@@ -82,7 +82,7 @@ public enum Move {
         }
         return true;
     }
-    void move(List<Field> fields, String color) {
+    public void move(List<Field> fields, String color) {
         emptyOldFields(fields);
         setUpNewFields(fields, color);
     }

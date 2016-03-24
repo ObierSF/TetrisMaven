@@ -1,5 +1,7 @@
 package com.tetris;
 
+import com.tetris.Tile.IShapeTile;
+import com.tetris.Tile.Tile;
 import org.junit.Before;
 import org.junit.Test;
 

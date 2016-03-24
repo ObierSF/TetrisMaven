@@ -1,5 +1,8 @@
 package com.tetris;
 
+import com.tetris.ShapeStrategy.*;
+import com.tetris.Tile.Tile;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

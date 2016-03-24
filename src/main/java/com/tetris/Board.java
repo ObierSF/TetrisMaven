@@ -22,7 +22,7 @@ public class Board {
         }
     }
 
-    Field getField(int fieldPosition) {
+    public Field getField(int fieldPosition) {
         return board.get(fieldPosition);
     }
 }

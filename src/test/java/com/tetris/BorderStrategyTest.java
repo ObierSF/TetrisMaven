@@ -1,11 +1,8 @@
 package com.tetris;
 
-import org.junit.Before;
+import com.tetris.BorderStrategy.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by User on 09.03.2016.

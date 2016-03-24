@@ -1,5 +1,7 @@
 package com.tetris;
 
+import com.tetris.Tile.Tile;
+
 /**
  * Created by User on 21.03.2016.
  */
