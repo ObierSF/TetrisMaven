@@ -70,4 +70,36 @@ public class Field {
     boolean isEmpty() {
         return !placedField && !partOfTile;
     }
+
+    Field getRightNeighbour() {
+        return surroundingFields.right;
+    }
+
+    Field getLeftNeighbour() {
+        return surroundingFields.left;
+    }
+
+    Field getUpperNeighbour() {
+        return surroundingFields.upper;
+    }
+
+    Field getLowerNeighbour() {
+        return surroundingFields.lower;
+    }
+
+    boolean isLeftNeighbourPlacedField() {
+        return surroundingFields.left.isPlacedField();
+    }
+
+    boolean isRightNeighbourPlacedField() {
+        return surroundingFields.right.isPlacedField();
+    }
+
+    boolean isUpperNeighbourPlacedField() {
+        return surroundingFields.upper.isPlacedField();
+    }
+
+    boolean isLowerNeighbourPlacedField() {
+        return surroundingFields.lower.isPlacedField();
+    }
 }

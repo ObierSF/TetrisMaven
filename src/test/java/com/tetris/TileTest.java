@@ -23,36 +23,25 @@ public class TileTest {
     }
 
     @Test
-    public void shouldReturnTrueForVerticalTile() throws Exception {
-        //given
-        Tile verticalTile = new IShapeTile(board);
-        //then
-        assertTrue(verticalTile.isVertical());
-    }
-
-    @Test
-    public void shouldReturnFalseForUpSideDownTile() throws Exception {
-        //given
-        Tile notUpSideDownTile = new IShapeTile(board);
-        //then
-        assertFalse(notUpSideDownTile.isUpSideDown());
-    }
-
-    @Test
     public void shouldNotFallBelowBottom() throws Exception {
         //given
         Tile pseudoRandomTile = new IShapeTile(board);
         int[] bottomPosition = {124, 134, 144, 154};
         int numberOfMovesTillBottom = 12;
         //when
-        for (int i=0; i<numberOfMovesTillBottom; i++)
-            pseudoRandomTile.move(Move.FALL);
+        for (int i=0; i<numberOfMovesTillBottom; i++) {
+            if (pseudoRandomTile.isMovePossible(Move.FALL)) {
+                pseudoRandomTile.move(Move.FALL);
+            }
+        }
         //then
         for (int i=0; i<bottomPosition.length; i++) {
             assertEquals(bottomPosition[i], pseudoRandomTile.getFieldPosition(i));
         }
         //and when
-        pseudoRandomTile.move(Move.FALL);
+        if (pseudoRandomTile.isMovePossible(Move.FALL)) {
+            pseudoRandomTile.move(Move.FALL);
+        }
         //then
         for (int i=0; i<bottomPosition.length; i++) {
             assertEquals(bottomPosition[i], pseudoRandomTile.getFieldPosition(i));
@@ -66,14 +55,19 @@ public class TileTest {
         int[] extremeRightPosition = {8, 9, 18, 19};
         int numberOfMovesTillRightBorder = 4;
         //when
-        for (int i=0; i<numberOfMovesTillRightBorder; i++)
-            pseudoRandomTile.move(Move.RIGHT);
+        for (int i=0; i<numberOfMovesTillRightBorder; i++) {
+            if (pseudoRandomTile.isMovePossible(Move.RIGHT)) {
+                pseudoRandomTile.move(Move.RIGHT);
+            }
+        }
         //then
         for (int i=0; i<extremeRightPosition.length; i++) {
             assertEquals(extremeRightPosition[i], pseudoRandomTile.getFieldPosition(i));
         }
         //and when
-        pseudoRandomTile.move(Move.RIGHT);
+        if (pseudoRandomTile.isMovePossible(Move.RIGHT)) {
+            pseudoRandomTile.move(Move.RIGHT);
+        }
         //then
         for (int i=0; i<extremeRightPosition.length; i++) {
             assertEquals(extremeRightPosition[i], pseudoRandomTile.getFieldPosition(i));
@@ -87,14 +81,19 @@ public class TileTest {
         int[] extremeLeftPosition = {0, 1, 10, 11};
         int numberOfMovesTillLeftBorder = 4;
         //when
-        for (int i=0; i<numberOfMovesTillLeftBorder; i++)
-            pseudoRandomTile.move(Move.LEFT);
+        for (int i=0; i<numberOfMovesTillLeftBorder; i++) {
+            if (pseudoRandomTile.isMovePossible(Move.LEFT)) {
+                pseudoRandomTile.move(Move.LEFT);
+            }
+        }
         //then
         for (int i=0; i<extremeLeftPosition.length; i++) {
             assertEquals(extremeLeftPosition[i], pseudoRandomTile.getFieldPosition(i));
         }
         //and when
-        pseudoRandomTile.move(Move.LEFT);
+        if (pseudoRandomTile.isMovePossible(Move.LEFT)) {
+            pseudoRandomTile.move(Move.LEFT);
+        }
         //then
         for (int i=0; i<extremeLeftPosition.length; i++) {
             assertEquals(extremeLeftPosition[i], pseudoRandomTile.getFieldPosition(i));
@@ -109,7 +108,9 @@ public class TileTest {
         int belowFieldPosition = 44;
         //when
         board.getField(belowFieldPosition).placeField();
-        pseudoRandomTile.move(Move.FALL);
+        if (pseudoRandomTile.isMovePossible(Move.FALL)) {
+            pseudoRandomTile.move(Move.FALL);
+        }
         //then
         for (int i=0; i<tilePosition.length; i++) {
             assertEquals(tilePosition[i], pseudoRandomTile.getFieldPosition(i));
@@ -124,7 +125,9 @@ public class TileTest {
         int placedLeftFieldPosition = 13;
         //when
         board.getField(placedLeftFieldPosition).placeField();
-        pseudoRandomTile.move(Move.LEFT);
+        if (pseudoRandomTile.isMovePossible(Move.LEFT)) {
+            pseudoRandomTile.move(Move.LEFT);
+        }
         //then
         for (int i=0; i<tilePosition.length; i++) {
             assertEquals(tilePosition[i], pseudoRandomTile.getFieldPosition(i));
@@ -139,7 +142,9 @@ public class TileTest {
         int placedRightFieldPosition = 35;
         //when
         board.getField(placedRightFieldPosition).placeField();
-        pseudoRandomTile.move(Move.RIGHT);
+        if (pseudoRandomTile.isMovePossible(Move.RIGHT)) {
+            pseudoRandomTile.move(Move.RIGHT);
+        }
         //then
         for (int i=0; i<tilePosition.length; i++) {
             assertEquals(tilePosition[i], pseudoRandomTile.getFieldPosition(i));

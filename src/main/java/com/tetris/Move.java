@@ -9,7 +9,7 @@ public enum Move {
     FALL {
         @Override
         boolean isFieldOnSideNotAvailable(Field field) {
-            return field.getSurroundingFields().lower == null || field.getSurroundingFields().lower.isPlacedField();
+            return field.getLowerNeighbour() == null || field.isLowerNeighbourPlacedField();
         }
 
         @Override
@@ -22,7 +22,7 @@ public enum Move {
         @Override
         void setUpNewFields(List<Field> fields, String color) {
             for (int i=0; i<fields.size(); i++) {
-                fields.set(i, fields.get(i).getSurroundingFields().lower);
+                fields.set(i, fields.get(i).getLowerNeighbour());
                 fields.get(i).makePartOfTile(color);
             }
         }
@@ -30,7 +30,7 @@ public enum Move {
     LEFT {
         @Override
         boolean isFieldOnSideNotAvailable(Field field) {
-            return field.getSurroundingFields().left == null || field.getSurroundingFields().left.isPlacedField();
+            return field.getLeftNeighbour() == null || field.isLeftNeighbourPlacedField();
         }
 
         @Override
@@ -43,7 +43,7 @@ public enum Move {
         @Override
         void setUpNewFields(List<Field> fields, String color) {
             for (int i=0; i<fields.size(); i++) {
-                fields.set(i, fields.get(i).getSurroundingFields().left);
+                fields.set(i, fields.get(i).getLeftNeighbour());
                 fields.get(i).makePartOfTile(color);
             }
         }
@@ -51,7 +51,7 @@ public enum Move {
     RIGHT {
         @Override
         boolean isFieldOnSideNotAvailable(Field field) {
-            return field.getSurroundingFields().right == null || field.getSurroundingFields().right.isPlacedField();
+            return field.getRightNeighbour() == null || field.isRightNeighbourPlacedField();
         }
 
         @Override
@@ -64,7 +64,7 @@ public enum Move {
         @Override
         void setUpNewFields(List<Field> fields, String color) {
             for (int i=0; i<fields.size(); i++) {
-                fields.set(i, fields.get(i).getSurroundingFields().right);
+                fields.set(i, fields.get(i).getRightNeighbour());
                 fields.get(i).makePartOfTile(color);
             }
         }

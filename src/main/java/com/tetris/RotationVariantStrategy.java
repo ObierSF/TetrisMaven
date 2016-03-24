@@ -15,10 +15,15 @@ abstract class RotationVariantStrategy {
     abstract ZShapeRotation getZShapeRotation();
 
     boolean isVertical(List<Field> fields) {
-        return Math.abs(fields.get(0).getPosition() - fields.get(1).getPosition()) == 10;
+        int width = 10;
+        int higherFieldPosition = fields.get(0).getPosition();
+        int lowerFieldPosition = fields.get(1).getPosition();
+        return Math.abs(higherFieldPosition - lowerFieldPosition) == width;
     }
 
     boolean isUpSideDown(List<Field> fields) {
-        return fields.get(0).getPosition() > fields.get(1).getPosition();
+        int higherFieldPosition = fields.get(0).getPosition();
+        int lowerFieldPosition = fields.get(1).getPosition();
+        return higherFieldPosition > lowerFieldPosition;
     }
 }

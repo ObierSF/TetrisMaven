@@ -60,12 +60,4 @@ abstract class Tile {
     int getFieldPosition(int n) {
         return fields.get(n).getPosition();
     }
-
-    boolean isVertical() {
-        return Math.abs(getFieldPosition(0) - getFieldPosition(1)) == 10;
-    }
-
-    boolean isUpSideDown() {
-        return getFieldPosition(0) > getFieldPosition(1);
-    }
 }

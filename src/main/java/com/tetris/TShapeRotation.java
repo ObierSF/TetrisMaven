@@ -13,22 +13,22 @@ public enum TShapeRotation {
         }
 
         private boolean isFirstPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().right != null && !fields.get(1).getSurroundingFields().right.isPlacedField();
+            return fields.get(1).getRightNeighbour() != null && !fields.get(1).isRightNeighbourPlacedField();
         }
 
         private boolean isThrirdPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().left != null && !fields.get(1).getSurroundingFields().left.isPlacedField();
+            return fields.get(1).getLeftNeighbour() != null && !fields.get(1).isLeftNeighbourPlacedField();
         }
 
         private boolean isForthPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().upper != null && !fields.get(1).getSurroundingFields().upper.isPlacedField();
+            return fields.get(1).getUpperNeighbour() != null && !fields.get(1).isUpperNeighbourPlacedField();
         }
 
         @Override
         void rotate(List<Field> fields) {
-            fields.set(0, fields.get(1).getSurroundingFields().right);
-            fields.set(2, fields.get(1).getSurroundingFields().left);
-            fields.set(3, fields.get(1).getSurroundingFields().upper);
+            fields.set(0, fields.get(1).getRightNeighbour());
+            fields.set(2, fields.get(1).getLeftNeighbour());
+            fields.set(3, fields.get(1).getUpperNeighbour());
         }
     },
     VERTICALDOWN {
@@ -38,22 +38,22 @@ public enum TShapeRotation {
         }
 
         private boolean isFirstPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().lower != null && !fields.get(1).getSurroundingFields().lower.isPlacedField();
+            return fields.get(1).getLowerNeighbour() != null && !fields.get(1).isLowerNeighbourPlacedField();
         }
 
         private boolean isThrirdPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().upper != null && !fields.get(1).getSurroundingFields().upper.isPlacedField();
+            return fields.get(1).getUpperNeighbour() != null && !fields.get(1).isUpperNeighbourPlacedField();
         }
 
         private boolean isForthPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().right != null && !fields.get(1).getSurroundingFields().right.isPlacedField();
+            return fields.get(1).getRightNeighbour() != null && !fields.get(1).isRightNeighbourPlacedField();
         }
 
         @Override
         void rotate(List<Field> fields) {
-            fields.set(0, fields.get(1).getSurroundingFields().lower);
-            fields.set(2, fields.get(1).getSurroundingFields().upper);
-            fields.set(3, fields.get(1).getSurroundingFields().right);
+            fields.set(0, fields.get(1).getLowerNeighbour());
+            fields.set(2, fields.get(1).getUpperNeighbour());
+            fields.set(3, fields.get(1).getRightNeighbour());
         }
     },
     HORIZONTALUP {
@@ -63,22 +63,22 @@ public enum TShapeRotation {
         }
 
         private boolean isFirstPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().left != null && !fields.get(1).getSurroundingFields().left.isPlacedField();
+            return fields.get(1).getLeftNeighbour() != null && !fields.get(1).isLeftNeighbourPlacedField();
         }
 
         private boolean isThrirdPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().right != null && !fields.get(1).getSurroundingFields().right.isPlacedField();
+            return fields.get(1).getRightNeighbour() != null && !fields.get(1).isRightNeighbourPlacedField();
         }
 
         private boolean isForthPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().right != null && !fields.get(1).getSurroundingFields().right.isPlacedField();
+            return fields.get(1).getRightNeighbour() != null && !fields.get(1).isRightNeighbourPlacedField();
         }
 
         @Override
         void rotate(List<Field> fields) {
-            fields.set(0, fields.get(1).getSurroundingFields().left);
-            fields.set(2, fields.get(1).getSurroundingFields().right);
-            fields.set(3, fields.get(1).getSurroundingFields().lower);
+            fields.set(0, fields.get(1).getLeftNeighbour());
+            fields.set(2, fields.get(1).getRightNeighbour());
+            fields.set(3, fields.get(1).getLowerNeighbour());
         }
     },
     VERTICALUP {
@@ -88,22 +88,22 @@ public enum TShapeRotation {
         }
 
         private boolean isFirstPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().upper != null && !fields.get(1).getSurroundingFields().upper.isPlacedField();
+            return fields.get(1).getUpperNeighbour() != null && !fields.get(1).isUpperNeighbourPlacedField();
         }
 
         private boolean isThrirdPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().lower != null && !fields.get(1).getSurroundingFields().lower.isPlacedField();
+            return fields.get(1).getLowerNeighbour() != null && !fields.get(1).isLowerNeighbourPlacedField();
         }
 
         private boolean isForthPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().left != null && !fields.get(2).getSurroundingFields().left.isPlacedField();
+            return fields.get(1).getLeftNeighbour() != null && !fields.get(2).isLeftNeighbourPlacedField();
         }
 
         @Override
         void rotate(List<Field> fields) {
-            fields.set(0, fields.get(1).getSurroundingFields().upper);
-            fields.set(2, fields.get(1).getSurroundingFields().lower);
-            fields.set(3, fields.get(1).getSurroundingFields().left);
+            fields.set(0, fields.get(1).getUpperNeighbour());
+            fields.set(2, fields.get(1).getLowerNeighbour());
+            fields.set(3, fields.get(1).getLeftNeighbour());
         }
     };
 

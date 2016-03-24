@@ -2,115 +2,106 @@ package com.tetris;
 
 import java.util.List;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+
 /**
  * Created by User on 22.03.2016.
  */
-public enum IShapeRotation {
+public enum IShapeRotation implements ShapeRotation {
     HORIZONTALDOWN {
-        @Override
-        boolean isPossible(List<Field> fields) {
+        public boolean isPossible(List<Field> fields) {
             return isFirstPositionAvailable(fields) && isThrirdPositionAvailable(fields) && isForthPositionAvailable(fields);
         }
 
         private boolean isFirstPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().right != null && !fields.get(1).getSurroundingFields().right.isPlacedField();
+            return fields.get(1).getRightNeighbour() != null && !fields.get(1).isRightNeighbourPlacedField();
         }
 
         private boolean isThrirdPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().left != null && !fields.get(1).getSurroundingFields().left.isPlacedField();
+            return fields.get(1).getLeftNeighbour() != null && !fields.get(1).isLeftNeighbourPlacedField();
         }
 
         private boolean isForthPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().left.getSurroundingFields().left != null
-                    && !fields.get(1).getSurroundingFields().left.getSurroundingFields().left.isPlacedField();
+            Field leftNeighbour = fields.get(1).getLeftNeighbour();
+            return leftNeighbour.getLeftNeighbour() != null && !leftNeighbour.isLeftNeighbourPlacedField();
         }
 
-        @Override
-        void rotate(List<Field> fields) {
-            fields.set(0, fields.get(1).getSurroundingFields().right);
-            fields.set(2, fields.get(1).getSurroundingFields().left);
-            fields.set(3, fields.get(2).getSurroundingFields().left);
+        public void rotate(List<Field> fields) {
+            fields.set(0, fields.get(1).getRightNeighbour());
+            fields.set(2, fields.get(1).getLeftNeighbour());
+            fields.set(3, fields.get(2).getLeftNeighbour());
         }
     },
     VERTICALDOWN {
-        @Override
-        boolean isPossible(List<Field> fields) {
+        public boolean isPossible(List<Field> fields) {
             return isFirstPositionAvailable(fields) && isThrirdPositionAvailable(fields) && isForthPositionAvailable(fields);
         }
 
         private boolean isFirstPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().lower != null && !fields.get(1).getSurroundingFields().lower.isPlacedField();
+            return fields.get(1).getLowerNeighbour() != null && !fields.get(1).isLowerNeighbourPlacedField();
         }
 
         private boolean isThrirdPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().upper != null && !fields.get(1).getSurroundingFields().upper.isPlacedField();
+            return fields.get(1).getUpperNeighbour() != null && !fields.get(1).isUpperNeighbourPlacedField();
         }
 
         private boolean isForthPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().upper.getSurroundingFields().upper != null
-                    && !fields.get(1).getSurroundingFields().upper.getSurroundingFields().upper.isPlacedField();
+            Field upperNeighbour = fields.get(1).getUpperNeighbour();
+            return upperNeighbour.getUpperNeighbour() != null && !upperNeighbour.isUpperNeighbourPlacedField();
         }
 
-        @Override
-        void rotate(List<Field> fields) {
-            fields.set(0, fields.get(1).getSurroundingFields().lower);
-            fields.set(2, fields.get(1).getSurroundingFields().upper);
-            fields.set(3, fields.get(2).getSurroundingFields().upper);
+        public void rotate(List<Field> fields) {
+            fields.set(0, fields.get(1).getLowerNeighbour());
+            fields.set(2, fields.get(1).getUpperNeighbour());
+            fields.set(3, fields.get(2).getUpperNeighbour());
         }
     },
     HORIZONTALUP {
-        @Override
-        boolean isPossible(List<Field> fields) {
+        public boolean isPossible(List<Field> fields) {
             return isFirstPositionAvailable(fields) && isThrirdPositionAvailable(fields) && isForthPositionAvailable(fields);
         }
 
         private boolean isFirstPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().left != null && !fields.get(1).getSurroundingFields().left.isPlacedField();
+            return fields.get(1).getLeftNeighbour() != null && !fields.get(1).isLeftNeighbourPlacedField();
         }
 
         private boolean isThrirdPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().right != null && !fields.get(1).getSurroundingFields().right.isPlacedField();
+            return fields.get(1).getRightNeighbour() != null && !fields.get(1).isRightNeighbourPlacedField();
         }
 
         private boolean isForthPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().right.getSurroundingFields().right != null
-                    && !fields.get(1).getSurroundingFields().right.getSurroundingFields().right.isPlacedField();
+            Field rightNeighbour = fields.get(1).getRightNeighbour();
+            return rightNeighbour.getRightNeighbour() != null && !rightNeighbour.isRightNeighbourPlacedField();
         }
 
-        @Override
-        void rotate(List<Field> fields) {
-            fields.set(0, fields.get(1).getSurroundingFields().left);
-            fields.set(2, fields.get(1).getSurroundingFields().right);
-            fields.set(3, fields.get(2).getSurroundingFields().right);
+        public void rotate(List<Field> fields) {
+            fields.set(0, fields.get(1).getLeftNeighbour());
+            fields.set(2, fields.get(1).getRightNeighbour());
+            fields.set(3, fields.get(2).getRightNeighbour());
         }
     },
     VERTICALUP {
-        @Override
-        boolean isPossible(List<Field> fields) {
+        public boolean isPossible(List<Field> fields) {
             return isFirstPositionAvailable(fields) && isThrirdPositionAvailable(fields) && isForthPositionAvailable(fields);
         }
 
         private boolean isFirstPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().upper != null && !fields.get(1).getSurroundingFields().upper.isPlacedField();
+            return fields.get(1).getUpperNeighbour() != null && !fields.get(1).isUpperNeighbourPlacedField();
         }
 
         private boolean isThrirdPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().lower != null && !fields.get(1).getSurroundingFields().lower.isPlacedField();
+            return fields.get(1).getLowerNeighbour() != null && !fields.get(1).isLowerNeighbourPlacedField();
         }
 
         private boolean isForthPositionAvailable(List<Field> fields) {
-            return fields.get(1).getSurroundingFields().lower.getSurroundingFields().lower != null
-                    && !fields.get(1).getSurroundingFields().lower.getSurroundingFields().lower.isPlacedField();
+            Field lowerNeighbour = fields.get(1).getLowerNeighbour();
+            return lowerNeighbour.getLowerNeighbour() != null && !lowerNeighbour.isLowerNeighbourPlacedField();
         }
 
-        @Override
-        void rotate(List<Field> fields) {
-            fields.set(0, fields.get(1).getSurroundingFields().upper);
-            fields.set(2, fields.get(1).getSurroundingFields().lower);
-            fields.set(3, fields.get(2).getSurroundingFields().lower);
+        public void rotate(List<Field> fields) {
+            fields.set(0, fields.get(1).getUpperNeighbour());
+            fields.set(2, fields.get(1).getLowerNeighbour());
+            fields.set(3, fields.get(2).getLowerNeighbour());
         }
     };
-
-    abstract boolean isPossible(List<Field> fields);
-    abstract void rotate(List<Field> fields);
 }
