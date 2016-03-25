@@ -6,6 +6,6 @@ import com.tetris.Tile.Tile;
 /**
  * Created by User on 06.03.2016.
  */
-interface ShapeStrategy {
+public interface ShapeStrategy {
     Tile getTileShape(Board board);
 }

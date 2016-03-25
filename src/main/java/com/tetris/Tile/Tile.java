@@ -1,7 +1,7 @@
 package com.tetris.Tile;
 
 import com.tetris.*;
-import com.tetris.Tile.RotationVariant.*;
+import com.tetris.Tile.RotationVariantStrategy.*;
 import lombok.Getter;
 
 import java.util.ArrayList;

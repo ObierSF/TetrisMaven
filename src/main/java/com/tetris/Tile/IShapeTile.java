@@ -1,8 +1,8 @@
 package com.tetris.Tile;
 
 import com.tetris.Board;
-import com.tetris.Tile.RotationVariant.ShapeRotation.IShapeRotation;
-import com.tetris.Tile.RotationVariant.RotationVariantStrategy;
+import com.tetris.Tile.RotationVariantStrategy.ShapeRotation.IShapeRotation;
+import com.tetris.Tile.RotationVariantStrategy.RotationVariantStrategy;
 
 /**
  * Created by User on 06.03.2016.
