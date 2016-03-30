@@ -3,6 +3,7 @@ package com.tetris;
 import com.tetris.tile.rotationvariantstrategy.HorizontalUpRotationStrategy;
 import com.tetris.tile.rotationvariantstrategy.RotationVariantStrategy;
 import com.tetris.tile.rotationvariantstrategy.shaperotation.IShapeRotation;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.ShapeRotation;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -44,10 +45,10 @@ public class HorizontalUpRotationStrategyTest {
         List<Field> verticalUpTile = returnTileWithFieldsPositions(verticalUpTilePositions);
         RotationVariantStrategy horizontalUpRotationStrategy = new HorizontalUpRotationStrategy();
         boolean strategyResponse;
-        IShapeRotation iShapeRotation;
+        ShapeRotation iShapeRotation;
         //when
         if (strategyResponse = horizontalUpRotationStrategy.validate(verticalUpTile, "left")) {
-            iShapeRotation = horizontalUpRotationStrategy.getIShapeRotation();
+            iShapeRotation = horizontalUpRotationStrategy.getShapeRotation("I");
         //then
             assertEquals(IShapeRotation.HORIZONTALUP, iShapeRotation);
         }
@@ -61,10 +62,10 @@ public class HorizontalUpRotationStrategyTest {
         List<Field> verticalDownTile = returnTileWithFieldsPositions(verticalDownTilePositions);
         RotationVariantStrategy horizontalUpRotationStrategy = new HorizontalUpRotationStrategy();
         boolean strategyResponse;
-        IShapeRotation iShapeRotation;
+        ShapeRotation iShapeRotation;
         //when
         if (strategyResponse = horizontalUpRotationStrategy.validate(verticalDownTile, "right")) {
-            iShapeRotation = horizontalUpRotationStrategy.getIShapeRotation();
+            iShapeRotation = horizontalUpRotationStrategy.getShapeRotation("I");
         //then
             assertEquals(IShapeRotation.HORIZONTALUP, iShapeRotation);
         }

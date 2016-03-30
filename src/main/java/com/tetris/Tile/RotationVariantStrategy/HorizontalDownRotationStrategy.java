@@ -13,7 +13,7 @@ import java.util.Map;
 public class HorizontalDownRotationStrategy extends RotationVariantStrategy {
     private Map<String, ShapeRotation> shapeRotationMap;
 
-    HorizontalDownRotationStrategy() {
+    public HorizontalDownRotationStrategy() {
         shapeRotationMap = new HashMap<String, ShapeRotation>();
         shapeRotationMap.put("I", IShapeRotation.HORIZONTALDOWN);
         shapeRotationMap.put("J", JShapeRotation.HORIZONTALDOWN);
@@ -36,37 +36,8 @@ public class HorizontalDownRotationStrategy extends RotationVariantStrategy {
         return side.equals("left") && isVertical(fields) && isUpSideDown(fields);
     }
 
+    @Override
     public ShapeRotation getShapeRotation(String shape) {
         return shapeRotationMap.get(shape);
-    }
-
-    @Override
-    public IShapeRotation getIShapeRotation() {
-        return IShapeRotation.HORIZONTALDOWN;
-    }
-
-    @Override
-    public JShapeRotation getJShapeRotation() {
-        return JShapeRotation.HORIZONTALDOWN;
-    }
-
-    @Override
-    public LShapeRotation getLShapeRotation() {
-        return LShapeRotation.HORIZONTALDOWN;
-    }
-
-    @Override
-    public SShapeRotation getSShapeRotation() {
-        return SShapeRotation.HORIZONTALDOWN;
-    }
-
-    @Override
-    public TShapeRotation getTShapeRotation() {
-        return TShapeRotation.HORIZONTALDOWN;
-    }
-
-    @Override
-    public ZShapeRotation getZShapeRotation() {
-        return ZShapeRotation.HORIZONTALDOWN;
     }
 }

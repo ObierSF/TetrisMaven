@@ -2,7 +2,7 @@ package com.tetris.tile;
 
 import com.tetris.Board;
 import com.tetris.tile.rotationvariantstrategy.RotationVariantStrategy;
-import com.tetris.tile.rotationvariantstrategy.shaperotation.TShapeRotation;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.ShapeRotation;
 
 /**
  * Created by User on 06.03.2016.
@@ -17,16 +17,16 @@ public class TShapeTile extends Tile {
 
     @Override
     public void rotate(String side) {
-        TShapeRotation tShapeRotation = getRotation(side);
+        ShapeRotation tShapeRotation = getRotation(side);
         if (tShapeRotation != null && tShapeRotation.isPossible(fields)) {
             tShapeRotation.rotate(fields);
         }
     }
 
-    private TShapeRotation getRotation(String side) {
+    private ShapeRotation getRotation(String side) {
         for (RotationVariantStrategy strategy : rotationVariantStrategy) {
             if (strategy.validate(fields, side)) {
-                return strategy.getTShapeRotation();
+                return strategy.getShapeRotation("T");
             }
         }
         return null;

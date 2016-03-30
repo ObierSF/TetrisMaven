@@ -3,12 +3,26 @@ package com.tetris.tile.rotationvariantstrategy;
 import com.tetris.*;
 import com.tetris.tile.rotationvariantstrategy.shaperotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by User on 22.03.2016.
  */
 public class VerticalDownRotationStrategy extends RotationVariantStrategy {
+    private Map<String, ShapeRotation> shapeRotationMap;
+
+    public VerticalDownRotationStrategy() {
+        shapeRotationMap = new HashMap<String, ShapeRotation>();
+        shapeRotationMap.put("I", IShapeRotation.VERTICALDOWN);
+        shapeRotationMap.put("J", JShapeRotation.VERTICALDOWN);
+        shapeRotationMap.put("L", LShapeRotation.VERTICALDOWN);
+        shapeRotationMap.put("S", SShapeRotation.VERTICALDOWN);
+        shapeRotationMap.put("T", TShapeRotation.VERTICALDOWN);
+        shapeRotationMap.put("Z", ZShapeRotation.VERTICALDOWN);
+    }
+
     @Override
     public boolean validate(List<Field> fields, String side) {
         return isLeftRotation(fields, side) || isRightRotation(fields, side);
@@ -23,32 +37,7 @@ public class VerticalDownRotationStrategy extends RotationVariantStrategy {
     }
 
     @Override
-    public IShapeRotation getIShapeRotation() {
-        return IShapeRotation.VERTICALDOWN;
-    }
-
-    @Override
-    public JShapeRotation getJShapeRotation() {
-        return JShapeRotation.VERTICALDOWN;
-    }
-
-    @Override
-    public LShapeRotation getLShapeRotation() {
-        return LShapeRotation.VERTICALDOWN;
-    }
-
-    @Override
-    public SShapeRotation getSShapeRotation() {
-        return SShapeRotation.VERTICALDOWN;
-    }
-
-    @Override
-    public TShapeRotation getTShapeRotation() {
-        return TShapeRotation.VERTICALDOWN;
-    }
-
-    @Override
-    public ZShapeRotation getZShapeRotation() {
-        return ZShapeRotation.VERTICALDOWN;
+    public ShapeRotation getShapeRotation(String shape) {
+        return shapeRotationMap.get(shape);
     }
 }

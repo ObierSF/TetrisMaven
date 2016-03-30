@@ -3,6 +3,7 @@ package com.tetris.tile;
 import com.tetris.Board;
 import com.tetris.tile.rotationvariantstrategy.shaperotation.IShapeRotation;
 import com.tetris.tile.rotationvariantstrategy.RotationVariantStrategy;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.ShapeRotation;
 
 /**
  * Created by User on 06.03.2016.
@@ -18,16 +19,16 @@ public class IShapeTile extends Tile {
 
     @Override
     public void rotate(String side) {
-        IShapeRotation iShapeRotation = getRotation(side);
+        ShapeRotation iShapeRotation = getRotation(side);
         if (iShapeRotation != null && iShapeRotation.isPossible(fields)) {
             iShapeRotation.rotate(fields);
         }
     }
 
-    private IShapeRotation getRotation(String side) {
+    private ShapeRotation getRotation(String side) {
         for (RotationVariantStrategy strategy : rotationVariantStrategy) {
             if (strategy.validate(fields, side)) {
-                return strategy.getIShapeRotation();
+                return strategy.getShapeRotation("I");
             }
         }
         return null;

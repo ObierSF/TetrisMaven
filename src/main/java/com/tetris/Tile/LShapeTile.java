@@ -1,7 +1,7 @@
 package com.tetris.tile;
 
 import com.tetris.Board;
-import com.tetris.tile.rotationvariantstrategy.shaperotation.LShapeRotation;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.ShapeRotation;
 import com.tetris.tile.rotationvariantstrategy.RotationVariantStrategy;
 
 /**
@@ -17,16 +17,16 @@ public class LShapeTile extends Tile {
 
     @Override
     public void rotate(String side) {
-        LShapeRotation lShapeRotation = getRotation(side);
+        ShapeRotation lShapeRotation = getRotation(side);
         if (lShapeRotation != null && lShapeRotation.isPossible(fields)) {
             lShapeRotation.rotate(fields);
         }
     }
 
-    private LShapeRotation getRotation(String side) {
+    private ShapeRotation getRotation(String side) {
         for (RotationVariantStrategy strategy : rotationVariantStrategy) {
             if (strategy.validate(fields, side)) {
-                return strategy.getLShapeRotation();
+                return strategy.getShapeRotation("L");
             }
         }
         return null;

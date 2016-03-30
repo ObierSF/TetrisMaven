@@ -2,6 +2,7 @@ package com.tetris;
 
 import com.tetris.tile.rotationvariantstrategy.RotationVariantStrategy;
 import com.tetris.tile.rotationvariantstrategy.shaperotation.IShapeRotation;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.ShapeRotation;
 import com.tetris.tile.rotationvariantstrategy.VerticalUpRotationStrategy;
 import org.junit.Before;
 import org.junit.Test;
@@ -44,12 +45,12 @@ public class VerticalUpRotationStrategyTest {
         List<Field> horizontalDownTile = returnTileWithFieldsPositions(horizontalDownTilePositions);
         RotationVariantStrategy verticalUpRotationStrategy = new VerticalUpRotationStrategy();
         boolean strategyResponse;
-        IShapeRotation iShapeRotation;
+        ShapeRotation ShapeRotation;
         //when
         if (strategyResponse = verticalUpRotationStrategy.validate(horizontalDownTile, "left")) {
-            iShapeRotation = verticalUpRotationStrategy.getIShapeRotation();
+            ShapeRotation = verticalUpRotationStrategy.getShapeRotation("I");
             //then
-            assertEquals(IShapeRotation.VERTICALUP, iShapeRotation);
+            assertEquals(IShapeRotation.VERTICALUP, ShapeRotation);
         }
         assertTrue(strategyResponse);
     }
@@ -61,12 +62,12 @@ public class VerticalUpRotationStrategyTest {
         List<Field> horizontalUpTile = returnTileWithFieldsPositions(horizontalUpTilePositions);
         RotationVariantStrategy verticalUpRotationStrategy = new VerticalUpRotationStrategy();
         boolean strategyResponse;
-        IShapeRotation iShapeRotation;
+        ShapeRotation ShapeRotation;
         //when
         if (strategyResponse = verticalUpRotationStrategy.validate(horizontalUpTile, "right")) {
-            iShapeRotation = verticalUpRotationStrategy.getIShapeRotation();
+            ShapeRotation = verticalUpRotationStrategy.getShapeRotation("I");
         //then
-            assertEquals(IShapeRotation.VERTICALUP, iShapeRotation);
+            assertEquals(IShapeRotation.VERTICALUP, ShapeRotation);
         }
         assertTrue(strategyResponse);
     }
