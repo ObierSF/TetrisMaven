@@ -1,4 +1,4 @@
-package com.tetris.BorderStrategy;
+package com.tetris.borderstrategy;
 
 import com.tetris.Border;
 

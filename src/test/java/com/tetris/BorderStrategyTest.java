@@ -1,6 +1,6 @@
 package com.tetris;
 
-import com.tetris.BorderStrategy.*;
+import com.tetris.borderstrategy.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

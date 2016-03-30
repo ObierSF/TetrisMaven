@@ -1,6 +1,6 @@
 package com.tetris;
 
-import com.tetris.Tile.Tile;
+import com.tetris.tile.Tile;
 
 /**
  * Created by User on 21.03.2016.

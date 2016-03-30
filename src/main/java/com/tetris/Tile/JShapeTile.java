@@ -1,8 +1,8 @@
-package com.tetris.Tile;
+package com.tetris.tile;
 
 import com.tetris.Board;
-import com.tetris.Tile.RotationVariantStrategy.ShapeRotation.JShapeRotation;
-import com.tetris.Tile.RotationVariantStrategy.RotationVariantStrategy;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.JShapeRotation;
+import com.tetris.tile.rotationvariantstrategy.RotationVariantStrategy;
 
 /**
  * Created by User on 06.03.2016.
@@ -25,7 +25,7 @@ public class JShapeTile extends Tile {
     }
 
     private JShapeRotation getRotation(String side) {
-        for (RotationVariantStrategy strategy : rotationVariantStrategies) {
+        for (RotationVariantStrategy strategy : rotationVariantStrategy) {
             if (strategy.validate(fields, side)) {
                 return strategy.getJShapeRotation();
             }

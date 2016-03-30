@@ -1,8 +1,8 @@
 package com.tetris;
 
-import com.tetris.Tile.RotationVariantStrategy.HorizontalDownRotationStrategy;
-import com.tetris.Tile.RotationVariantStrategy.RotationVariantStrategy;
-import com.tetris.Tile.RotationVariantStrategy.ShapeRotation.IShapeRotation;
+import com.tetris.tile.rotationvariantstrategy.HorizontalDownRotationStrategy;
+import com.tetris.tile.rotationvariantstrategy.RotationVariantStrategy;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.IShapeRotation;
 import org.junit.Before;
 import org.junit.Test;
 

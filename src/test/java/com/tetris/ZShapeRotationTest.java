@@ -1,6 +1,6 @@
 package com.tetris;
 
-import com.tetris.Tile.RotationVariantStrategy.ShapeRotation.ZShapeRotation;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.ZShapeRotation;
 import org.junit.Before;
 import org.junit.Test;
 

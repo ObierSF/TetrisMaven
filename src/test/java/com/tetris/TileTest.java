@@ -1,8 +1,8 @@
 package com.tetris;
 
-import com.tetris.Tile.IShapeTile;
-import com.tetris.Tile.OShapeTile;
-import com.tetris.Tile.Tile;
+import com.tetris.tile.IShapeTile;
+import com.tetris.tile.OShapeTile;
+import com.tetris.tile.Tile;
 import org.junit.Before;
 import org.junit.Test;
 

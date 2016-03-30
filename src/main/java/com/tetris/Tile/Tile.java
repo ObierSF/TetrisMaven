@@ -1,7 +1,7 @@
-package com.tetris.Tile;
+package com.tetris.tile;
 
 import com.tetris.*;
-import com.tetris.Tile.RotationVariantStrategy.*;
+import com.tetris.tile.rotationvariantstrategy.*;
 import lombok.Getter;
 
 import java.util.ArrayList;
@@ -11,14 +11,14 @@ import java.util.List;
  * Created by User on 06.03.2016.
  */
 public abstract class Tile {
-    protected List<RotationVariantStrategy> rotationVariantStrategies;
+    protected List<RotationVariantStrategy> rotationVariantStrategy;
     @Getter protected List<Field> fields;
     protected Board board;
     protected String color;
 
     public Tile(Board board) {
         this.board = board;
-        prepareRotationStrategy();
+        rotationVariantStrategy = RotationVariantCreator.getRotationVariantStrategy();
     }
 
     public abstract void rotate(String side);
@@ -29,14 +29,6 @@ public abstract class Tile {
             fields.add(board.getField(i));
         }
         makeFieldsPartOfTile();
-    }
-
-    void prepareRotationStrategy() {
-        rotationVariantStrategies = new ArrayList<RotationVariantStrategy>(4);
-        rotationVariantStrategies.add(new VerticalUpRotationStrategy());
-        rotationVariantStrategies.add(new HorizontalDownRotationStrategy());
-        rotationVariantStrategies.add(new VerticalDownRotationStrategy());
-        rotationVariantStrategies.add(new HorizontalUpRotationStrategy());
     }
 
     void makeFieldsPartOfTile() {

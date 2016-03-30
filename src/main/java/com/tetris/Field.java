@@ -1,10 +1,9 @@
 package com.tetris;
 
-import com.tetris.BorderStrategy.*;
+import com.tetris.borderstrategy.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,21 +25,8 @@ public class Field {
         this.position = position;
         partOfTile = false;
         placedField = false;
-        prepareBorderStrategy();
+        borderStrategy = BorderCreator.getBorderStrategy();
         checkBorder();
-    }
-
-    void prepareBorderStrategy() {
-        borderStrategy = new ArrayList<BorderStrategy>();
-        borderStrategy.add(new LeftTopCornerStrategy());
-        borderStrategy.add(new RightTopCornerStrategy());
-        borderStrategy.add(new LeftBottomCornerStrategy());
-        borderStrategy.add(new RightBottomCornerStrategy());
-        borderStrategy.add(new LeftBorderStrategy());
-        borderStrategy.add(new RightBorderStrategy());
-        borderStrategy.add(new TopBorderStrategy());
-        borderStrategy.add(new BottomBorderStrategy());
-        borderStrategy.add(new NonBorderStrategy());
     }
 
     void checkBorder() {

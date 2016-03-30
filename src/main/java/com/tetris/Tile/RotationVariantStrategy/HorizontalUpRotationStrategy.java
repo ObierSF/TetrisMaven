@@ -1,7 +1,7 @@
-package com.tetris.Tile.RotationVariantStrategy;
+package com.tetris.tile.rotationvariantstrategy;
 
 import com.tetris.*;
-import com.tetris.Tile.RotationVariantStrategy.ShapeRotation.*;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.*;
 
 import java.util.List;
 

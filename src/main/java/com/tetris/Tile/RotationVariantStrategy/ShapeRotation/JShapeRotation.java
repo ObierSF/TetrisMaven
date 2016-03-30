@@ -1,4 +1,4 @@
-package com.tetris.Tile.RotationVariantStrategy.ShapeRotation;
+package com.tetris.tile.rotationvariantstrategy.shaperotation;
 
 import com.tetris.Field;
 
@@ -14,21 +14,21 @@ public enum JShapeRotation implements ShapeRotation {
         }
 
         private boolean isFirstPositionAvailable(List<Field> fields) {
-            return fields.get(1).getRightNeighbour() != null && !fields.get(1).isRightNeighbourPlacedField();
+            return getSecond(fields).getRightNeighbour() != null && !getSecond(fields).isRightNeighbourPlacedField();
         }
 
         private boolean isThrirdPositionAvailable(List<Field> fields) {
-            return fields.get(1).getLeftNeighbour() != null && !fields.get(1).isLeftNeighbourPlacedField();
+            return getSecond(fields).getLeftNeighbour() != null && !getSecond(fields).isLeftNeighbourPlacedField();
         }
 
         private boolean isForthPositionAvailable(List<Field> fields) {
-            Field leftNeighbour = fields.get(1).getLeftNeighbour();
+            Field leftNeighbour = getSecond(fields).getLeftNeighbour();
             return leftNeighbour.getUpperNeighbour() != null && !leftNeighbour.isUpperNeighbourPlacedField();
         }
 
         public void rotate(List<Field> fields) {
-            fields.set(0, fields.get(1).getRightNeighbour());
-            fields.set(2, fields.get(1).getLeftNeighbour());
+            fields.set(0, getSecond(fields).getRightNeighbour());
+            fields.set(2, getSecond(fields).getLeftNeighbour());
             fields.set(3, fields.get(2).getUpperNeighbour());
         }
     },
@@ -38,21 +38,21 @@ public enum JShapeRotation implements ShapeRotation {
         }
 
         private boolean isFirstPositionAvailable(List<Field> fields) {
-            return fields.get(1).getLowerNeighbour() != null && !fields.get(1).isLowerNeighbourPlacedField();
+            return getSecond(fields).getLowerNeighbour() != null && !getSecond(fields).isLowerNeighbourPlacedField();
         }
 
         private boolean isThrirdPositionAvailable(List<Field> fields) {
-            return fields.get(1).getUpperNeighbour() != null && !fields.get(1).isUpperNeighbourPlacedField();
+            return getSecond(fields).getUpperNeighbour() != null && !getSecond(fields).isUpperNeighbourPlacedField();
         }
 
         private boolean isForthPositionAvailable(List<Field> fields) {
-            Field upperNeighbour = fields.get(1).getUpperNeighbour();
+            Field upperNeighbour = getSecond(fields).getUpperNeighbour();
             return upperNeighbour.getRightNeighbour() != null && !upperNeighbour.isRightNeighbourPlacedField();
         }
 
         public void rotate(List<Field> fields) {
-            fields.set(0, fields.get(1).getLowerNeighbour());
-            fields.set(2, fields.get(1).getUpperNeighbour());
+            fields.set(0, getSecond(fields).getLowerNeighbour());
+            fields.set(2, getSecond(fields).getUpperNeighbour());
             fields.set(3, fields.get(2).getRightNeighbour());
         }
     },
@@ -62,21 +62,21 @@ public enum JShapeRotation implements ShapeRotation {
         }
 
         private boolean isFirstPositionAvailable(List<Field> fields) {
-            return fields.get(1).getLeftNeighbour() != null && !fields.get(1).isLeftNeighbourPlacedField();
+            return getSecond(fields).getLeftNeighbour() != null && !getSecond(fields).isLeftNeighbourPlacedField();
         }
 
         private boolean isThrirdPositionAvailable(List<Field> fields) {
-            return fields.get(1).getRightNeighbour() != null && !fields.get(1).isRightNeighbourPlacedField();
+            return getSecond(fields).getRightNeighbour() != null && !getSecond(fields).isRightNeighbourPlacedField();
         }
 
         private boolean isForthPositionAvailable(List<Field> fields) {
-            Field leftNeighbour = fields.get(1).getLeftNeighbour();
+            Field leftNeighbour = getSecond(fields).getLeftNeighbour();
             return leftNeighbour.getLowerNeighbour() != null && !leftNeighbour.isLowerNeighbourPlacedField();
         }
 
         public void rotate(List<Field> fields) {
-            fields.set(0, fields.get(1).getLeftNeighbour());
-            fields.set(2, fields.get(1).getRightNeighbour());
+            fields.set(0, getSecond(fields).getLeftNeighbour());
+            fields.set(2, getSecond(fields).getRightNeighbour());
             fields.set(3, fields.get(2).getLowerNeighbour());
         }
     },
@@ -86,22 +86,26 @@ public enum JShapeRotation implements ShapeRotation {
         }
 
         private boolean isFirstPositionAvailable(List<Field> fields) {
-            return fields.get(1).getUpperNeighbour() != null && !fields.get(1).isUpperNeighbourPlacedField();
+            return getSecond(fields).getUpperNeighbour() != null && !getSecond(fields).isUpperNeighbourPlacedField();
         }
 
         private boolean isThrirdPositionAvailable(List<Field> fields) {
-            return fields.get(1).getLowerNeighbour() != null && !fields.get(1).isLowerNeighbourPlacedField();
+            return getSecond(fields).getLowerNeighbour() != null && !getSecond(fields).isLowerNeighbourPlacedField();
         }
 
         private boolean isForthPositionAvailable(List<Field> fields) {
-            Field lowerNeighbour = fields.get(1).getLowerNeighbour();
+            Field lowerNeighbour = getSecond(fields).getLowerNeighbour();
             return lowerNeighbour.getLeftNeighbour() != null && !lowerNeighbour.isLeftNeighbourPlacedField();
         }
 
         public void rotate(List<Field> fields) {
-            fields.set(0, fields.get(1).getUpperNeighbour());
-            fields.set(2, fields.get(1).getLowerNeighbour());
+            fields.set(0, getSecond(fields).getUpperNeighbour());
+            fields.set(2, getSecond(fields).getLowerNeighbour());
             fields.set(3, fields.get(2).getLeftNeighbour());
         }
+    };
+
+    Field getSecond(List<Field> fields) {
+        return fields.get(1);
     }
 }

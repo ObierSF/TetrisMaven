@@ -1,4 +1,4 @@
-package com.tetris.Tile.RotationVariantStrategy.ShapeRotation;
+package com.tetris.tile.rotationvariantstrategy.shaperotation;
 
 import com.tetris.Field;
 

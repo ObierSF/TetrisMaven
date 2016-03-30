@@ -1,4 +1,4 @@
-package com.tetris.Tile;
+package com.tetris.tile;
 
 import com.tetris.Board;
 import com.tetris.Field;

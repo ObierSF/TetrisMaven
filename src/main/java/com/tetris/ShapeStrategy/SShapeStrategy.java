@@ -1,8 +1,8 @@
-package com.tetris.ShapeStrategy;
+package com.tetris.shapestrategy;
 
 import com.tetris.Board;
-import com.tetris.Tile.SShapeTile;
-import com.tetris.Tile.Tile;
+import com.tetris.tile.SShapeTile;
+import com.tetris.tile.Tile;
 
 /**
  * Created by User on 22.03.2016.
