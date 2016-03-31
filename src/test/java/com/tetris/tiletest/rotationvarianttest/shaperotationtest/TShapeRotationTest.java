@@ -16,32 +16,23 @@ import static org.junit.Assert.*;
  */
 public class TShapeRotationTest {
     Board board;
+    TileCreator tileCreator;
 
     @Before
     public void setUp() throws Exception {
-        int width = 10;
-        int height = 16;
-        int fieldsNumber = width * height;
-        board = new Board(width * height);
+        int fieldsNumber = 160;
+        board = new Board(fieldsNumber);
         for (int i=0; i<fieldsNumber; i++) {
             board.getField(i).setSurroundingFields(board.getField(i).getBorder().determineTheSurroundingFields(board, i));
         }
-    }
-
-    private List<Field> returnTileWithFieldsPositions(int[] positions) {
-        List<Field> tile = new ArrayList<Field>();
-        tile.add(board.getField(positions[0]));
-        tile.add(board.getField(positions[1]));
-        tile.add(board.getField(positions[2]));
-        tile.add(board.getField(positions[3]));
-        return tile;
+        tileCreator = new TileCreator();
     }
 
     @Test
     public void shouldSetJShapeTileHorizontalDown() throws Exception {
         //given
         int[] verticalUpPositions = {4, 14, 24, 13};
-        List<Field> tShapeTileVerticalUp = returnTileWithFieldsPositions(verticalUpPositions);
+        List<Field> tShapeTileVerticalUp = tileCreator.returnTileWithFieldsPositions(verticalUpPositions, board);
         int[] horizontalDownPositions = {15, 14, 13, 4};
         //when
         if (TShapeRotation.HORIZONTALDOWN.isPossible(tShapeTileVerticalUp)) {
@@ -57,7 +48,7 @@ public class TShapeRotationTest {
     public void shouldSetJShapeTileVerticalDown() throws Exception {
         //given
         int[] verticalUpPositions = {4, 14, 24, 13};
-        List<Field> tShapeTileVerticalUp = returnTileWithFieldsPositions(verticalUpPositions);
+        List<Field> tShapeTileVerticalUp = tileCreator.returnTileWithFieldsPositions(verticalUpPositions, board);
         int[] verticalDownPositions = {24, 14, 4, 15};
         //when
         if (TShapeRotation.VERTICALDOWN.isPossible(tShapeTileVerticalUp)) {
@@ -73,7 +64,7 @@ public class TShapeRotationTest {
     public void shouldSetIShapeTileHorizontalUp() throws Exception {
         //given
         int[] verticalUpPositions = {4, 14, 24, 13};
-        List<Field> tShapeTileVerticalUp = returnTileWithFieldsPositions(verticalUpPositions);
+        List<Field> tShapeTileVerticalUp = tileCreator.returnTileWithFieldsPositions(verticalUpPositions, board);
         int[] horizontalUpPositions = {13, 14, 15, 24};
         //when
         if (TShapeRotation.HORIZONTALUP.isPossible(tShapeTileVerticalUp)) {
@@ -89,7 +80,7 @@ public class TShapeRotationTest {
     public void shouldSetIShapeTileVerticalUp() throws Exception {
         //given
         int[] horizontalUpPositions = {13, 14, 15, 24};
-        List<Field> tShapeTileHorizontalUp = returnTileWithFieldsPositions(horizontalUpPositions);
+        List<Field> tShapeTileHorizontalUp = tileCreator.returnTileWithFieldsPositions(horizontalUpPositions, board);
         int[] verticalUpPositions = {4, 14, 24, 13};
         //when
         if (TShapeRotation.VERTICALUP.isPossible(tShapeTileHorizontalUp)) {

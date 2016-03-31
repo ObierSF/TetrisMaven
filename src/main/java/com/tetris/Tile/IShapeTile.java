@@ -2,8 +2,6 @@ package com.tetris.tile;
 
 import com.tetris.Board;
 import com.tetris.tile.rotationvariantstrategy.RotationSide;
-import com.tetris.tile.rotationvariantstrategy.shaperotation.IShapeRotation;
-import com.tetris.tile.rotationvariantstrategy.RotationVariantStrategy;
 import com.tetris.tile.rotationvariantstrategy.shaperotation.ShapeRotation;
 
 /**

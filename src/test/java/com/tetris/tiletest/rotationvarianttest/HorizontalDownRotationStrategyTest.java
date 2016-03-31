@@ -6,7 +6,7 @@ import com.tetris.tile.Shape;
 import com.tetris.tile.rotationvariantstrategy.HorizontalDownRotationStrategy;
 import com.tetris.tile.rotationvariantstrategy.RotationSide;
 import com.tetris.tile.rotationvariantstrategy.RotationVariantStrategy;
-import com.tetris.tile.rotationvariantstrategy.shaperotation.IShapeRotation;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.ishaperotation.IShapeRotation;
 import com.tetris.tile.rotationvariantstrategy.shaperotation.ShapeRotation;
 import org.junit.Before;
 import org.junit.Test;

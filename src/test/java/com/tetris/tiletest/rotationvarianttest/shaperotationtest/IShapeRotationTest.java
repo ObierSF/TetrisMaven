@@ -2,7 +2,7 @@ package com.tetris.tiletest.rotationvarianttest.shaperotationtest;
 
 import com.tetris.Board;
 import com.tetris.Field;
-import com.tetris.tile.rotationvariantstrategy.shaperotation.IShapeRotation;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.ishaperotation.IShapeRotation;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,32 +16,23 @@ import static org.junit.Assert.*;
  */
 public class IShapeRotationTest {
     Board board;
+    TileCreator tileCreator;
 
     @Before
     public void setUp() throws Exception {
-        int width = 10;
-        int height = 16;
-        int fieldsNumber = width * height;
-        board = new Board(width * height);
+        int fieldsNumber = 160;
+        board = new Board(fieldsNumber);
         for (int i=0; i<fieldsNumber; i++) {
             board.getField(i).setSurroundingFields(board.getField(i).getBorder().determineTheSurroundingFields(board, i));
         }
-    }
-
-    private List<Field> returnTileWithFieldsPositions(int[] positions) {
-        List<Field> tile = new ArrayList<Field>();
-        tile.add(board.getField(positions[0]));
-        tile.add(board.getField(positions[1]));
-        tile.add(board.getField(positions[2]));
-        tile.add(board.getField(positions[3]));
-        return tile;
+        tileCreator = new TileCreator();
     }
 
     @Test
     public void shouldSetIShapeTileHorizontalDown() throws Exception {
         //given
         int[] verticalUpPositions = {4, 14, 24, 34};
-        List<Field> iShapeTileVerticalUp = returnTileWithFieldsPositions(verticalUpPositions);
+        List<Field> iShapeTileVerticalUp = tileCreator.returnTileWithFieldsPositions(verticalUpPositions, board);
         int[] horizontalDownPositions = {15, 14, 13, 12};
         //when
         if (IShapeRotation.HORIZONTALDOWN.isPossible(iShapeTileVerticalUp)) {
@@ -57,7 +48,7 @@ public class IShapeRotationTest {
     public void shouldSetIShapeTileVerticalDown() throws Exception {
         //given
         int[] verticalUpPositions = {14, 24, 34, 44};
-        List<Field> iShapeTileVerticalUp = returnTileWithFieldsPositions(verticalUpPositions);
+        List<Field> iShapeTileVerticalUp = tileCreator.returnTileWithFieldsPositions(verticalUpPositions, board);
         int[] verticalDownPositions = {34, 24, 14, 4};
         //when
         if (IShapeRotation.VERTICALDOWN.isPossible(iShapeTileVerticalUp)) {
@@ -73,7 +64,7 @@ public class IShapeRotationTest {
     public void shouldSetIShapeTileHorizontalUp() throws Exception {
         //given
         int[] verticalUpPositions = {4, 14, 24, 34};
-        List<Field> iShapeTileVerticalUp = returnTileWithFieldsPositions(verticalUpPositions);
+        List<Field> iShapeTileVerticalUp = tileCreator.returnTileWithFieldsPositions(verticalUpPositions, board);
         int[] horizontalUpPositions = {13, 14, 15, 16};
         //when
         if (IShapeRotation.HORIZONTALUP.isPossible(iShapeTileVerticalUp)) {
@@ -89,7 +80,7 @@ public class IShapeRotationTest {
     public void shouldSetIShapeTileVerticalUp() throws Exception {
         //given
         int[] horizontalUpPositions = {13, 14, 15, 16};
-        List<Field> iShapeTileHorizontalUp = returnTileWithFieldsPositions(horizontalUpPositions);
+        List<Field> iShapeTileHorizontalUp = tileCreator.returnTileWithFieldsPositions(horizontalUpPositions, board);
         int[] verticalUpPositions = {4, 14, 24, 34};
         //when
         if (IShapeRotation.VERTICALUP.isPossible(iShapeTileHorizontalUp)) {

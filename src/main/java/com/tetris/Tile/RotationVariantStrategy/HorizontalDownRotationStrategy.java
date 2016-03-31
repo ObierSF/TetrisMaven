@@ -3,6 +3,7 @@ package com.tetris.tile.rotationvariantstrategy;
 import com.tetris.*;
 import com.tetris.tile.Shape;
 import com.tetris.tile.rotationvariantstrategy.shaperotation.*;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.ishaperotation.IShapeRotation;
 
 import java.util.HashMap;
 import java.util.List;

@@ -16,32 +16,23 @@ import static org.junit.Assert.*;
  */
 public class SShapeRotationTest {
     Board board;
+    TileCreator tileCreator;
 
     @Before
     public void setUp() throws Exception {
-        int width = 10;
-        int height = 16;
-        int fieldsNumber = width * height;
-        board = new Board(width * height);
+        int fieldsNumber = 160;
+        board = new Board(fieldsNumber);
         for (int i=0; i<fieldsNumber; i++) {
             board.getField(i).setSurroundingFields(board.getField(i).getBorder().determineTheSurroundingFields(board, i));
         }
-    }
-
-    private List<Field> returnTileWithFieldsPositions(int[] positions) {
-        List<Field> tile = new ArrayList<Field>();
-        tile.add(board.getField(positions[0]));
-        tile.add(board.getField(positions[1]));
-        tile.add(board.getField(positions[2]));
-        tile.add(board.getField(positions[3]));
-        return tile;
+        tileCreator = new TileCreator();
     }
 
     @Test
     public void shouldSetJShapeTileHorizontalDown() throws Exception {
         //given
         int[] verticalUpPositions = {4, 14, 15, 25};
-        List<Field> sShapeTileVerticalUp = returnTileWithFieldsPositions(verticalUpPositions);
+        List<Field> sShapeTileVerticalUp = tileCreator.returnTileWithFieldsPositions(verticalUpPositions, board);
         int[] horizontalDownPositions = {15, 14, 24, 23};
         //when
         if (SShapeRotation.HORIZONTALDOWN.isPossible(sShapeTileVerticalUp)) {
@@ -57,7 +48,7 @@ public class SShapeRotationTest {
     public void shouldSetJShapeTileVerticalDown() throws Exception {
         //given
         int[] verticalUpPositions = {4, 14, 15, 25};
-        List<Field> sShapeTileVerticalUp = returnTileWithFieldsPositions(verticalUpPositions);
+        List<Field> sShapeTileVerticalUp = tileCreator.returnTileWithFieldsPositions(verticalUpPositions, board);
         int[] verticalDownPositions = {24, 14, 13, 3};
         //when
         if (SShapeRotation.VERTICALDOWN.isPossible(sShapeTileVerticalUp)) {
@@ -73,7 +64,7 @@ public class SShapeRotationTest {
     public void shouldSetIShapeTileHorizontalUp() throws Exception {
         //given
         int[] verticalUpPositions = {4, 14, 15, 25};
-        List<Field> sShapeTileVerticalUp = returnTileWithFieldsPositions(verticalUpPositions);
+        List<Field> sShapeTileVerticalUp = tileCreator.returnTileWithFieldsPositions(verticalUpPositions, board);
         int[] horizontalUpPositions = {13, 14, 4, 5};
         //when
         if (SShapeRotation.HORIZONTALUP.isPossible(sShapeTileVerticalUp)) {
@@ -89,7 +80,7 @@ public class SShapeRotationTest {
     public void shouldSetIShapeTileVerticalUp() throws Exception {
         //given
         int[] horizontalUpPositions = {13, 14, 4, 5};
-        List<Field> sShapeTileHorizontalUp = returnTileWithFieldsPositions(horizontalUpPositions);
+        List<Field> sShapeTileHorizontalUp = tileCreator.returnTileWithFieldsPositions(horizontalUpPositions, board);
         int[] verticalUpPositions = {4, 14, 15, 25};
         //when
         if (SShapeRotation.VERTICALUP.isPossible(sShapeTileHorizontalUp)) {

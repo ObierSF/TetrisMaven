@@ -16,32 +16,23 @@ import static org.junit.Assert.*;
  */
 public class ZShapeRotationTest {
     Board board;
+    TileCreator tileCreator;
 
     @Before
     public void setUp() throws Exception {
-        int width = 10;
-        int height = 16;
-        int fieldsNumber = width * height;
-        board = new Board(width * height);
+        int fieldsNumber = 160;
+        board = new Board(fieldsNumber);
         for (int i=0; i<fieldsNumber; i++) {
             board.getField(i).setSurroundingFields(board.getField(i).getBorder().determineTheSurroundingFields(board, i));
         }
-    }
-
-    private List<Field> returnTileWithFieldsPositions(int[] positions) {
-        List<Field> tile = new ArrayList<Field>();
-        tile.add(board.getField(positions[0]));
-        tile.add(board.getField(positions[1]));
-        tile.add(board.getField(positions[2]));
-        tile.add(board.getField(positions[3]));
-        return tile;
+        tileCreator = new TileCreator();
     }
 
     @Test
     public void shouldSetJShapeTileHorizontalDown() throws Exception {
         //given
         int[] verticalUpPositions = {4, 14, 13, 23};
-        List<Field> zShapeTileVerticalUp = returnTileWithFieldsPositions(verticalUpPositions);
+        List<Field> zShapeTileVerticalUp = tileCreator.returnTileWithFieldsPositions(verticalUpPositions, board);
         int[] horizontalDownPositions = {15, 14, 4, 3};
         //when
         if (ZShapeRotation.HORIZONTALDOWN.isPossible(zShapeTileVerticalUp)) {
@@ -57,7 +48,7 @@ public class ZShapeRotationTest {
     public void shouldSetJShapeTileVerticalDown() throws Exception {
         //given
         int[] verticalUpPositions = {4, 14, 13, 23};
-        List<Field> zShapeTileVerticalUp = returnTileWithFieldsPositions(verticalUpPositions);
+        List<Field> zShapeTileVerticalUp = tileCreator.returnTileWithFieldsPositions(verticalUpPositions, board);
         int[] verticalDownPositions = {24, 14, 15, 5};
         //when
         if (ZShapeRotation.VERTICALDOWN.isPossible(zShapeTileVerticalUp)) {
@@ -73,7 +64,7 @@ public class ZShapeRotationTest {
     public void shouldSetIShapeTileHorizontalUp() throws Exception {
         //given
         int[] verticalUpPositions = {4, 14, 13, 23};
-        List<Field> zShapeTileVerticalUp = returnTileWithFieldsPositions(verticalUpPositions);
+        List<Field> zShapeTileVerticalUp = tileCreator.returnTileWithFieldsPositions(verticalUpPositions, board);
         int[] horizontalUpPositions = {13, 14, 24, 25};
         //when
         if (ZShapeRotation.HORIZONTALUP.isPossible(zShapeTileVerticalUp)) {
@@ -89,7 +80,7 @@ public class ZShapeRotationTest {
     public void shouldSetIShapeTileVerticalUp() throws Exception {
         //given
         int[] horizontalUpPositions = {13, 14, 24, 25};
-        List<Field> zShapeTileHorizontalUp = returnTileWithFieldsPositions(horizontalUpPositions);
+        List<Field> zShapeTileHorizontalUp = tileCreator.returnTileWithFieldsPositions(horizontalUpPositions, board);
         int[] verticalUpPositions = {4, 14, 13, 23};
         //when
         if (ZShapeRotation.VERTICALUP.isPossible(zShapeTileHorizontalUp)) {
