@@ -1,5 +1,8 @@
 package com.tetris.tile.rotationvariantstrategy;
 
+import com.tetris.Field;
+import com.tetris.tile.Shape;
+import com.tetris.tile.rotationvariantstrategy.shaperotation.ShapeRotation;
 import lombok.Getter;
 
 import java.util.Arrays;
@@ -11,8 +14,17 @@ import java.util.List;
  */
 public class RotationVariantCreator {
     @SuppressWarnings("unchecked")
-    @Getter private static final List<RotationVariantStrategy> rotationVariantStrategy =
+    private static final List<RotationVariantStrategy> rotationVariantStrategy =
             Collections.unmodifiableList(Arrays.<RotationVariantStrategy>asList(
                     new HorizontalDownRotationStrategy(),new HorizontalUpRotationStrategy(),
                     new VerticalDownRotationStrategy(), new VerticalUpRotationStrategy()));
+
+    public ShapeRotation getRotation(List<Field> fields, RotationSide side, Shape shape) {
+        for (RotationVariantStrategy strategy : rotationVariantStrategy) {
+            if (strategy.validate(fields, side)) {
+                return strategy.getShapeRotation(shape);
+            }
+        }
+        return null;
+    }
 }

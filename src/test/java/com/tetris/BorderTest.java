@@ -17,7 +17,7 @@ public class BorderTest {
     public void setUp() throws Exception {
         int width = 10;
         int height = 16;
-        board = new Board(width, height);
+        board = new Board(width * height);
     }
 
     @Test

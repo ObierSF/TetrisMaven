@@ -11,17 +11,17 @@ import java.util.List;
  * Created by User on 06.03.2016.
  */
 public abstract class Tile {
-    protected List<RotationVariantStrategy> rotationVariantStrategy;
+    RotationVariantCreator rotationVariantCreator;
     @Getter protected List<Field> fields;
     protected Board board;
     protected String color;
 
     public Tile(Board board) {
         this.board = board;
-        rotationVariantStrategy = RotationVariantCreator.getRotationVariantStrategy();
+        rotationVariantCreator = new RotationVariantCreator();
     }
 
-    public abstract void rotate(String side);
+    public abstract void rotate(RotationSide side);
 
     void setUpFields(int[] shapePosition) {
         fields = new ArrayList<Field>();

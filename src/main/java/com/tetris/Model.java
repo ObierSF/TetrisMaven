@@ -1,6 +1,7 @@
 package com.tetris;
 
 import com.tetris.tile.Tile;
+import com.tetris.tile.rotationvariantstrategy.RotationSide;
 
 /**
  * Created by User on 21.03.2016.
@@ -11,7 +12,7 @@ public class Model {
     Tile tile;
 
     Model(int width, int height) {
-        board = new Board(width, height);
+        board = new Board(width * height);
         for (int i=0; i<width * height; i++) {
             board.getField(i).setSurroundingFields(board.getField(i).getBorder().determineTheSurroundingFields(board, i));
         }
@@ -35,11 +36,11 @@ public class Model {
     }
 
     void rotateTileLeft() {
-        tile.rotate("left");
+        tile.rotate(RotationSide.LEFT);
     }
 
     void rotateTileRight() {
-        tile.rotate("right");
+        tile.rotate(RotationSide.RIGHT);
     }
 
     boolean canTileFall() {

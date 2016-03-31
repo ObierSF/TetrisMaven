@@ -1,6 +1,7 @@
 package com.tetris.tile;
 
 import com.tetris.Board;
+import com.tetris.tile.rotationvariantstrategy.RotationSide;
 import com.tetris.tile.rotationvariantstrategy.shaperotation.ShapeRotation;
 import com.tetris.tile.rotationvariantstrategy.RotationVariantStrategy;
 
@@ -12,24 +13,15 @@ public class JShapeTile extends Tile {
     public JShapeTile(Board board) {
         super(board);
         color = "GREEN";
-        int[] jShapePosition = {5, 15, 24, 25};
+        int[] jShapePosition = {5, 15, 25, 24};
         setUpFields(jShapePosition);
     }
 
     @Override
-    public void rotate(String side) {
-        ShapeRotation jShapeRotation = getRotation(side);
+    public void rotate(RotationSide side) {
+        ShapeRotation jShapeRotation = rotationVariantCreator.getRotation(fields, side, Shape.J);
         if (jShapeRotation != null && jShapeRotation.isPossible(fields)) {
             jShapeRotation.rotate(fields);
         }
-    }
-
-    private ShapeRotation getRotation(String side) {
-        for (RotationVariantStrategy strategy : rotationVariantStrategy) {
-            if (strategy.validate(fields, side)) {
-                return strategy.getShapeRotation("J");
-            }
-        }
-        return null;
     }
 }

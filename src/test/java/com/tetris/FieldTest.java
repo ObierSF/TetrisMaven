@@ -16,7 +16,7 @@ public class FieldTest {
 
     @Before
     public void setUp() throws Exception {
-        board = new Board(width, height);
+        board = new Board(width * height);
         //given
         int pseudoRandomNumber = 4;
         field = board.getField(pseudoRandomNumber);

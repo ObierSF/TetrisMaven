@@ -1,5 +1,6 @@
 package com.tetris.borderstrategy;
 
+import com.tetris.Border;
 import lombok.Getter;
 
 import java.util.Arrays;
@@ -11,9 +12,18 @@ import java.util.List;
  */
 public class BorderCreator {
     @SuppressWarnings("unchecked")
-    @Getter private static final List<BorderStrategy> borderStrategy =
+    private static final List<BorderStrategy> borderStrategy =
             Collections.unmodifiableList(Arrays.<BorderStrategy>asList(
-                    new BottomBorderStrategy(), new LeftBorderStrategy(), new LeftBottomCornerStrategy(),
-                    new LeftTopCornerStrategy(), new NonBorderStrategy(), new RightBorderStrategy(),
-                    new RightBottomCornerStrategy(), new RightTopCornerStrategy(), new TopBorderStrategy()));
+                    new LeftTopCornerStrategy(), new RightTopCornerStrategy(), new LeftBottomCornerStrategy(),
+                    new RightBottomCornerStrategy(), new TopBorderStrategy(), new LeftBorderStrategy(),
+                    new RightBorderStrategy(), new BottomBorderStrategy(), new NonBorderStrategy()));
+
+    public Border getBorder(int width, int height, int position, Border border) {
+        for (BorderStrategy strategy : borderStrategy) {
+            if (strategy.validate(width, height, position, border)) {
+                return strategy.getBorder();
+            }
+        }
+        return null;
+    }
 }

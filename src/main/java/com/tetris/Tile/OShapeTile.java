@@ -2,6 +2,7 @@ package com.tetris.tile;
 
 import com.tetris.Board;
 import com.tetris.Field;
+import com.tetris.tile.rotationvariantstrategy.RotationSide;
 
 import java.util.ArrayList;
 
@@ -18,7 +19,7 @@ public class OShapeTile extends Tile {
     }
 
     @Override
-    public void rotate(String side) {
+    public void rotate(RotationSide side) {
 
     }
 }

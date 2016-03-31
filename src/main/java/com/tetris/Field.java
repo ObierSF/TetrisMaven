@@ -1,5 +1,6 @@
 package com.tetris;
 
+import com.google.common.base.Optional;
 import com.tetris.borderstrategy.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,16 +26,8 @@ public class Field {
         this.position = position;
         partOfTile = false;
         placedField = false;
-        borderStrategy = BorderCreator.getBorderStrategy();
-        checkBorder();
-    }
-
-    void checkBorder() {
-        for (BorderStrategy strategy : borderStrategy) {
-            if (strategy.validate(width, height, position, border)) {
-                border = strategy.getBorder();
-            }
-        }
+        BorderCreator borderCreator = new BorderCreator();
+        border = borderCreator.getBorder(width, height, position, border);
     }
 
     public void placeField() {
