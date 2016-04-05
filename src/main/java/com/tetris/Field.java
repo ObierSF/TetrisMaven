@@ -18,7 +18,6 @@ public class Field {
     @Getter private int position;
     @Getter private String color;
     @Getter private Border border;
-    private List<BorderStrategy> borderStrategy;
     @Getter @Setter private SurroundingFields surroundingFields;
 
 
@@ -27,7 +26,11 @@ public class Field {
         partOfTile = false;
         placedField = false;
         BorderCreator borderCreator = new BorderCreator();
-        border = borderCreator.getBorder(width, height, position, border);
+        try {
+            border = borderCreator.getBorder(width, height, position, border);
+        } catch(Exception e) {
+            System.out.println("Exception " + e);
+        }
     }
 
     public void placeField() {
