@@ -1,11 +1,8 @@
 package com.tetris;
 
-import com.google.common.base.Optional;
 import com.tetris.borderstrategy.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.List;
 
 /**
  * Created by User on 06.03.2016.

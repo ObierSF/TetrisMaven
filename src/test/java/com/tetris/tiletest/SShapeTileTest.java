@@ -1,9 +1,9 @@
 package com.tetris.tiletest;
 
 import com.tetris.Board;
-import com.tetris.Move;
 import com.tetris.tile.SShapeTile;
 import com.tetris.tile.Tile;
+import com.tetris.tile.move.Move;
 import com.tetris.tile.rotationvariantstrategy.RotationSide;
 import org.junit.Before;
 import org.junit.Test;

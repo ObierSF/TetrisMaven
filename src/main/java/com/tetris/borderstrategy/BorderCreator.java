@@ -1,8 +1,5 @@
 package com.tetris.borderstrategy;
 
-import com.tetris.Border;
-import lombok.Getter;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

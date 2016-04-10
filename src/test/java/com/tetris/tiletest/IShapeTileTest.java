@@ -1,9 +1,9 @@
 package com.tetris.tiletest;
 
 import com.tetris.Board;
-import com.tetris.Move;
 import com.tetris.tile.IShapeTile;
 import com.tetris.tile.Tile;
+import com.tetris.tile.move.Move;
 import com.tetris.tile.rotationvariantstrategy.RotationSide;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,6 +27,7 @@ public class IShapeTileTest {
             board.getField(i).setSurroundingFields(board.getField(i).getBorder().determineTheSurroundingFields(board, i));
         }
         tile = new IShapeTile(board);
+        tile.setUpFields();
     }
 
     @Test
@@ -60,7 +61,6 @@ public class IShapeTileTest {
         //then
         for (int i=0; i<thirdRotationPositions.length; i++) {
             assertEquals(thirdRotationPositions[i], tile.getFieldPosition(i));
-            System.out.println(tile.getFieldPosition(i) + " ");
         }
         //when
         tile.rotate(RotationSide.LEFT);

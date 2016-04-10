@@ -13,16 +13,16 @@ public class OShapeTile extends Tile {
     public OShapeTile(Board board) {
         super(board);
         color = "BLUE";
+        shape = Shape.O;
+        makeFieldsPartOfTile();
+    }
+
+    @Override
+    public void setUpFields() {
         fields = new ArrayList<Field>();
         fields.add(board.getField(4));
         fields.add(board.getField(5));
         fields.add(board.getField(14));
         fields.add(board.getField(15));
-        makeFieldsPartOfTile();
-    }
-
-    @Override
-    public void rotate(RotationSide side) {
-
     }
 }

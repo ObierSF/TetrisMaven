@@ -2,66 +2,210 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3dfb6dd-09b0-4b9f-8b2e-29e68c8737fd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/BorderStrategy/BorderCreator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/BorderStrategy/BorderStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/BorderStrategy/BottomBorderStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/BorderStrategy/LeftBorderStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/BorderStrategy/LeftBottomCornerStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/BorderStrategy/LeftTopCornerStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/BorderStrategy/NonBorderStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/BorderStrategy/RightBorderStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/BorderStrategy/RightBottomCornerStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/BorderStrategy/RightTopCornerStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/BorderStrategy/TopBorderStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/ShapeStrategy/IShapeStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/ShapeStrategy/JShapeStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/ShapeStrategy/LShapeStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/ShapeStrategy/OShapeStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/ShapeStrategy/SShapeStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/ShapeStrategy/ShapeStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/ShapeStrategy/TShapeStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/ShapeStrategy/ZShapeStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/IShapeTile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/JShapeTile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/LShapeTile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/OShapeTile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/RotationVariantStrategy/HorizontalDownRotationStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/RotationVariantStrategy/HorizontalUpRotationStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/RotationVariantStrategy/RotationVariantCreator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/RotationVariantStrategy/RotationVariantStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/JShapeRotation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/LShapeRotation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/SShapeRotation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/ShapeRotation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/TShapeRotation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/ZShapeRotation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/RotationVariantStrategy/VerticalDownRotationStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/RotationVariantStrategy/VerticalUpRotationStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/SShapeTile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/TShapeTile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/Tile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Tile/ZShapeTile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/Shape.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationSide.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeHorizontalDownRotation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeHorizontalUpRotation.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/controller/MoveController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/move/FallStrategy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/move/LeftStrategy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/move/Move.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/move/MoveCreator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/move/MoveStrategy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/move/RightStrategy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/RotationCreator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/jshaperotation/JShapeHorizontalDownRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/jshaperotation/JShapeHorizontalUpRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/jshaperotation/JShapeVerticalDownRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/jshaperotation/JShapeVerticalUpRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/lshaperotation/LShapeHorizontalDownRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/lshaperotation/LShapeHorizontalUpRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/lshaperotation/LShapeVerticalDownRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/lshaperotation/LShapeVerticalUpRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/sshaperotation/SShapeHorizontalDownRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/sshaperotation/SShapeHorizontalUpRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/sshaperotation/SShapeVerticalDownRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/sshaperotation/SShapeVerticalUpRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/tshaperotation/TShapeHorizontalDownRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/tshaperotation/TShapeHorizontalUpRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/tshaperotation/TShapeVerticalDownRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/tshaperotation/TShapeVerticalUpRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/zshaperotation/ZShapeHorizontalDownRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/zshaperotation/ZShapeHorizontalUpRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/zshaperotation/ZShapeVerticalDownRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/zshaperotation/ZShapeVerticalUpRotation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationVariant.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Move.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/JShapeRotation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/LShapeRotation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/SShapeRotation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ShapeRotation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/TShapeRotation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ZShapeRotation.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeVerticalDownRotation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeVerticalUpRotation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/BorderStrategyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/MoveTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/ShapeTileTestSuite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/HorizontalDownRotationStrategyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/HorizontalUpRotationStrategyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/RotationVariantTestSuite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/VerticalDownRotationStrategyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/VerticalUpRotationStrategyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/IShapeRotationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/JShapeRotationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/LShapeRotationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/SShapeRotationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/ShapeRotationTestSuite.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/TShapeRotationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/TileCreator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/ZShapeRotationTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Border$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Border$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Border$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Border$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Border$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Border$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Border$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Border$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Border$9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Border.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Model.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Move$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Move$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Move$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Move.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/SurroundingFields.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/JShapeRotation$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/JShapeRotation$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/JShapeRotation$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/JShapeRotation$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/JShapeRotation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/LShapeRotation$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/LShapeRotation$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/LShapeRotation$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/LShapeRotation$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/LShapeRotation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/SShapeRotation$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/SShapeRotation$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/SShapeRotation$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/SShapeRotation$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/SShapeRotation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/ShapeRotation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/TShapeRotation$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/TShapeRotation$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/TShapeRotation$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/TShapeRotation$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/TShapeRotation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/ZShapeRotation$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/ZShapeRotation$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/ZShapeRotation$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/ZShapeRotation$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/ShapeRotation/ZShapeRotation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeHorizontalDownRotation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeHorizontalUpRotation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotation$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotation$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotation$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotation$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeVerticalDownRotation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeVerticalUpRotation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/BorderStrategyTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/MoveTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/ShapeTileTestSuite.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/HorizontalDownRotationStrategyTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/HorizontalUpRotationStrategyTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/RotationVariantTestSuite.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/VerticalDownRotationStrategyTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/VerticalUpRotationStrategyTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/shaperotationtest/IShapeRotationTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/shaperotationtest/JShapeRotationTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/shaperotationtest/LShapeRotationTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/shaperotationtest/SShapeRotationTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/shaperotationtest/ShapeRotationTestSuite.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/shaperotationtest/TShapeRotationTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/shaperotationtest/TileCreator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/rotationvarianttest/shaperotationtest/ZShapeRotationTest.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Border.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/Border.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Model.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/controller/Controller.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/SurroundingFields.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/SurroundingFields.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeHorizontalDownRotation.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/ishaperotation/IShapeHorizontalDownRotation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeHorizontalUpRotation.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/ishaperotation/IShapeHorizontalUpRotation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotator.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/RotationStrategy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeVerticalDownRotation.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/ishaperotation/IShapeVerticalDownRotation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeVerticalUpRotation.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/ishaperotation/IShapeVerticalUpRotation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/BorderCreator.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/BorderCreator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/BorderStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/BorderStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/BottomBorderStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/BottomBorderStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/LeftBorderStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/LeftBorderStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/LeftBottomCornerStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/LeftBottomCornerStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/LeftTopCornerStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/LeftTopCornerStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/NonBorderStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/NonBorderStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/RightBorderStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/RightBorderStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/RightBottomCornerStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/RightBottomCornerStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/RightTopCornerStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/RightTopCornerStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/TopBorderStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/BorderStrategy/TopBorderStrategy.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Field.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Field.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/IShapeTile.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/IShapeTile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/JShapeTile.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/JShapeTile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/LShapeTile.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/LShapeTile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/OShapeTile.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/OShapeTile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/HorizontalDownRotationStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/HorizontalDownRotationStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/HorizontalUpRotationStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/HorizontalUpRotationStrategy.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/RotationVariantCreator.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/RotationVariantCreator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/RotationVariantStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/RotationVariantStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/VerticalDownRotationStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/VerticalDownRotationStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/VerticalUpRotationStrategy.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/RotationVariantStrategy/VerticalUpRotationStrategy.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/SShapeTile.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/SShapeTile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/TShapeTile.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/TShapeTile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/Tile.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/Tile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/ZShapeTile.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/ZShapeTile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/TileFactory.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/TileFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/BorderTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/BorderTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/FieldTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/FieldTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/ModelTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/ModelTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/IShapeTileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/IShapeTileTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/JShapeTileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/JShapeTileTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/LShapeTileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/LShapeTileTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/SShapeTileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/SShapeTileTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/TShapeTileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/TShapeTileTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/TileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/TileTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/ZShapeTileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/ZShapeTileTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/Field.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/Field.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/TileFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/TileFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/BorderCreator.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/BorderCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/BorderStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/BorderStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/BottomBorderStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/BottomBorderStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/LeftBorderStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/LeftBorderStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/LeftBottomCornerStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/LeftBottomCornerStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/LeftTopCornerStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/LeftTopCornerStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/NonBorderStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/NonBorderStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/RightBorderStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/RightBorderStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/RightBottomCornerStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/RightBottomCornerStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/RightTopCornerStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/RightTopCornerStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/TopBorderStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/TopBorderStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/IShapeTile.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/IShapeTile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/JShapeTile.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/JShapeTile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/LShapeTile.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/LShapeTile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/OShapeTile.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/OShapeTile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/SShapeTile.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/SShapeTile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/TShapeTile.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/TShapeTile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/Tile.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/Tile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/ZShapeTile.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/ZShapeTile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/HorizontalDownRotationStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/HorizontalDownRotationStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/HorizontalUpRotationStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/HorizontalUpRotationStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationVariantCreator.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationVariantCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationVariantStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationVariantStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/VerticalDownRotationStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/VerticalDownRotationStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/VerticalUpRotationStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/VerticalUpRotationStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/BorderTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/tetris/BorderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/FieldTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/tetris/FieldTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/ModelTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/tetris/ModelTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/IShapeTileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/IShapeTileTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/JShapeTileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/JShapeTileTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/LShapeTileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/LShapeTileTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/SShapeTileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/SShapeTileTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/TShapeTileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/TShapeTileTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/TileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/TileTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/ZShapeTileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/ZShapeTileTest.java" />
     </list>
     <ignored path="TetrisMaven.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,14 +228,50 @@
     <favorites_list name="TetrisMaven" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/controller/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding>
+                <element signature="e#1091#1092#0" expanded="true" />
+                <element signature="e#1138#1139#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/ModelTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TileFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/TileFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Interface" />
         <option value="Enum" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -107,57 +287,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/TileTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/HorizontalDownRotationStrategyTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/BorderTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/HorizontalUpRotationStrategyTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/TShapeRotationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/JShapeRotationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/LShapeRotationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/SShapeRotationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/VerticalUpRotationStrategyTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/IShapeRotationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/FieldTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/MoveTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/TileTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/Board.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/Border.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/IShapeTileTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/VerticalUpRotationStrategyTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/ShapeRotationTestSuite.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/RotationVariantTestSuite.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/zshaperotation/ZShapeVerticalUpRotation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/HorizontalDownRotationStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/HorizontalUpRotationStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationVariantStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/VerticalUpRotationStrategy.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/JShapeTileTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/ShapeTileTestSuite.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/JShapeTileTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/LShapeTileTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/SShapeTileTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/TShapeTileTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/ZShapeTileTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeHorizontalDownRotation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeHorizontalUpRotation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeVerticalDownRotation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeVerticalUpRotation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotation.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/TileCreator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/JShapeRotationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/ZShapeRotationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/IShapeRotationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/LShapeRotationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/SShapeRotationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/TShapeRotationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/Tile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/OShapeTile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/BorderCreator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/Field.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationVariantCreator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/ZShapeTile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/LShapeTile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/SShapeTile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/VerticalDownRotationStrategy.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/HorizontalDownRotationStrategyTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/HorizontalUpRotationStrategyTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/VerticalDownRotationStrategyTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/VerticalUpRotationStrategyTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/RotationVariantTestSuite.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/ishaperotation/IShapeVerticalDownRotation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/JShapeTile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/LShapeTile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/OShapeTile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/SShapeTile.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/TShapeTile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/ZShapeTile.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/IShapeTile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/ishaperotation/IShapeHorizontalDownRotation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationVariantCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/ishaperotation/IShapeVerticalUpRotation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/jshaperotation/JShapeVerticalUpRotation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/lshaperotation/LShapeVerticalUpRotation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/RotationCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/move/Move.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/move/MoveStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/move/LeftStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/move/MoveCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/Tile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/Model.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/TileTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/ZShapeTileTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/JShapeTileTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/TShapeTileTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/LShapeTileTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/IShapeTileTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/MoveTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/SShapeTileTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/move/FallStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/tile/move/RightStrategy.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/borderstrategytest/BorderStrategyTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/tiletest/movetest/MoveTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/SurroundingFields.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/Border.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/BoardTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/TileFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tetris/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tetris/ModelTest.java" />
       </list>
     </option>
   </component>
@@ -246,6 +426,18 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tetris" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -273,6 +465,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TetrisMaven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TetrisMaven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tetris" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -290,6 +512,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -299,7 +522,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BorderStrategyTest">
+  <component name="RunManager" selected="JUnit.ModelTest">
     <configuration default="false" name="ShapeTileTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -326,36 +549,10 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ShapeRotationTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="RotationVariantTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.tetris.tiletest.rotationvarianttest.shaperotationtest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="TetrisMaven" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.tetris.tiletest.rotationvarianttest.shaperotationtest" />
-      <option name="MAIN_CLASS_NAME" value="com.tetris.tiletest.rotationvarianttest.shaperotationtest.ShapeRotationTestSuite" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="com.tetris.tiletest.rotationvarianttest in TetrisMaven" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.tetris.tiletest.rotationvarianttest.*" />
+          <option name="PATTERN" value="com.tetris.tiletest.rotationvariantstrategytest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -363,33 +560,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.tetris.tiletest.rotationvarianttest" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="BorderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.tetris.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="TetrisMaven" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.tetris" />
-      <option name="MAIN_CLASS_NAME" value="com.tetris.BorderTest" />
+      <option name="MAIN_CLASS_NAME" value="com.tetris.tiletest.rotationvarianttest.RotationVariantTestSuite" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -404,7 +575,59 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BorderStrategyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tetris.tiletest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TetrisMaven" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.tetris.tiletest" />
+      <option name="MAIN_CLASS_NAME" value="com.tetris.tiletest.TileTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tetris.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TetrisMaven" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.tetris" />
+      <option name="MAIN_CLASS_NAME" value="com.tetris.BoardTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.tetris.*" />
@@ -415,7 +638,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.tetris" />
-      <option name="MAIN_CLASS_NAME" value="com.tetris.BorderStrategyTest" />
+      <option name="MAIN_CLASS_NAME" value="com.tetris.ModelTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -855,18 +1078,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.ShapeTileTestSuite" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ShapeRotationTestSuite" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.com.tetris.tiletest.rotationvarianttest in TetrisMaven" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BorderTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BorderStrategyTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.RotationVariantTestSuite" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TileTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BoardTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ModelTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BorderStrategyTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BorderTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.com.tetris.tiletest.rotationvarianttest in TetrisMaven" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ModelTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BoardTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TileTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.ShapeTileTestSuite" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ShapeRotationTestSuite" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RotationVariantTestSuite" />
       </list>
     </recent_temporary>
   </component>
@@ -901,47 +1124,47 @@
       <workItem from="1458900056732" duration="1329000" />
       <workItem from="1459334788300" duration="159000" />
       <workItem from="1459334969343" duration="19056000" />
-      <workItem from="1459854763556" duration="3213000" />
+      <workItem from="1459854763556" duration="15041000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BorderStrategyTest - 2016.04.05 at 14h 38m 49s.xml">
-      <configuration name="BorderStrategyTest" configurationId="JUnit" />
+    <history-entry file="BoardTest - 2016.04.06 at 23h 04m 50s.xml">
+      <configuration name="BoardTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BorderTest - 2016.04.05 at 14h 38m 37s.xml">
-      <configuration name="BorderTest" configurationId="JUnit" />
+    <history-entry file="ModelTest - 2016.04.10 at 15h 41m 20s.xml">
+      <configuration name="ModelTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FieldTest - 2016.04.05 at 13h 14m 23s.xml">
-      <configuration name="FieldTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ShapeRotationTestSuite - 2016.04.05 at 13h 14m 34s.xml">
-      <configuration name="ShapeRotationTestSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ShapeTileTestSuite - 2016.03.31 at 19h 53m 39s.xml">
+    <history-entry file="ShapeTileTestSuite - 2016.04.06 at 20h 39m 44s.xml">
       <configuration name="ShapeTileTestSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShapeTileTestSuite - 2016.04.05 at 13h 14m 28s.xml">
+    <history-entry file="ShapeTileTestSuite - 2016.04.06 at 20h 40m 25s.xml">
       <configuration name="ShapeTileTestSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShapeTileTestSuite - 2016.04.05 at 13h 14m 47s.xml">
+    <history-entry file="ShapeTileTestSuite - 2016.04.06 at 20h 40m 52s.xml">
       <configuration name="ShapeTileTestSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_tetris_tiletest_rotationvarianttest_in_TetrisMaven - 2016.04.05 at 13h 24m 32s.xml">
-      <configuration name="com.tetris.tiletest.rotationvarianttest in TetrisMaven" configurationId="JUnit" />
+    <history-entry file="ShapeTileTestSuite - 2016.04.06 at 20h 41m 09s.xml">
+      <configuration name="ShapeTileTestSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_tetris_tiletest_rotationvarianttest_in_TetrisMaven - 2016.04.05 at 14h 28m 21s.xml">
-      <configuration name="com.tetris.tiletest.rotationvarianttest in TetrisMaven" configurationId="JUnit" />
+    <history-entry file="ShapeTileTestSuite - 2016.04.06 at 20h 41m 30s.xml">
+      <configuration name="ShapeTileTestSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_tetris_tiletest_rotationvarianttest_in_TetrisMaven - 2016.04.05 at 14h 38m 17s.xml">
-      <configuration name="com.tetris.tiletest.rotationvarianttest in TetrisMaven" configurationId="JUnit" />
+    <history-entry file="ShapeTileTestSuite - 2016.04.06 at 20h 41m 37s.xml">
+      <configuration name="ShapeTileTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TileTest - 2016.04.06 at 22h 54m 10s.xml">
+      <configuration name="TileTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TileTest - 2016.04.06 at 22h 55m 57s.xml">
+      <configuration name="TileTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52489000" />
+    <option name="totallyTimeSpent" value="64317000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="-8" width="1538" height="916" extended-state="7" />
+    <frame x="70" y="-8" width="1538" height="916" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -958,6 +1181,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24967149" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -968,7 +1192,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -991,402 +1214,456 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/HorizontalDownRotationStrategyTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationVariantStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/VerticalDownRotationStrategyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="204">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/VerticalUpRotationStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/VerticalUpRotationStrategyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="53" column="59" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/JShapeRotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/ShapeTileTestSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        <state relative-caret-position="425">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/JShapeTileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="54" column="78" selection-start-line="54" selection-start-column="78" selection-end-line="54" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/LShapeTileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="54" column="78" selection-start-line="54" selection-start-column="78" selection-end-line="54" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/SShapeTileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="54" column="78" selection-start-line="54" selection-start-column="78" selection-end-line="54" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/TShapeTileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="54" column="78" selection-start-line="54" selection-start-column="78" selection-end-line="54" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/ZShapeTileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/TileFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeHorizontalDownRotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeVerticalDownRotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeVerticalUpRotation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/VerticalDownRotationStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#832#833#0" expanded="false" />
+            <element signature="e#883#884#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/RotationStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/IShapeRotationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvariantstrategytest/HorizontalUpRotationStrategyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvariantstrategytest/VerticalDownRotationStrategyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvariantstrategytest/VerticalUpRotationStrategyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/ishaperotation/IShapeVerticalDownRotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="63" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/RotationVariantTestSuite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/HorizontalUpRotationStrategyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/IShapeTileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/ShapeRotationTestSuite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/TileCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/ZShapeRotationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/IShapeRotationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="34" column="111" selection-start-line="34" selection-start-column="111" selection-end-line="34" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/JShapeRotationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="34" column="111" selection-start-line="34" selection-start-column="104" selection-end-line="34" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/LShapeRotationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="111" selection-start-line="34" selection-start-column="111" selection-end-line="34" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/SShapeRotationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="34" column="111" selection-start-line="34" selection-start-column="111" selection-end-line="34" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvarianttest/shaperotationtest/TShapeRotationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/FieldTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/Shape.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/rotationvariantstrategytest/HorizontalDownRotationStrategyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="-33">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/OShapeTile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeHorizontalUpRotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/BorderStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/BottomBorderStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/LeftBottomCornerStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/shaperotation/ishaperotation/IShapeRotator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/Border.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/ShapeTileTestSuite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/BorderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/BorderStrategyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/BorderCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationVariantCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/ZShapeTile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="31" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/LShapeTile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/SShapeTile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/JShapeTile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="340">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/LShapeTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="22" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/SShapeTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/ZShapeTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/TShapeTile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        <state relative-caret-position="340">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/Tile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/OShapeTile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="289">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/ishaperotation/IShapeHorizontalDownRotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/IShapeTile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="224">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationVariantCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/RotationVariantStrategy.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/lshaperotation/LShapeVerticalUpRotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/jshaperotation/JShapeVerticalUpRotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/ishaperotation/IShapeVerticalUpRotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/Move.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationvariantstrategy/VerticalDownRotationStrategy.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/move/MoveStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="102">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/move/MoveCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#183#213#0" expanded="false" />
+            <element signature="e#321#335#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/rotationstrategy/RotationCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#788#806#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/ZShapeTileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/JShapeTileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/TShapeTileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/LShapeTileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="103" column="12" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/IShapeTileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="104" column="14" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/SShapeTileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="103" column="14" selection-start-line="103" selection-start-column="14" selection-end-line="103" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/move/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/TileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/move/FallStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding>
+            <element signature="e#225#226#0" expanded="false" />
+            <element signature="e#270#271#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/move/LeftStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#225#226#0" expanded="false" />
+            <element signature="e#270#271#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/move/RightStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding>
+            <element signature="e#226#227#0" expanded="false" />
+            <element signature="e#272#273#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/tile/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/borderstrategytest/BorderStrategyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/tiletest/movetest/MoveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/SurroundingFields.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/borderstrategy/Border.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/TileFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1138#1139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/controller/MoveController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/controller/KeyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/ModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

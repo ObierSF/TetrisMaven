@@ -2,7 +2,6 @@ package com.tetris.tile.rotationvariantstrategy;
 
 import com.tetris.*;
 import com.tetris.tile.Shape;
-import com.tetris.tile.rotationvariantstrategy.shaperotation.*;
 
 import java.util.List;
 
@@ -11,7 +10,7 @@ import java.util.List;
  */
 public abstract class RotationVariantStrategy {
     public abstract boolean validate(List<Field> fields, RotationSide side);
-    public abstract ShapeRotation getShapeRotation(Shape shape);
+    public abstract RotationVariant getRotationVariant();
 
     boolean isVertical(List<Field> fields) {
         int width = 10;

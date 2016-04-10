@@ -1,5 +1,7 @@
 package com.tetris;
 
+import com.tetris.borderstrategy.Border;
+import com.tetris.borderstrategy.SurroundingFields;
 import org.junit.Before;
 import org.junit.Test;
 

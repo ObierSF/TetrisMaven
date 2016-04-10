@@ -19,12 +19,12 @@ public class TileFactory {
                     new SShapeStrategy(), new ZShapeStrategy()));
 
 
-    TileFactory(Board board) {
+    public TileFactory(Board board) {
         this.board = board;
         rand = new Random();
     }
 
-    Tile returnRandomTile() {
+    public Tile returnRandomTile() {
         int n = rand.nextInt(7);
         ShapeStrategy shape = shapeStrategy.get(n);
         Tile tile = shape.getTileShape(board);

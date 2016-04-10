@@ -1,7 +1,5 @@
 package com.tetris.borderstrategy;
 
-import com.tetris.Border;
-
 /**
  * Created by User on 09.03.2016.
  */
