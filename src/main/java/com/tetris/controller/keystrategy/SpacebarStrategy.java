@@ -13,6 +13,6 @@ public class SpacebarStrategy implements KeyStrategy {
     }
 
     public void takeAction(MoveController moveController) {
-        //
+        moveController.tileFallToBottom();
     }
 }

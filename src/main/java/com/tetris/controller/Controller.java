@@ -34,22 +34,6 @@ public class Controller {
     }
 
     public void clearFullRows() {
-        Field temporaryField;
-        for (Field field : tile.getFields()) {
-            temporaryField = field.getSurroundingFields().right;
-            while (temporaryField != null || temporaryField.isPartOfTile()) {
-                temporaryField = temporaryField.getSurroundingFields().right;
-                if (temporaryField.isPlacedField()) {
 
-                }
-            }
-            temporaryField = field.getSurroundingFields().left;
-            while (temporaryField != null || temporaryField.isPartOfTile()) {
-                temporaryField = temporaryField.getSurroundingFields().left;
-                if (temporaryField.isPlacedField()) {
-
-                }
-            }
-        }
     }
 }

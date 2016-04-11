@@ -13,6 +13,6 @@ public class DownArrowStrategy implements KeyStrategy {
     }
 
     public void takeAction(MoveController moveController) {
-        moveController.moveTileRight();
+        moveController.rotateTileRight();
     }
 }

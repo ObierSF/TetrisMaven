@@ -53,15 +53,17 @@ public abstract class Tile {
         }
     }
 
-    public void move(Move move) {
+    public boolean move(Move move) {
         try {
             MoveStrategy moveStrategy = moveCreator.getMove(move);
             if (moveStrategy.isPossible(fields)) {
                 moveStrategy.move(fields, color);
+                return true;
             }
         } catch (Exception e) {
             System.out.println("Move exception: " + e);
         }
+        return false;
     }
 
     public void placeTile() {

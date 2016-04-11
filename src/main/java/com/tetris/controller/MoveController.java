@@ -33,4 +33,10 @@ public class MoveController {
     public void tileFall() {
         tile.move(Move.FALL);
     }
+
+    public void tileFallToBottom() {
+        while (tile.move(Move.FALL)) {
+
+        }
+    }
 }
