@@ -14,24 +14,12 @@ public class MoveController {
         this.tile = tile;
     }
 
-    public void moveTileLeft() {
-        tile.move(Move.LEFT);
+    public void moveTile(Move move) {
+        tile.move(move);
     }
 
-    public void moveTileRight() {
-        tile.move(Move.RIGHT);
-    }
-
-    public void rotateTileLeft() {
-        tile.rotate(RotationSide.LEFT);
-    }
-
-    public void rotateTileRight() {
-        tile.rotate(RotationSide.RIGHT);
-    }
-
-    public void tileFall() {
-        tile.move(Move.FALL);
+    public void rotateTile(RotationSide rotationSide) {
+        tile.rotate(rotationSide);
     }
 
     public void tileFallToBottom() {

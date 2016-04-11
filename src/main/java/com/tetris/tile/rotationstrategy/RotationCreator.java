@@ -33,6 +33,6 @@ public class RotationCreator {
                 return strategy;
             }
         }
-        throw new Exception();
+        throw new RotationException();
     }
 }

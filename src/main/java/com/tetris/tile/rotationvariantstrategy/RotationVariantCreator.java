@@ -1,7 +1,6 @@
 package com.tetris.tile.rotationvariantstrategy;
 
 import com.tetris.Field;
-import com.tetris.tile.Shape;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -23,6 +22,6 @@ public class RotationVariantCreator {
                 return strategy.getRotationVariant();
             }
         }
-        throw new Exception();
+        throw new RotationVariantException();
     }
 }

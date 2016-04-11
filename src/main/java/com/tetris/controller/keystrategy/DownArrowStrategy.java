@@ -1,6 +1,7 @@
 package com.tetris.controller.keystrategy;
 
 import com.tetris.controller.MoveController;
+import com.tetris.tile.rotationvariantstrategy.RotationSide;
 
 import java.awt.event.KeyEvent;
 
@@ -13,6 +14,6 @@ public class DownArrowStrategy implements KeyStrategy {
     }
 
     public void takeAction(MoveController moveController) {
-        moveController.rotateTileRight();
+        moveController.rotateTile(RotationSide.RIGHT);
     }
 }

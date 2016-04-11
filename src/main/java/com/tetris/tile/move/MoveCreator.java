@@ -19,6 +19,6 @@ public class MoveCreator {
                 return strategy;
             }
         }
-        throw new Exception();
+        throw new MoveException();
     }
 }

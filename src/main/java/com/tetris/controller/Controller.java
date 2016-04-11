@@ -19,9 +19,6 @@ public class Controller {
 
     public Controller(int width, int height) {
         board = new Board(width * height);
-        for (int i=0; i<width * height; i++) {
-            board.getField(i).setSurroundingFields(board.getField(i).getBorder().determineTheSurroundingFields(board, i));
-        }
         tileFactory = new TileFactory(board);
     }
 

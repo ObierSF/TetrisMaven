@@ -13,7 +13,7 @@ import java.util.List;
 public class IShapeVerticalDownRotation extends RotationStrategy {
     @Override
     public boolean validate(Shape shape, RotationVariant rotationVariant) {
-        return shape.equals(Shape.I) && rotationVariant.equals(RotationVariant.VERTICALDOWN);
+        return shape == Shape.I && rotationVariant == RotationVariant.VERTICALDOWN;
     }
 
     @Override

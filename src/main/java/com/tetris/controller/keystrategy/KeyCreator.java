@@ -21,6 +21,6 @@ public class KeyCreator {
                 return strategy;
             }
         }
-        throw new Exception();
+        throw new KeyException();
     }
 }

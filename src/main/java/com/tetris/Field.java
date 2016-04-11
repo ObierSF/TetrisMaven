@@ -47,6 +47,10 @@ public class Field {
         placedField = false;
     }
 
+    public void determineSurroundingFields(Board board) {
+        border.determineTheSurroundingFields(board, position);
+    }
+
     public boolean isEmpty() {
         return !placedField && !partOfTile;
     }

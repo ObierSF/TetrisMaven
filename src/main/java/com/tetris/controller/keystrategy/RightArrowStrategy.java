@@ -1,6 +1,7 @@
 package com.tetris.controller.keystrategy;
 
 import com.tetris.controller.MoveController;
+import com.tetris.tile.move.Move;
 
 import java.awt.event.KeyEvent;
 
@@ -13,6 +14,6 @@ public class RightArrowStrategy implements KeyStrategy {
     }
 
     public void takeAction(MoveController moveController) {
-        moveController.moveTileRight();
+        moveController.moveTile(Move.RIGHT);
     }
 }

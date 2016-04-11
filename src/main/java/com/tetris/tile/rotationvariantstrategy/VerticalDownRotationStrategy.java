@@ -16,11 +16,11 @@ public class VerticalDownRotationStrategy extends RotationVariantStrategy {
     }
 
     private boolean isRightRotation(List<Field> fields, RotationSide side) {
-        return side.equals(RotationSide.RIGHT) && !isVertical(fields) && isUpSideDown(fields);
+        return side == RotationSide.RIGHT && !isVertical(fields) && isUpSideDown(fields);
     }
 
     private boolean isLeftRotation(List<Field> fields, RotationSide side) {
-        return side.equals(RotationSide.LEFT) && !isVertical(fields) && !isUpSideDown(fields);
+        return side == RotationSide.LEFT && !isVertical(fields) && !isUpSideDown(fields);
     }
 
     @Override

@@ -21,6 +21,6 @@ public class BorderCreator {
                 return strategy.getBorder();
             }
         }
-        throw new Exception();
+        throw new BorderException();
     }
 }

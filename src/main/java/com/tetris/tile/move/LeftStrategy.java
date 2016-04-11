@@ -10,7 +10,7 @@ import java.util.List;
 public class LeftStrategy extends MoveStrategy {
     @Override
     public boolean validate(Move move) {
-        return move.equals(Move.LEFT);
+        return move == Move.LEFT;
     }
 
     @Override
