@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3dfb6dd-09b0-4b9f-8b2e-29e68c8737fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/tetris/controllertest/MoveControllerTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/ModelTest.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/tetris/ModelTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/tetris/controllertest/controllerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/Tile/Tile.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/Tile/Tile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/controller/Controller.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tetris/controller/MoveController.class" afterPath="$PROJECT_DIR$/target/classes/com/tetris/controller/MoveController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/IShapeTileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/IShapeTileTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/JShapeTileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/JShapeTileTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/LShapeTileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/LShapeTileTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/SShapeTileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/SShapeTileTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/TShapeTileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/TShapeTileTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/TileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/TileTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/ZShapeTileTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/tetris/tiletest/ZShapeTileTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/controller/MoveController.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/controller/MoveController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/controller/keystrategy/DownArrowStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/controller/keystrategy/DownArrowStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/controller/keystrategy/SpacebarStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/controller/keystrategy/SpacebarStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tetris/tile/Tile.java" afterPath="$PROJECT_DIR$/src/main/java/com/tetris/tile/Tile.java" />
-    </list>
+    <list default="true" id="f3dfb6dd-09b0-4b9f-8b2e-29e68c8737fd" name="Default" comment="" />
     <ignored path="TetrisMaven.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -939,7 +919,7 @@
       <workItem from="1460312337171" duration="908000" />
       <workItem from="1460313268003" duration="13000" />
       <workItem from="1460389536012" duration="3196000" />
-      <workItem from="1460398910817" duration="1393000" />
+      <workItem from="1460398910817" duration="1466000" />
     </task>
     <servers />
   </component>
@@ -976,7 +956,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71115000" />
+    <option name="totallyTimeSpent" value="71188000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="-8" width="1538" height="916" extended-state="6" />
@@ -1367,16 +1347,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/controllertest/ControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tetris/shapestrategy/IShapeStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1390,6 +1360,16 @@
         <state relative-caret-position="272">
           <caret line="23" column="9" selection-start-line="20" selection-start-column="8" selection-end-line="23" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tetris/controllertest/ControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
