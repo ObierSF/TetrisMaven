@@ -1,6 +1,6 @@
 package com.tetris.tile.rotationstrategy;
 
-import com.tetris.Field;
+import com.tetris.field.Field;
 import com.tetris.tile.Shape;
 import com.tetris.tile.rotationvariantstrategy.RotationVariant;
 
@@ -18,6 +18,12 @@ public abstract class RotationStrategy {
 
     public boolean isPossible(List<Field> fields) {
         return isFirstPositionAvailable(fields) && isThrirdPositionAvailable(fields) && isForthPositionAvailable(fields);
+    }
+
+    public void emptyOldFields(List<Field> fields) {
+        for (Field field : fields) {
+            field.empty();
+        }
     }
 
     protected Field getSecond(List<Field> fields) {

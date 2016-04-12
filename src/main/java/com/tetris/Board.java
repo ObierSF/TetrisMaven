@@ -1,5 +1,7 @@
 package com.tetris;
 
+import com.tetris.field.Field;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +31,7 @@ public class Board {
 
     public void setSurroundingFieldsForFields() {
         for (Field field : board) {
-            field.setSurroundingFields(field.getBorder().determineTheSurroundingFields(this, field.getPosition()));
+            field.determineSurroundingFields(this);
         }
     }
 }

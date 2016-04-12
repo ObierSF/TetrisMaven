@@ -1,6 +1,6 @@
 package com.tetris.tile.rotationvariantstrategy;
 
-import com.tetris.Field;
+import com.tetris.field.Field;
 
 import java.util.Arrays;
 import java.util.Collections;

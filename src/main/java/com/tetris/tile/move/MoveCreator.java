@@ -11,7 +11,8 @@ public class MoveCreator {
     @SuppressWarnings("unchecked")
     private static final List<MoveStrategy> moveStrategy =
             Collections.unmodifiableList(Arrays.<MoveStrategy>asList(
-                    new LeftStrategy(), new RightStrategy(), new FallStrategy()));
+                    new LeftStrategy(), new RightStrategy(),
+                    new FallStrategy(), new UpStrategy()));
 
     public MoveStrategy getMove(Move move) throws Exception {
         for (MoveStrategy strategy : moveStrategy) {

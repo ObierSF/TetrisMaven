@@ -6,5 +6,6 @@ package com.tetris.tile.move;
 public enum Move {
     FALL,
     LEFT,
-    RIGHT;
+    RIGHT,
+    UP;
 }

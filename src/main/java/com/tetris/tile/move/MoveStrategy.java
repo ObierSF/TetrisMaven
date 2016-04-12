@@ -1,6 +1,7 @@
 package com.tetris.tile.move;
 
-import com.tetris.Field;
+import com.tetris.field.Field;
+import com.tetris.tile.Color;
 
 import java.util.List;
 
@@ -10,11 +11,11 @@ import java.util.List;
 public abstract class MoveStrategy {
     public abstract boolean validate(Move move);
     public abstract boolean isFieldOnSideAvailable(Field field);
-    public abstract void setUpNewFields(List<Field> fields, String color);
+    public abstract void setUpNewFields(List<Field> fields, Color color);
 
     public void emptyOldFields(List<Field> fields) {
-        for (int i=0; i<fields.size(); i++) {
-            fields.get(i).empty();
+        for (Field field : fields) {
+            field.empty();
         }
     }
 
@@ -27,7 +28,7 @@ public abstract class MoveStrategy {
         return true;
     }
 
-    public void move(List<Field> fields, String color) {
+    public void move(List<Field> fields, Color color) {
         emptyOldFields(fields);
         setUpNewFields(fields, color);
     }

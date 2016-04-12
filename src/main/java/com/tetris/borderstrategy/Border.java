@@ -1,7 +1,7 @@
 package com.tetris.borderstrategy;
 
 import com.tetris.Board;
-import com.tetris.borderstrategy.SurroundingFields;
+import com.tetris.field.SurroundingFields;
 
 /**
  * Created by User on 07.03.2016.

@@ -1,6 +1,8 @@
-package com.tetris;
+package com.tetris.field;
 
+import com.tetris.Board;
 import com.tetris.borderstrategy.*;
+import com.tetris.tile.Color;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,12 +15,12 @@ public class Field {
     @Getter private boolean partOfTile;
     @Getter private boolean placedField;
     @Getter private int position;
-    @Getter private String color;
+    @Getter private Color color;
     @Getter private Border border;
     @Getter @Setter private SurroundingFields surroundingFields;
 
 
-    Field(int position) {
+    public Field(int position) {
         this.position = position;
         partOfTile = false;
         placedField = false;
@@ -35,55 +37,49 @@ public class Field {
         placedField = true;
     }
 
-    public void makePartOfTile(String color) {
+    public void makePartOfTile(Color color) {
         this.color = color;
         partOfTile = true;
         placedField = false;
     }
 
     public void empty() {
-        color = "";
+        color = Color.NON;
         partOfTile = false;
         placedField = false;
     }
 
     public void determineSurroundingFields(Board board) {
-        border.determineTheSurroundingFields(board, position);
+        surroundingFields = border.determineTheSurroundingFields(board, position);
     }
 
     public boolean isEmpty() {
         return !placedField && !partOfTile;
     }
 
-    public Field getRightNeighbour() {
-        return surroundingFields.right;
+    public Field getNeighbour(Neighbour neighbour) {
+        return surroundingFields.getNeighbour(neighbour);
     }
 
-    public Field getLeftNeighbour() {
-        return surroundingFields.left;
+    public boolean isNeighbourPlacedField(Neighbour neighbour) {
+        return getNeighbour(neighbour).isPlacedField();
     }
 
-    public Field getUpperNeighbour() {
-        return surroundingFields.upper;
+    public boolean isSideOfRowFull(Neighbour neighbour) {
+        if (getNeighbour(neighbour) == null) {
+            return true;
+        }
+        else if (isNeighbourPlacedField(neighbour) || getNeighbour(neighbour).isPartOfTile()) {
+            getNeighbour(neighbour).isSideOfRowFull(neighbour);
+            return true;
+        }
+        return false;
     }
 
-    public Field getLowerNeighbour() {
-        return surroundingFields.lower;
-    }
-
-    public boolean isLeftNeighbourPlacedField() {
-        return surroundingFields.left.isPlacedField();
-    }
-
-    public boolean isRightNeighbourPlacedField() {
-        return surroundingFields.right.isPlacedField();
-    }
-
-    public boolean isUpperNeighbourPlacedField() {
-        return surroundingFields.upper.isPlacedField();
-    }
-
-    public boolean isLowerNeighbourPlacedField() {
-        return surroundingFields.lower.isPlacedField();
+    public void clearRow() {
+        empty();
+        if (getNeighbour(Neighbour.RIGHT) != null) {
+            getNeighbour(Neighbour.RIGHT).clearRow();
+        }
     }
 }

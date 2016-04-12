@@ -1,7 +1,9 @@
 package com.tetris;
 
 import com.tetris.borderstrategy.Border;
-import com.tetris.borderstrategy.SurroundingFields;
+import com.tetris.field.SurroundingFields;
+import com.tetris.field.Field;
+import com.tetris.tile.Color;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -37,7 +39,7 @@ public class FieldTest {
     @Test
     public void shouldReturnTrueAfterFieldIsMadePartOfTile() throws Exception {
         //given
-        String pseudoRandomColor = "RED";
+        Color pseudoRandomColor = Color.RED;
         //when
         field.makePartOfTile(pseudoRandomColor);
         //then

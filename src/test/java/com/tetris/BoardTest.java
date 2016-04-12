@@ -1,5 +1,6 @@
 package com.tetris;
 
+import com.tetris.field.Field;
 import org.junit.Before;
 import org.junit.Test;
 

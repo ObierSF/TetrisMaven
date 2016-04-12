@@ -1,15 +1,11 @@
 package com.tetris.tiletest.movetest;
 
 import com.tetris.Board;
-import com.tetris.Field;
-import com.tetris.tile.move.Move;
+import com.tetris.field.Field;
 import org.junit.Before;
-import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by User on 17.03.2016.

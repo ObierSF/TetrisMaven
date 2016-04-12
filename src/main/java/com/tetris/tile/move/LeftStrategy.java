@@ -1,6 +1,8 @@
 package com.tetris.tile.move;
 
-import com.tetris.Field;
+import com.tetris.field.Field;
+import com.tetris.field.Neighbour;
+import com.tetris.tile.Color;
 
 import java.util.List;
 
@@ -15,13 +17,13 @@ public class LeftStrategy extends MoveStrategy {
 
     @Override
     public boolean isFieldOnSideAvailable(Field field) {
-        return field.getLeftNeighbour() != null && !field.isLeftNeighbourPlacedField();
+        return field.getNeighbour(Neighbour.LEFT) != null && !field.isNeighbourPlacedField(Neighbour.LEFT);
     }
 
     @Override
-    public void setUpNewFields(List<Field> fields, String color) {
+    public void setUpNewFields(List<Field> fields, Color color) {
         for (int i=0; i<fields.size(); i++) {
-            fields.set(i, fields.get(i).getLeftNeighbour());
+            fields.set(i, fields.get(i).getNeighbour(Neighbour.LEFT));
             fields.get(i).makePartOfTile(color);
         }
     }

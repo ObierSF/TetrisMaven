@@ -1,6 +1,7 @@
 package com.tetris.tile.rotationstrategy.zshaperotation;
 
-import com.tetris.Field;
+import com.tetris.field.Field;
+import com.tetris.field.Neighbour;
 import com.tetris.tile.Shape;
 import com.tetris.tile.rotationstrategy.RotationStrategy;
 import com.tetris.tile.rotationvariantstrategy.RotationVariant;
@@ -18,24 +19,24 @@ public class ZShapeHorizontalUpRotation extends RotationStrategy {
 
     @Override
     protected boolean isFirstPositionAvailable(List<Field> fields) {
-        return getSecond(fields).getLeftNeighbour() != null && !getSecond(fields).isLeftNeighbourPlacedField();
+        return getSecond(fields).getNeighbour(Neighbour.LEFT) != null && !getSecond(fields).isNeighbourPlacedField(Neighbour.LEFT);
     }
 
     @Override
     protected boolean isThrirdPositionAvailable(List<Field> fields) {
-        return getSecond(fields).getLowerNeighbour() != null && !getSecond(fields).isLowerNeighbourPlacedField();
+        return getSecond(fields).getNeighbour(Neighbour.LOWER) != null && !getSecond(fields).isNeighbourPlacedField(Neighbour.RIGHT);
     }
 
     @Override
     protected boolean isForthPositionAvailable(List<Field> fields) {
-        Field lowerNeighbour = getSecond(fields).getLowerNeighbour();
-        return lowerNeighbour.getRightNeighbour() != null && !lowerNeighbour.isRightNeighbourPlacedField();
+        Field lowerNeighbour = getSecond(fields).getNeighbour(Neighbour.LOWER);
+        return lowerNeighbour.getNeighbour(Neighbour.RIGHT) != null && !lowerNeighbour.isNeighbourPlacedField(Neighbour.RIGHT);
     }
 
     @Override
     public void rotate(List<Field> fields) {
-        fields.set(0, getSecond(fields).getLeftNeighbour());
-        fields.set(2, getSecond(fields).getLowerNeighbour());
-        fields.set(3, fields.get(2).getRightNeighbour());
+        fields.set(0, getSecond(fields).getNeighbour(Neighbour.LEFT));
+        fields.set(2, getSecond(fields).getNeighbour(Neighbour.LOWER));
+        fields.set(3, fields.get(2).getNeighbour(Neighbour.RIGHT));
     }
 }

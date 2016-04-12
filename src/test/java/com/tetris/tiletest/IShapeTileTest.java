@@ -21,11 +21,7 @@ public class IShapeTileTest {
     public void setUp() throws Exception {
         int width = 10;
         int height = 16;
-        int fieldsNumber = width * height;
         board = new Board(width * height);
-        for (int i=0; i<fieldsNumber; i++) {
-            board.getField(i).setSurroundingFields(board.getField(i).getBorder().determineTheSurroundingFields(board, i));
-        }
         tile = new IShapeTile(board);
         tile.setUpFields();
     }
@@ -47,6 +43,7 @@ public class IShapeTileTest {
         tile.rotate(RotationSide.LEFT);
         //then
         for (int i=0; i<firstRotationPositions.length; i++) {
+            assertTrue(tile.getFields().get(i).isPartOfTile());
             assertEquals(firstRotationPositions[i], tile.getFieldPosition(i));
         }
         //when

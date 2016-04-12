@@ -1,9 +1,7 @@
 package com.tetris.tile;
 
 import com.tetris.Board;
-import com.tetris.Field;
-import com.tetris.tile.rotationvariantstrategy.RotationSide;
-import com.tetris.tile.rotationvariantstrategy.RotationVariantStrategy;
+import com.tetris.field.Field;
 
 import java.util.ArrayList;
 
@@ -14,7 +12,7 @@ public class JShapeTile extends Tile {
 
     public JShapeTile(Board board) {
         super(board);
-        color = "GREEN";
+        color = Color.GREEN;
         shape = Shape.J;
         makeFieldsPartOfTile();
     }

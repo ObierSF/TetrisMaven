@@ -1,8 +1,7 @@
 package com.tetris.tile;
 
 import com.tetris.Board;
-import com.tetris.Field;
-import com.tetris.tile.rotationvariantstrategy.RotationSide;
+import com.tetris.field.Field;
 
 import java.util.ArrayList;
 
@@ -12,7 +11,7 @@ import java.util.ArrayList;
 public class OShapeTile extends Tile {
     public OShapeTile(Board board) {
         super(board);
-        color = "BLUE";
+        color = Color.BLUE;
         shape = Shape.O;
         makeFieldsPartOfTile();
     }

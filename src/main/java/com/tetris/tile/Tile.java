@@ -1,6 +1,7 @@
 package com.tetris.tile;
 
 import com.tetris.*;
+import com.tetris.field.Field;
 import com.tetris.tile.move.Move;
 import com.tetris.tile.move.MoveCreator;
 import com.tetris.tile.move.MoveStrategy;
@@ -20,8 +21,8 @@ public abstract class Tile {
     protected MoveCreator moveCreator;
     @Getter protected List<Field> fields;
     protected Board board;
-    protected String color;
-    public Shape shape;
+    protected Color color;
+    @Getter protected Shape shape;
 
     public Tile(Board board) {
         this.board = board;
@@ -39,7 +40,9 @@ public abstract class Tile {
                 RotationVariant rotationVariant = rotationVariantCreator.getRotationVariant(fields, side);
                 RotationStrategy rotationStrategy = rotationCreator.getRotation(shape, rotationVariant);
                 if (rotationStrategy.isPossible(fields)) {
+                    rotationStrategy.emptyOldFields(fields);
                     rotationStrategy.rotate(fields);
+                    makeFieldsPartOfTile();
                 }
             } catch (Exception e) {
                 System.out.println("Rotation exception " + e);

@@ -1,9 +1,7 @@
 package com.tetris.tile;
 
 import com.tetris.Board;
-import com.tetris.Field;
-import com.tetris.tile.rotationvariantstrategy.RotationSide;
-import com.tetris.tile.rotationvariantstrategy.RotationVariantStrategy;
+import com.tetris.field.Field;
 
 import java.util.ArrayList;
 
@@ -13,7 +11,7 @@ import java.util.ArrayList;
 public class LShapeTile extends Tile {
     public LShapeTile(Board board) {
         super(board);
-        color = "PINK";
+        color = Color.PINK;
         shape = Shape.L;
         makeFieldsPartOfTile();
     }

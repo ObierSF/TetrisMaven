@@ -23,9 +23,6 @@ public class JShapeTileTest {
         int height = 16;
         int fieldsNumber = width * height;
         board = new Board(width * height);
-        for (int i=0; i<fieldsNumber; i++) {
-            board.getField(i).setSurroundingFields(board.getField(i).getBorder().determineTheSurroundingFields(board, i));
-        }
         tile = new JShapeTile(board);
     }
 

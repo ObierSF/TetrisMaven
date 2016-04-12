@@ -1,6 +1,8 @@
 package com.tetris.controllertest;
 
-import com.tetris.Field;
+import com.tetris.Board;
+import com.tetris.controller.MoveController;
+import com.tetris.field.Field;
 import com.tetris.controller.Controller;
 import com.tetris.tile.IShapeTile;
 import com.tetris.tile.Tile;
@@ -15,11 +17,12 @@ import static org.junit.Assert.*;
  * Created by User on 22.03.2016.
  */
 public class ControllerTest {
-    Controller controller;
+    private Controller controller;
+    private int width;
 
     @Before
     public void setUp() throws Exception {
-        int width = 10;
+        width = 10;
         int height = 16;
         controller = new Controller(width, height);
     }
@@ -51,6 +54,34 @@ public class ControllerTest {
         for (Field field : fields) {
             assertTrue(field.isPlacedField());
             assertFalse(field.isPartOfTile());
+        }
+    }
+
+    @Test
+    public void rowsShouldBeCountedAndCleared() {
+        //given
+        Board board = controller.getBoard();
+        Tile pseudoRandomTile = new IShapeTile(board);
+        MoveController moveController = new MoveController(pseudoRandomTile);
+        int expectedScore = 200;
+        int[] bottomFullRowFieldsPositions = {150, 151, 152, 153, 155, 156, 157, 158, 159};
+        int[] preBottomFullRowFieldsPositions = {140, 141, 142, 143, 145, 146, 147, 148, 149};
+        controller.setTile(pseudoRandomTile);
+        //when
+        for (int i=0; i<bottomFullRowFieldsPositions.length; i++) {
+            board.getField(bottomFullRowFieldsPositions[i]).placeField();
+            board.getField(preBottomFullRowFieldsPositions[i]).placeField();
+        }
+        moveController.tileFallToBottom();
+        controller.placeTile();
+        controller.searchForFullRows();
+        controller.sumScore();
+        controller.clearFullRows();
+        //then
+        assertEquals(expectedScore, controller.getScore());
+        for (int i=0; i<bottomFullRowFieldsPositions.length; i++) {
+            assertTrue(board.getField(bottomFullRowFieldsPositions[i]).isEmpty());
+            assertTrue(board.getField(preBottomFullRowFieldsPositions[i]).isEmpty());
         }
     }
 }
