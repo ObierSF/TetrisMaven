@@ -14,7 +14,6 @@ public class JShapeTile extends Tile {
         super(board);
         color = Color.GREEN;
         shape = Shape.J;
-        makeFieldsPartOfTile();
     }
 
     @Override

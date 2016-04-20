@@ -14,19 +14,30 @@ public abstract class RotationStrategy {
     protected abstract boolean isFirstPositionAvailable(List<Field> fields);
     protected abstract boolean isThrirdPositionAvailable(List<Field> fields);
     protected abstract boolean isForthPositionAvailable(List<Field> fields);
-    public abstract void rotate(List<Field> fields);
+    public abstract void setUpNewFields(List<Field> fields);
+
+    private void emptyOldField(List<Field> fields) {
+        for (Field field : fields) {
+            if (field != null) {
+                field.empty();
+            }
+        }
+    }
 
     public boolean isPossible(List<Field> fields) {
         return isFirstPositionAvailable(fields) && isThrirdPositionAvailable(fields) && isForthPositionAvailable(fields);
     }
 
-    public void emptyOldFields(List<Field> fields) {
-        for (Field field : fields) {
-            field.empty();
-        }
-    }
-
     protected Field getSecond(List<Field> fields) {
         return fields.get(1);
+    }
+
+    public void startRotate(List<Field> fields) {
+        setUpNewFields(fields);
+    }
+
+    public void rotate(List<Field> fields) {
+        emptyOldField(fields);
+        setUpNewFields(fields);
     }
 }

@@ -13,7 +13,6 @@ public class LShapeTile extends Tile {
         super(board);
         color = Color.PINK;
         shape = Shape.L;
-        makeFieldsPartOfTile();
     }
 
     @Override

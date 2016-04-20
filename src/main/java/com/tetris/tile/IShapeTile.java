@@ -14,7 +14,6 @@ public class IShapeTile extends Tile {
         super(board);
         color = Color.RED;
         shape = Shape.I;
-        makeFieldsPartOfTile();
     }
 
     @Override

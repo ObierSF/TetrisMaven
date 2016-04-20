@@ -2,9 +2,8 @@ package com.tetris.tile;
 
 import com.tetris.*;
 import com.tetris.field.Field;
-import com.tetris.tile.move.Move;
-import com.tetris.tile.move.MoveCreator;
-import com.tetris.tile.move.MoveStrategy;
+import com.tetris.field.Neighbour;
+import com.tetris.tile.move.*;
 import com.tetris.tile.rotationstrategy.RotationCreator;
 import com.tetris.tile.rotationstrategy.RotationStrategy;
 import com.tetris.tile.rotationvariantstrategy.*;
@@ -34,44 +33,99 @@ public abstract class Tile {
 
     public abstract void setUpFields();
 
-    public void rotate(RotationSide side) {
+    public boolean isAddingPossible() {
+        for (Field field : fields) {
+            if (field != null && !field.isEmpty()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean rotate(RotationSide side) {
         if (!shape.equals(Shape.O)) {
             try {
                 RotationVariant rotationVariant = rotationVariantCreator.getRotationVariant(fields, side);
                 RotationStrategy rotationStrategy = rotationCreator.getRotation(shape, rotationVariant);
                 if (rotationStrategy.isPossible(fields)) {
-                    rotationStrategy.emptyOldFields(fields);
                     rotationStrategy.rotate(fields);
                     makeFieldsPartOfTile();
+                    return true;
                 }
+            } catch (Exception e) {
+                System.out.println("Rotation exception " + e);
+            }
+        }
+        return false;
+    }
+
+    public void startRotate(RotationSide side) {
+        if (!shape.equals(Shape.O)) {
+            try {
+                RotationVariant rotationVariant = rotationVariantCreator.getRotationVariant(fields, side);
+                RotationStrategy rotationStrategy = rotationCreator.getRotation(shape, rotationVariant);
+                rotationStrategy.startRotate(fields);
+
             } catch (Exception e) {
                 System.out.println("Rotation exception " + e);
             }
         }
     }
 
-    void makeFieldsPartOfTile() {
+    public boolean makeFieldsPartOfTile() {
         for (Field field : fields) {
             field.makePartOfTile(color);
         }
+        return true;
+    }
+
+    public boolean isFallPossible() {
+        for (Field field : fields) {
+            if (field.getNeighbour(Neighbour.LOWER) == null || field.isNeighbourPlacedField(Neighbour.LOWER)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public boolean move(Move move) {
         try {
             MoveStrategy moveStrategy = moveCreator.getMove(move);
             if (moveStrategy.isPossible(fields)) {
-                moveStrategy.move(fields, color);
+                moveStrategy.move(fields);
+                makeFieldsPartOfTile();
                 return true;
             }
         } catch (Exception e) {
-            System.out.println("Move exception: " + e);
+            System.out.println("Move exception " + e);
         }
         return false;
     }
 
+    public void fallForRotation() {
+        MoveStrategy moveStrategy = new FallStrategy();
+        moveStrategy.lastMove(fields);
+    }
+
+    public void moveTileToTop() {
+        MoveStrategy moveStrategy = new UpStrategy();
+        while (moveStrategy.isPossible(fields)) {
+            moveStrategy.lastMove(fields);
+        }
+    }
+
+    public void moveLastTileUp(){
+        MoveStrategy moveStrategy = new UpStrategy();
+        while(!isAddingPossible()) {
+            moveStrategy.lastMove(fields);
+        }
+    }
+
     public void placeTile() {
         for (Field field : fields) {
-            field.placeField();
+            if (field != null) {
+                field.placeField();
+            }
         }
     }
 

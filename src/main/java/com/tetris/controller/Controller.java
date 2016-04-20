@@ -1,62 +1,80 @@
 package com.tetris.controller;
 
 import com.tetris.Board;
-import com.tetris.field.Field;
-import com.tetris.tilefactory.TileFactory;
-import com.tetris.field.Neighbour;
-import com.tetris.tile.Tile;
-import lombok.Getter;
-import lombok.Setter;
+import com.tetris.tile.move.Move;
 
-import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 
 /**
- * Created by User on 21.03.2016.
+ * Created by User on 16.04.2016.
  */
-public class Controller {
+public class Controller extends Thread implements Observer {
     private int width;
-    @Getter private Board board;
-    private TileFactory tileFactory;
-    @Setter @Getter private Tile tile;
+    private Board board;
+    private MoveController moveController;
+    private Thread keyThread;
+    private KeyController keyController;
+    private GameController gameController;
     private ScoreObserver scoreObserver;
+    private boolean isGameOver = false;
 
     public Controller(int width, int height) {
         this.width = width;
         board = new Board(width * height);
-        tileFactory = new TileFactory(board);
-        scoreObserver = new ScoreObserver();
     }
 
-    public void setRandomTile() {
-        tile = tileFactory.returnRandomTile();
+    public void prepareGame() {
+        gameController = new GameController(width, board);
+        scoreObserver = new ScoreObserver(gameController);
+        moveController = new MoveController();
+        keyController = new KeyController(moveController);
+        keyController.addObserver(this);
+        keyThread = new Thread(keyController);
     }
 
-    public void placeTile() {
-        tile.placeTile();
+    public void run() {
+        try {
+            if (gameController.isAddingTilePossible()) {
+                gameController.setRandomTile();
+                moveController.setTile(gameController.getTile());
+                keyThread.start();
+                while(!isGameOver) {
+                    sleep(1000);
+                    moveController.moveTile(Move.FALL);
+                    afterMoveUpdate();
+                }
+                keyThread.join();
+            }
+        } catch (InterruptedException e) {
+            System.out.println("Exception: " + e);
+        }
     }
 
-    public void searchForFullRows() {
-        List<Field> fields = tile.getFields();
-        for (Field field : fields) {
-            if (field.isSideOfRowFull(Neighbour.LEFT) && field.isSideOfRowFull(Neighbour.RIGHT)) {
-                scoreObserver.noteFullRow(field.getPosition());
+    public void update(Observable o, Object arg) {
+        afterMoveUpdate();
+    }
+
+    private void gameOver() {
+        System.out.println("Game Over");
+        isGameOver = true;
+        keyController.setGameOver(true);
+    }
+
+    private void afterMoveUpdate() {
+        if (!gameController.isFallPossible()) {
+            gameController.searchForFullRows();
+            scoreObserver.sumScore();
+            scoreObserver.clearFullRows(board);
+            gameController.placeTile();
+            if (!gameController.isAddingTilePossible()) {
+                gameController.setLastTile();
+                gameOver();
+            }
+            else {
+                gameController.setRandomTile();
+                moveController.setTile(gameController.getTile());
             }
         }
-    }
-
-    public void sumScore() {
-        scoreObserver.sumScore();
-    }
-
-    public void clearFullRows() {
-        List<Integer> rows = scoreObserver.getRows();
-        for (Integer row : rows) {
-            board.getField(row * width).clearRow();
-        }
-        scoreObserver.clearRows();
-    }
-
-    public int getScore() {
-        return scoreObserver.getScore();
     }
 }

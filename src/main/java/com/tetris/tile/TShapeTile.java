@@ -13,7 +13,6 @@ public class TShapeTile extends Tile {
         super(board);
         color = Color.YELLOW;
         shape = Shape.T;
-        makeFieldsPartOfTile();
     }
 
     @Override

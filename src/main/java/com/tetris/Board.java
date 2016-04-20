@@ -29,9 +29,27 @@ public class Board {
         return board.get(fieldPosition);
     }
 
-    public void setSurroundingFieldsForFields() {
+    private void setSurroundingFieldsForFields() {
         for (Field field : board) {
             field.determineSurroundingFields(this);
         }
+    }
+
+    public void printBoard() {
+        int counter = 0;
+        for (Field field : board) {
+            if (field.isPlacedField()) {
+                System.out.print("p ");
+            } else if (field.isPartOfTile()) {
+                System.out.print("t ");
+            } else {
+                System.out.print("e ");
+            }
+            if (++counter%10 == 0) {
+                System.out.println();
+            }
+        }
+        System.out.println();
+        System.out.println();
     }
 }

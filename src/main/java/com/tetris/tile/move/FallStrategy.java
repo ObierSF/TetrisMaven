@@ -21,10 +21,9 @@ public class FallStrategy extends MoveStrategy {
     }
 
     @Override
-    public void setUpNewFields(List<Field> fields, Color color) {
+    public void setUpNewFields(List<Field> fields) {
         for (int i=0; i<fields.size(); i++) {
             fields.set(i, fields.get(i).getNeighbour(Neighbour.LOWER));
-            fields.get(i).makePartOfTile(color);
         }
     }
 }

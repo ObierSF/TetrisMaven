@@ -10,8 +10,8 @@ import lombok.Setter;
  * Created by User on 06.03.2016.
  */
 public class Field {
-    final int height = 16;
-    final int width = 10;
+    private final int height = 16;
+    private final int width = 10;
     @Getter private boolean partOfTile;
     @Getter private boolean placedField;
     @Getter private int position;
@@ -37,10 +37,14 @@ public class Field {
         placedField = true;
     }
 
-    public void makePartOfTile(Color color) {
-        this.color = color;
-        partOfTile = true;
-        placedField = false;
+    public boolean makePartOfTile(Color color) {
+        if (isEmpty()) {
+            this.color = color;
+            partOfTile = true;
+            placedField = false;
+            return true;
+        }
+        return false;
     }
 
     public void empty() {
@@ -70,8 +74,7 @@ public class Field {
             return true;
         }
         else if (isNeighbourPlacedField(neighbour) || getNeighbour(neighbour).isPartOfTile()) {
-            getNeighbour(neighbour).isSideOfRowFull(neighbour);
-            return true;
+            return getNeighbour(neighbour).isSideOfRowFull(neighbour);
         }
         return false;
     }

@@ -1,6 +1,7 @@
 package com.tetris.tilefactory.startrotationstrategy;
 
 import com.tetris.tile.Tile;
+import com.tetris.tile.move.Move;
 import com.tetris.tile.rotationvariantstrategy.RotationSide;
 import com.tetris.tile.rotationvariantstrategy.RotationVariant;
 
@@ -13,6 +14,8 @@ public class HorizontalDownRotation implements StartRotationStrategy {
     }
 
     public void rotate(Tile tile) {
-        tile.rotate(RotationSide.RIGHT);
+        tile.fallForRotation();
+        tile.fallForRotation();
+        tile.startRotate(RotationSide.RIGHT);
     }
 }

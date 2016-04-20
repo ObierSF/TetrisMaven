@@ -13,7 +13,6 @@ public class OShapeTile extends Tile {
         super(board);
         color = Color.BLUE;
         shape = Shape.O;
-        makeFieldsPartOfTile();
     }
 
     @Override

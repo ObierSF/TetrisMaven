@@ -34,7 +34,7 @@ public class ZShapeHorizontalDownRotation extends RotationStrategy {
     }
 
     @Override
-    public void rotate(List<Field> fields) {
+    public void setUpNewFields(List<Field> fields) {
         fields.set(0, getSecond(fields).getNeighbour(Neighbour.RIGHT));
         fields.set(2, getSecond(fields).getNeighbour(Neighbour.UPPER));
         fields.set(3, fields.get(2).getNeighbour(Neighbour.LEFT));

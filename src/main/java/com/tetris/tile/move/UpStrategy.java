@@ -21,10 +21,13 @@ public class UpStrategy extends MoveStrategy {
     }
 
     @Override
-    public void setUpNewFields(List<Field> fields, Color color) {
+    public void setUpNewFields(List<Field> fields) {
         for (int i=0; i<fields.size(); i++) {
-            fields.set(i, fields.get(i).getNeighbour(Neighbour.UPPER));
-            fields.get(i).makePartOfTile(color);
+            if (fields.get(i) != null && fields.get(i).getNeighbour(Neighbour.UPPER) != null) {
+                fields.set(i, fields.get(i).getNeighbour(Neighbour.UPPER));
+            } else {
+                fields.set(i, null);
+            }
         }
     }
 }

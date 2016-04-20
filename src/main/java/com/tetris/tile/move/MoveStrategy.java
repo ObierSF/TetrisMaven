@@ -11,13 +11,7 @@ import java.util.List;
 public abstract class MoveStrategy {
     public abstract boolean validate(Move move);
     public abstract boolean isFieldOnSideAvailable(Field field);
-    public abstract void setUpNewFields(List<Field> fields, Color color);
-
-    public void emptyOldFields(List<Field> fields) {
-        for (Field field : fields) {
-            field.empty();
-        }
-    }
+    public abstract void setUpNewFields(List<Field> fields);
 
     public boolean isPossible(List<Field> fields) {
         for (Field field : fields) {
@@ -28,8 +22,20 @@ public abstract class MoveStrategy {
         return true;
     }
 
-    public void move(List<Field> fields, Color color) {
-        emptyOldFields(fields);
-        setUpNewFields(fields, color);
+    private void emptyOldField(List<Field> fields) {
+        for (Field field : fields) {
+            if (field != null) {
+                field.empty();
+            }
+        }
+    }
+
+    public void lastMove(List<Field> fields) {
+        setUpNewFields(fields);
+    }
+
+    public void move(List<Field> fields) {
+        emptyOldField(fields);
+        setUpNewFields(fields);
     }
 }

@@ -13,7 +13,6 @@ public class ZShapeTile extends Tile {
         super(board);
         color = Color.ORANGE;
         shape = Shape.Z;
-        makeFieldsPartOfTile();
     }
 
     @Override
