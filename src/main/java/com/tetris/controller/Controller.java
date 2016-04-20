@@ -15,7 +15,7 @@ public class Controller extends Thread implements Observer {
     private MoveController moveController;
     private Thread keyThread;
     private KeyController keyController;
-    private GameController gameController;
+    private TileController tileController;
     private ScoreObserver scoreObserver;
     private boolean isGameOver = false;
 
@@ -25,8 +25,8 @@ public class Controller extends Thread implements Observer {
     }
 
     public void prepareGame() {
-        gameController = new GameController(width, board);
-        scoreObserver = new ScoreObserver(gameController);
+        tileController = new TileController(width, board);
+        scoreObserver = new ScoreObserver(tileController);
         moveController = new MoveController();
         keyController = new KeyController(moveController);
         keyController.addObserver(this);
@@ -35,19 +35,21 @@ public class Controller extends Thread implements Observer {
 
     public void run() {
         try {
-            if (gameController.isAddingTilePossible()) {
-                gameController.setRandomTile();
-                moveController.setTile(gameController.getTile());
+            if (setNewTile()) {
                 keyThread.start();
-                while(!isGameOver) {
-                    sleep(1000);
-                    moveController.moveTile(Move.FALL);
-                    afterMoveUpdate();
-                }
+                gameLoop();
                 keyThread.join();
             }
         } catch (InterruptedException e) {
             System.out.println("Exception: " + e);
+        }
+    }
+
+    private void gameLoop() throws InterruptedException {
+        while(!isGameOver) {
+            sleep(1000);
+            moveController.moveTile(Move.FALL);
+            afterMoveUpdate();
         }
     }
 
@@ -56,25 +58,34 @@ public class Controller extends Thread implements Observer {
     }
 
     private void gameOver() {
-        System.out.println("Game Over");
+        tileController.setLastTile();
         isGameOver = true;
         keyController.setGameOver(true);
+        System.out.println("Game Over");
     }
 
     private void afterMoveUpdate() {
-        if (!gameController.isFallPossible()) {
-            gameController.searchForFullRows();
-            scoreObserver.sumScore();
-            scoreObserver.clearFullRows(board);
-            gameController.placeTile();
-            if (!gameController.isAddingTilePossible()) {
-                gameController.setLastTile();
+        if (!tileController.isFallPossible()) {
+            tilePlaceOperation();
+            if (!setNewTile()) {
                 gameOver();
             }
-            else {
-                gameController.setRandomTile();
-                moveController.setTile(gameController.getTile());
-            }
         }
+    }
+
+    public boolean setNewTile() {
+        if (tileController.isAddingTilePossible()) {
+            tileController.setRandomTile();
+            moveController.setTile(tileController.getTile());
+            return true;
+        }
+        return false;
+    }
+
+    private void tilePlaceOperation() {
+        tileController.searchForFullRows();
+        scoreObserver.sumScore();
+        scoreObserver.clearFullRows(board);
+        tileController.placeTile();
     }
 }

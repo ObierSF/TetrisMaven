@@ -17,9 +17,9 @@ public class ScoreObserver implements Observer {
     @Getter private int score;
     @Getter private List<Integer> rows;
 
-    public ScoreObserver(GameController gameController) {
+    public ScoreObserver(TileController tileController) {
         rows = new LinkedList<Integer>();
-        gameController.addObserver(this);
+        tileController.addObserver(this);
     }
 
     public void sumScore() {
