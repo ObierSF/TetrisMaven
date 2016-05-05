@@ -2,13 +2,9 @@ package com.tetris.field;
 
 import com.tetris.Board;
 import com.tetris.borderstrategy.Border;
-import com.tetris.field.SurroundingFields;
-import com.tetris.field.Field;
-import com.tetris.tile.Color;
-import com.tetris.tile.IShapeTile;
-import com.tetris.tile.Tile;
 import org.junit.Before;
 import org.junit.Test;
+import java.awt.Color;
 
 import static org.junit.Assert.*;
 
@@ -16,10 +12,10 @@ import static org.junit.Assert.*;
  * Created by User on 09.03.2016.
  */
 public class FieldTest {
-    final int width = 10;
-    final int height = 16;
-    Field field;
-    Board board;
+    private final int width = 10;
+    private final int height = 16;
+    private Field field;
+    private Board board;
 
     @Before
     public void setUp() throws Exception {
@@ -30,9 +26,54 @@ public class FieldTest {
     }
 
     @Test
-    public void shouldReturnTrueAfterFieldIsPlaced() throws Exception {
+    public void columnShouldFall() throws Exception {
+        //given
+        Color pseudoRandomColor = Color.BLUE;
+        int[] columnPositions = {50, 40, 30, 20};
+        for (int columnPosition : columnPositions) {
+            board.getField(columnPosition).placeField(pseudoRandomColor);
+        }
         //when
-        field.placeField();
+        board.getField(columnPositions[0]).columnFall();
+        //then
+        assertTrue(board.getField(columnPositions[3]).isEmpty());
+        for (int columnPosition : columnPositions) {
+            assertTrue(board.getField(columnPosition+width).isPlacedField());
+        }
+    }
+
+    @Test
+    public void shouldReturnTrueIfFallIsPossible() throws Exception {
+        //given
+        int fieldBelowPosition = 14;
+        Color pseudoRandomColor = Color.BLUE;
+        //at first
+        assertTrue(field.isFallPossible());
+        //when
+        board.getField(fieldBelowPosition).placeField(pseudoRandomColor);
+        //then
+        assertFalse(field.isFallPossible());
+    }
+
+    @Test
+    public void fieldShouldFall() throws Exception {
+        //given
+        int afterFallPosition = 14;
+        Field newField = board.getField(afterFallPosition);
+        //when
+        field.placeField(Color.BLACK);
+        field.fall();
+        //then
+        assertTrue(field.isEmpty());
+        assertTrue(newField.isPlacedField());
+    }
+
+    @Test
+    public void shouldReturnTrueAfterFieldIsPlaced() throws Exception {
+        //given
+        Color pseudoRandomColor = Color.BLUE;
+        //when
+        field.placeField(pseudoRandomColor);
         //then
         assertTrue(field.isPlacedField());
         assertFalse(field.isPartOfTile());
@@ -316,12 +357,13 @@ public class FieldTest {
         int[] preBottomNotFullRowFieldsPositions = {140, 141, 142, 143, 145, 146, 147, 148, 149};
         Field fieldInFullRow = board.getField(fieldInFullRowPosition);
         Field fieldInNotFullRow = board.getField(fieldInNotFullRowPosition);
+        Color pseudoRandomColor = Color.BLUE;
         //when
         for (int bottomFullRowFieldsPosition : bottomFullRowFieldsPositions) {
-            board.getField(bottomFullRowFieldsPosition).placeField();
+            board.getField(bottomFullRowFieldsPosition).placeField(pseudoRandomColor);
         }
         for (int preBottomNotFullRowFieldsPosition : preBottomNotFullRowFieldsPositions) {
-            board.getField(preBottomNotFullRowFieldsPosition).placeField();
+            board.getField(preBottomNotFullRowFieldsPosition).placeField(pseudoRandomColor);
         }
         boolean trueAnswer = fieldInFullRow.isSideOfRowFull(Neighbour.RIGHT);
         boolean falseAnswer = fieldInNotFullRow.isSideOfRowFull(Neighbour.RIGHT);

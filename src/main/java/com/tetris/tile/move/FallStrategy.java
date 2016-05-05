@@ -2,7 +2,6 @@ package com.tetris.tile.move;
 
 import com.tetris.field.Field;
 import com.tetris.field.Neighbour;
-import com.tetris.tile.Color;
 
 import java.util.List;
 

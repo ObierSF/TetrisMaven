@@ -8,6 +8,7 @@ import com.tetris.tile.rotationstrategy.RotationCreator;
 import com.tetris.tile.rotationstrategy.RotationStrategy;
 import com.tetris.tile.rotationvariantstrategy.*;
 import lombok.Getter;
+import java.awt.Color;
 
 import java.util.List;
 
@@ -124,7 +125,7 @@ public abstract class Tile {
     public void placeTile() {
         for (Field field : fields) {
             if (field != null) {
-                field.placeField();
+                field.placeField(color);
             }
         }
     }

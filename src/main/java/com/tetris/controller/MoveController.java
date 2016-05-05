@@ -5,23 +5,33 @@ import com.tetris.tile.move.Move;
 import com.tetris.tile.rotationvariantstrategy.RotationSide;
 import lombok.Setter;
 
+import java.util.Observable;
+
 /**
  * Created by User on 07.04.2016.
  */
-public class MoveController {
+public class MoveController extends Observable {
     @Setter private Tile tile;
 
     public void moveTile(Move move) {
         tile.move(move);
+        notifyAfterMove();
     }
 
     public void rotateTile(RotationSide rotationSide) {
         tile.rotate(rotationSide);
+        notifyAfterMove();
     }
 
     public void tileFallToBottom() {
         while (tile.move(Move.FALL)) {
 
         }
+        notifyAfterMove();
+    }
+
+    private void notifyAfterMove() {
+        setChanged();
+        notifyObservers();
     }
 }

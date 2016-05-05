@@ -27,7 +27,7 @@ public class RandomisedTileFactory extends TileFactory {
     }
 
     @Override
-    public void generateRandomTile() {
+    public void generateTile() {
         int shapeNumber = rand.nextInt(7);
         int rotationNumber = rand.nextInt(4);
         ShapeStrategy shape = shapeStrategy.get(shapeNumber);

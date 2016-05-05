@@ -2,6 +2,7 @@ package com.tetris.controller;
 
 import com.tetris.controller.keystrategy.KeyCreator;
 import com.tetris.controller.keystrategy.KeyStrategy;
+import com.tetris.view.GameView;
 import lombok.Setter;
 
 import java.awt.event.KeyEvent;
@@ -13,36 +14,26 @@ import static java.lang.Thread.sleep;
 /**
  * Created by User on 11.04.2016.
  */
-public class KeyController extends Observable implements KeyListener, Runnable {
+public class KeyController implements KeyListener {
+    private GameView gameView;
     private KeyCreator keyCreator;
     private MoveController moveController;
-    @Setter private boolean isGameOver = false;
 
-    public KeyController(MoveController moveController) {
+    public KeyController(MoveController moveController, GameView gameView) {
         this.moveController = moveController;
+        this.gameView = gameView;
         keyCreator = new KeyCreator();
     }
 
-    public void run() {
-        while(!isGameOver){
-            try {
-                sleep(500);
-            } catch (InterruptedException e) {
-                System.out.println("Exception: " + e);
-            }
-        }
-    }
-
-    public void keyPressed(KeyEvent e) {
+    public void keyPressed(KeyEvent keyEvent) {
         try {
             KeyStrategy keyStrategy;
-            int keyCode = e.getKeyCode();
+            int keyCode = keyEvent.getKeyCode();
             keyStrategy = keyCreator.getKey(keyCode);
             keyStrategy.takeAction(moveController);
-            setChanged();
-            notifyObservers();
-        } catch (Exception ex) {
-            System.out.println("Key exception: " + ex);
+            //gameView.repaint();
+        } catch (Exception e) {
+            System.out.println("Key exception: " + e);
         }
     }
 

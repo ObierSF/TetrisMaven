@@ -15,9 +15,9 @@ import static org.junit.Assert.assertTrue;
  * Created by User on 11.04.2016.
  */
 public class MoveControllerTest {
-    MoveController moveController;
-    Tile pseudoRandomTile;
-    Board board;
+    private MoveController moveController;
+    private Tile pseudoRandomTile;
+    private Board board;
 
     @Before
     public void setUp() throws Exception {
@@ -83,6 +83,18 @@ public class MoveControllerTest {
         int[] positionsAfterMove = {13, 14, 15, 16};
         //when
         moveController.rotateTile(RotationSide.LEFT);
+        //then
+        for (int i=0; i<4; i++) {
+            assertEquals(positionsAfterMove[i], pseudoRandomTile.getFieldPosition(i));
+        }
+    }
+
+    @Test
+    public void tileShouldFallToBottom() throws Exception {
+        //given
+        int[] positionsAfterMove = {124, 134, 144, 154};
+        //when
+        moveController.tileFallToBottom();
         //then
         for (int i=0; i<4; i++) {
             assertEquals(positionsAfterMove[i], pseudoRandomTile.getFieldPosition(i));

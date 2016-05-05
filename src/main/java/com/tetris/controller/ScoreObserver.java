@@ -17,22 +17,15 @@ public class ScoreObserver implements Observer {
     @Getter private int score;
     @Getter private List<Integer> rows;
 
-    public ScoreObserver(TileController tileController) {
+    public ScoreObserver(BoardController boardController) {
         rows = new LinkedList<Integer>();
-        tileController.addObserver(this);
+        boardController.addObserver(this);
     }
 
     public void sumScore() {
         for (Integer row : rows) {
             score += rowValue;
         }
-    }
-
-    public void clearFullRows(Board board) {
-        for (Integer row : rows) {
-            board.getField(row * width).clearRow();
-        }
-        rows.clear();
     }
 
     public void update(Observable o, Object arg) {

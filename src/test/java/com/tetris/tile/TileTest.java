@@ -6,6 +6,7 @@ import com.tetris.tile.move.Move;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.awt.*;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -162,8 +163,9 @@ public class TileTest {
         Tile pseudoRandomTile = new IShapeTile(board);
         int[] tilePosition = {4, 14, 24, 34};
         int belowFieldPosition = 44;
+        Color pseudoRandomColor = Color.BLUE;
         //when
-        board.getField(belowFieldPosition).placeField();
+        board.getField(belowFieldPosition).placeField(pseudoRandomColor);
         pseudoRandomTile.move(Move.FALL);
         //then
         for (int i=0; i<tilePosition.length; i++) {
@@ -177,8 +179,9 @@ public class TileTest {
         Tile pseudoRandomTile = new IShapeTile(board);
         int[] tilePosition = {4, 14, 24, 34};
         int placedLeftFieldPosition = 13;
+        Color pseudoRandomColor = Color.BLUE;
         //when
-        board.getField(placedLeftFieldPosition).placeField();
+        board.getField(placedLeftFieldPosition).placeField(pseudoRandomColor);
         pseudoRandomTile.move(Move.LEFT);
         //then
         for (int i=0; i<tilePosition.length; i++) {
@@ -192,8 +195,9 @@ public class TileTest {
         Tile pseudoRandomTile = new IShapeTile(board);
         int[] tilePosition = {4, 14, 24, 34};
         int placedRightFieldPosition = 35;
+        Color pseudoRandomColor = Color.BLUE;
         //when
-        board.getField(placedRightFieldPosition).placeField();
+        board.getField(placedRightFieldPosition).placeField(pseudoRandomColor);
         pseudoRandomTile.move(Move.RIGHT);
         //then
         for (int i=0; i<tilePosition.length; i++) {

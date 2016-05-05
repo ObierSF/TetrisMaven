@@ -37,7 +37,7 @@ public class TileFactory {
         tile.placeTile();
     }
 
-    public void generateRandomTile() {
+    public void generateTile() {
         int shapeNumber = rand.nextInt(7);
         ShapeStrategy shape = shapeStrategy.get(shapeNumber);
         tile = shape.getTileShape(board);

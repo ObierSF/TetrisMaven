@@ -2,9 +2,9 @@ package com.tetris.field;
 
 import com.tetris.Board;
 import com.tetris.borderstrategy.*;
-import com.tetris.tile.Color;
 import lombok.Getter;
 import lombok.Setter;
+import java.awt.Color;
 
 /**
  * Created by User on 06.03.2016.
@@ -24,6 +24,7 @@ public class Field {
         this.position = position;
         partOfTile = false;
         placedField = false;
+        color = Color.WHITE;
         BorderCreator borderCreator = new BorderCreator();
         try {
             border = borderCreator.getBorder(width, height, position, border);
@@ -32,7 +33,8 @@ public class Field {
         }
     }
 
-    public void placeField() {
+    public void placeField(Color color) {
+        this.color = color;
         partOfTile = false;
         placedField = true;
     }
@@ -48,9 +50,29 @@ public class Field {
     }
 
     public void empty() {
-        color = Color.NON;
+        color = Color.WHITE;
         partOfTile = false;
         placedField = false;
+    }
+
+    public void columnFall() {
+        if (isFallPossible()) {
+            fall();
+            if (getNeighbour(Neighbour.UPPER) != null) {
+                getNeighbour(Neighbour.UPPER).columnFall();
+            }
+        }
+    }
+
+    public boolean isFallPossible() {
+        return getNeighbour(Neighbour.LOWER) != null && !isNeighbourPlacedField(Neighbour.LOWER);
+    }
+
+    public void fall() {
+        if (!isEmpty()) {
+            getNeighbour(Neighbour.LOWER).placeField(color);
+        }
+        empty();
     }
 
     public void determineSurroundingFields(Board board) {

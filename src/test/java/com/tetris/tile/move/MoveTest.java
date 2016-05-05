@@ -2,9 +2,9 @@ package com.tetris.tile.move;
 
 import com.tetris.Board;
 import com.tetris.field.Field;
-import com.tetris.tile.Color;
 import org.junit.Before;
 import org.junit.Test;
+import java.awt.Color;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,8 +29,8 @@ public class MoveTest {
         //given
         iShapeTilePositions = new int[]{4, 14, 24, 34};
         pseudoRandomTile = new ArrayList<Field>();
-        for (int i=0; i<iShapeTilePositions.length; i++) {
-            pseudoRandomTile.add(board.getField(iShapeTilePositions[i]));
+        for (int iShapeTilePosition : iShapeTilePositions) {
+            pseudoRandomTile.add(board.getField(iShapeTilePosition));
         }
         color = Color.RED;
     }
@@ -119,7 +119,7 @@ public class MoveTest {
         //given
         moveStrategy = new FallStrategy();
         int belowFieldPosition = 44;
-        board.getField(belowFieldPosition).placeField();
+        board.getField(belowFieldPosition).placeField(color);
         boolean moveResponse;
         //when
         moveResponse = move(moveStrategy);
@@ -132,7 +132,7 @@ public class MoveTest {
         //given
         moveStrategy = new LeftStrategy();
         int placedLeftFieldPosition = 23;
-        board.getField(placedLeftFieldPosition).placeField();
+        board.getField(placedLeftFieldPosition).placeField(color);
         boolean moveResponse;
         //when
         moveResponse = move(moveStrategy);
@@ -145,7 +145,7 @@ public class MoveTest {
         //given
         moveStrategy = new RightStrategy();
         int placedRightFieldPosition = 15;
-        board.getField(placedRightFieldPosition).placeField();
+        board.getField(placedRightFieldPosition).placeField(color);
         boolean moveResponse;
         //when
         moveResponse = move(moveStrategy);

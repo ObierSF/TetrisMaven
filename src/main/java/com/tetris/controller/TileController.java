@@ -15,7 +15,7 @@ import java.util.Observable;
 /**
  * Created by User on 21.03.2016.
  */
-public class TileController extends Observable {
+public class TileController {
     private int width;
     private TileFactory tileFactory;
     @Setter @Getter private Tile tile;
@@ -26,7 +26,7 @@ public class TileController extends Observable {
     }
 
     public boolean isAddingTilePossible() {
-        tileFactory.generateRandomTile();
+        tileFactory.generateTile();
         return tileFactory.isAddingTilePossible();
     }
 
@@ -39,21 +39,15 @@ public class TileController extends Observable {
         tile.placeTile();
     }
 
-    public void searchForFullRows() {
-        List<Field> fields = tile.getFields();
-        for (Field field : fields) {
-            if (field.isSideOfRowFull(Neighbour.LEFT) && field.isSideOfRowFull(Neighbour.RIGHT)) {
-                setChanged();
-                notifyObservers(field.getPosition());
-            }
-        }
-    }
-
     public boolean isFallPossible() {
         return tile.isFallPossible();
     }
 
     public void setLastTile() {
         tileFactory.setLastTile();
+    }
+
+    public List<Field> getFields() {
+        return tile.getFields();
     }
 }
